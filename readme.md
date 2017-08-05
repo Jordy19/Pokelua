@@ -1,7 +1,7 @@
-# Pokelua - # Transformice Lua API (Pokelua v4) [![Build Status](https://travis-ci.org/Jordy19/Pokelua.svg?branch=master)](https://travis-ci.org/Jordy19/Pokelua)
+# Pokelua - # Transformice Lua API (Pokelua V5)  
 
-This repository contains the source code for Pokelua v4, the module currently running in Transformice is v3.  
-This module contains functions that are only available to Luacrew members. This means that you can't run it in your tribe house.  
+This repository contains the source code for Pokelua v4, the module currently running in Transformice is v4.  
+This module contains functions that are only available to **Luacrew members**. This means that you can't run it in your tribe house.  
 
 ## What is Pokelua?
 Pokelua is a module written for the Transformice Lua API that allows players to transform their character in Pokemons.  
