@@ -4,3 +4,4 @@ utilities/images/*
 utilities/*.py
 lab/*
 test.lua
+__pycache__
