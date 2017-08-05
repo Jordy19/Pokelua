@@ -4,4 +4,3 @@ utilities/images/*
 utilities/*.py
 lab/*
 test.lua
-build.py
