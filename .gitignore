@@ -1,10 +1,13 @@
-module.lua
-debug/builds/*
+# Local debug env
 utilities/images/*
 utilities/*.py
+debug/builds/*
 lab/*
-test.lua
+
+# Python junk
 __pycache__/
-debug.lua
+
+# Generated files
 module.lua
 test.lua
+debug.lua
