@@ -1,12 +1,24 @@
 # Python build script written for Pokelua.
 # Written by Jordynl
 
-from src.python import fileTree, generator, debug
+import src.python.fileTree 
+import src.python.generator
+import src.python.debug
 import os
 
-class Builder(): 
 
-    def __init__(self):
+# Local build config
+config = {
+    "version": "4.8.5",
+    "versionName": "Alpha Version",
+    "nextVersion": ""
+}
+
+
+class Builder():
+
+    def __init__(self, config):
+        self.config = config
         self.srcPath = os.getcwd()
         self.newVersionMessage = ""
         self.debugVerbose = {
@@ -50,13 +62,24 @@ class Builder():
     def run(self):
         print("• [+] Initiating #pokelua builder.")
         print("• [+] SRC path: %s" % self.srcPath)
-        self.ignore = fileTree.getGitIgnore(self.srcPath)
-        self.filesList = fileTree.getFileTree(self.srcPath)
-        print("• [+] Files indexed. (%s entries, %s ignored)" % (len(self.filesList), len(self.ignore)))
-        generator.debugFile(self.srcPath, self.filesList, self.loadOrder)
-        debug.run(self.srcPath)
+        self.ignore = src.python.fileTree.getGitIgnore(self.srcPath)
+        self.filesList = src.python.fileTree.getFileTree(self.srcPath)
+        print("• [+] Files indexed. (%s entries, %s ignored)" % (
+            len(self.filesList), len(self.ignore)))
+        src.python.generator.debugFile(
+            self.srcPath,
+            self.filesList,
+            self.loadOrder
+        )
+        src.python.generator.moduleFile(
+            self.srcPath,
+            self.filesList,
+            self.loadOrder,
+            self.srcPath
+        )
+        src.python.debug.run(self.srcPath)
+
 
 if __name__ == "__main__":
-    builder = Builder()
+    builder = Builder(config)
     builder.run()
-

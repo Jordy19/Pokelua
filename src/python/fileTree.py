@@ -3,11 +3,12 @@
 
 import os
 
+
 def getGitIgnore(path):
     ignore = []
     gitIgnorePath = "%s/%s" % (path, ".gitignore")
     file = open(gitIgnorePath, 'r')
-    if file: 
+    if file:
         lines = file.read().split('\n')
         for l in lines:
             if "/" in l:
@@ -22,6 +23,7 @@ def getGitIgnore(path):
     else:
         return False
 
+
 def getFileTree(path):
     filesList = []
     ignore = getGitIgnore(path)
@@ -31,14 +33,16 @@ def getFileTree(path):
         for name in files:
             filePath = path.split("\\")[3:]
             if not filePath:
-                if not name in ignore and name not in ignoreFiles:
+                if name not in ignore and name not in ignoreFiles:
                     if ".lua" in name:
                         name = name.split(".lua")[0]
                         filesList.append(name)
             else:
-                if filePath and not filePath[0] in ignorePaths and filePath[0] not in ignore:
+                if (filePath and filePath[0] not in ignorePaths and
+                        filePath[0] not in ignore):
                     p = ":".join(filePath)
                     f = "%s.%s" % (".".join(filePath), name.split(".lua")[0])
-                    if p not in ignore and ".lua" in name and name not in ignoreFiles:
+                    if (p not in ignore and ".lua" in name and
+                            name not in ignoreFiles):
                         filesList.append(f)
     return filesList
