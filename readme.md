@@ -1,14 +1,19 @@
-# Pokelua - # Transformice Lua API (Pokelua V5)  
+<div style="text-align:center"><img src ="http://images.atelier801.com/15cf62eb3e9.png" /></div>
 
-This repository contains the source code for Pokelua v4, the module currently running in Transformice is v4.  
-This module contains functions that are only available to **Luacrew members**. This means that you can't run it in your tribe house.  
+Pokelua is a *module* specifically written to be loaded with the LUA API within [Transformice](http://transformice.com).  
+This repository contains the source code from the module.
 
-## What is Pokelua?
-Pokelua is a module written for the Transformice Lua API that allows players to transform their character in Pokemons.  
-It was purely written to test out the new tfm.exec.addImage() function.
-  
-## Disclaimer
-Pokémon is copyrighted by Nintendo, therefore I take no rights for the images.  
-The database used in Pokelua does contain fan made Pokémon which rights belong to their artists
+# Getting the module script
 
-**Feedback and suggestions are always welcome, this module is community driven.**
+## The requirements for using this module
+- A machine with at least [Python 3.5](https://www.python.org/downloads/) or higher and [Lua 5.3.2](https://www.lua.org/download.html) ([Windows](http://luabinaries.sourceforge.net/download.html)) *(They both have to be in the system path)*
+- A member of the [Transformice Module Team](http://atelier801.com/topic?f=5&t=691642&p=1) *(This module contains functions only available to members 
+- of this team)*
+
+## How to generate the module script.
+- Run the Python build script.
+- Locate the generated *module.lua* and load that content in the Transformice code editor.
+
+# Support
+
+- [Our official thread at the Atelier801 forums](http://atelier801.com/topic?f=6&t=838708&p=1) *Please use this thread for posting bugs and suggestions*

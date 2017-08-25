@@ -7,3 +7,4 @@ test.lua
 __pycache__/
 debug.lua
 module.lua
+test.lua
