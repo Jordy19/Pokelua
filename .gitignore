@@ -5,3 +5,5 @@ utilities/*.py
 lab/*
 test.lua
 __pycache__/
+debug.lua
+module.lua
