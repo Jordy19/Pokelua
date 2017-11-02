@@ -34,7 +34,7 @@ moduleConfig = {
     -- # Shiny Random Encounter
     -- By default shiny pokemons are a 0 of the 1 chance to get IF the pokemon contains shiny sprites.
     -- Warning: Don't set this to 0.
-    -- Default value: 1
+    -- Default value: 5
     shinyEncounter = 5,
 
     -- # Commands disable per game-mode
@@ -42,7 +42,7 @@ moduleConfig = {
     -- Default prefix: "Command", "game-mode"
     disabledCommands = {
         survivor = {fly=false,map=false},
-        racing = {fly=false,map=false}
+        racing = {fly=false,map=false} 
     }
 
 }

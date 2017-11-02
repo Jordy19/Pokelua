@@ -3,6 +3,7 @@ utilities/images/*
 utilities/*.py
 debug/builds/*
 lab/*
+test.py
 
 # Python junk
 __pycache__/
