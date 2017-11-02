@@ -7,6 +7,7 @@ test.py
 
 # Python junk
 __pycache__/
+*.pyc
 
 # Generated files
 module.lua

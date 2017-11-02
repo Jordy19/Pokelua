@@ -40,7 +40,7 @@ def moduleFile(path, fileTree, fileOrder, srcPath):
 def parseFile(filePath):
     f = open(filePath, 'r')
     file = stripComments(f.read())
-    if "/database" in filePath:
+    if "/data" in filePath:
         file = file.replace('\n', '\t')
     f.close()
     return file

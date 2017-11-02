@@ -9,7 +9,7 @@ import os
 
 # Local build config
 config = {
-    "version": "4.8.5",
+    "version": "5.0",
     "versionName": "Alpha Version",
     "nextVersion": ""
 }
@@ -32,10 +32,10 @@ class Builder():
             "src.lua.init",
             "src.lua.init",
             "config",
-            "database.pokemons",
-            "database.fakemons",
-            "database.items",
-            "database.misc",
+            "data.pokemons",
+            "data.fakemons",
+            "data.items",
+            "data.misc",
             "src.lua.admin",
             "src.lua.room",
             "src.lua.translate",
@@ -60,7 +60,7 @@ class Builder():
         ]
 
     def run(self):
-        print("• [+] Initiating #pokelua builder.")
+        print("• [+] Starting #pokelua builder.")
         print("• [+] SRC path: %s" % self.srcPath)
         self.ignore = src.python.fileTree.getGitIgnore(self.srcPath)
         self.filesList = src.python.fileTree.getFileTree(self.srcPath)
