@@ -4,7 +4,7 @@ def debugFile(path, fileTree, fileOrder):
     f = open(filePath, 'w+')
     f.write("--[[\n\tThis file was automatically generated with build.py\n"
             "\tChanges made in this file are NOT saved.\n]]\n\n")
-    f.write("tfm = require \"debug.Transformice\" -- Local Debug Framework\n")
+    f.write("tfm = require \"src.lua.transformice\" -- Local Debug Framework\n")
     f.write("ui = tfm.ui\nsystem = tfm.system\n")
     missingFiles = list(set(fileTree) - set(fileOrder))
     tree = [file for file in fileOrder if file in fileTree]

@@ -3,7 +3,7 @@
 	Changes made in this file are NOT saved.
 ]]
 
-tfm = require "debug.Transformice" -- Local Debug Framework
+tfm = require "src.lua.transformice" -- Local Debug Framework
 ui = tfm.ui
 system = tfm.system
 
@@ -41,6 +41,7 @@ require "src.lua.commands.owner"
 require "src.lua.commands.dev"
 require "src.lua.commands.alias"
 require "src.lua.lib.data" -- (X)
+require "src.lua.transformice" -- (X)
 
 --[[ 
 	Debug framework config

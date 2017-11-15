@@ -1,7 +1,7 @@
 # Python build script written for Pokelua.
 # Written by Jordynl
 
-import src.python.fileTree 
+import src.python.fileTree
 import src.python.generator
 import src.python.debug
 import os
@@ -61,7 +61,7 @@ class Builder():
 
     def run(self):
         print("• [+] Starting #pokelua builder.")
-        print("• [+] SRC path: %s" % self.srcPath)
+        print("• [+] Source path: %s" % self.srcPath)
         self.ignore = src.python.fileTree.getGitIgnore(self.srcPath)
         self.filesList = src.python.fileTree.getFileTree(self.srcPath)
         print("• [+] Files indexed. (%s entries, %s ignored)" % (
