@@ -1,7 +1,6 @@
 # Local debug env
 utilities/images/*
 utilities/*.py
-debug/builds/*
 lab/*
 test.py
 
