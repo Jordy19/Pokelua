@@ -1,10 +1,12 @@
+import os
+
 
 def debugFile(path, fileTree, fileOrder):
     filePath = "%s/debug.lua" % (path)
     f = open(filePath, 'w+')
     f.write("--[[\n\tThis file was automatically generated with build.py\n"
             "\tChanges made in this file are NOT saved.\n]]\n\n")
-    f.write("tfm = require \"src.lua.transformice\" -- Local Debug Framework\n")
+    f.write("tfm = require \"include.transformice\" -- Local Debug Framework\n")
     f.write("ui = tfm.ui\nsystem = tfm.system\n")
     missingFiles = list(set(fileTree) - set(fileOrder))
     tree = [file for file in fileOrder if file in fileTree]
@@ -35,6 +37,19 @@ def moduleFile(path, fileTree, fileOrder, srcPath):
         f.write(new_file)
     f.write("\ninit()")
     f.close()
+
+
+def listFile(path):
+    listPath = "%s\\include\\lists" % (path)
+    listFilePath = "{}\include\\list.lua".format(path)
+    # filePath = "%s\\src\\lua\\list.lua" % (listPath)
+    listF = open(listFilePath, "w+")
+    for path, subdirs, files in os.walk(listPath):
+        for file in files:
+            filePath = "{}\{}".format(listPath, file)
+            f = parseFile(filePath)
+            listF.write(f)
+    listF.close()
 
 
 def parseFile(filePath):

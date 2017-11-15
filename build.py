@@ -32,10 +32,7 @@ class Builder():
             "src.lua.init",
             "src.lua.init",
             "config",
-            "data.pokemons",
-            "data.fakemons",
-            "data.items",
-            "data.misc",
+            "include.list",
             "src.lua.admin",
             "src.lua.room",
             "src.lua.translate",
@@ -66,6 +63,7 @@ class Builder():
         self.filesList = src.python.fileTree.getFileTree(self.srcPath)
         print("• [+] Files indexed. (%s entries, %s ignored)" % (
             len(self.filesList), len(self.ignore)))
+        src.python.generator.listFile(self.srcPath)
         src.python.generator.debugFile(
             self.srcPath,
             self.filesList,
