@@ -31,7 +31,7 @@ eventNewPlayer = function(name)
         transformPending = false,
         fanart = false,
         prevPoke = "",
-        console = {"<font size='9'><J><b>PokeLua</b>.lua <V>&version&<J></font><font size='9px'>"},
+        console = {"<font size='9'><J><b>PokeLua</b>.lua <V>&version&<J></font><br/><font size='8'><BL><i>Running since: &uptime&</i></font><font size='9px'>"},
         moduleStarted = false,
         devMode=false,
         intro = true,
