@@ -83,6 +83,13 @@ function eventKeyboard(name,key,down,x,y)
             end
         end
     end
+    if db.players[name].intro then
+        print(1)
+        if key == 0 or key == 2 then
+            db.players[name].intro = false
+            core.introduce(name)
+        end
+    end
     if key == 80 then
         if db.players[name].pokedexOpen then
             pokedex.close(name, true)

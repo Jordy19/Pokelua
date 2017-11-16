@@ -22,7 +22,7 @@ function eventChatCommand(name, line)
     dArgs = args
     local colors = {valid="#2ecf73",invalid="#EB1D51"}
     table.remove(args, 1)
-    if db.players[name].roomAdmin then
+    if pData(name, "roomAdmin") then
         nameColor = "#ED67EA"
     else
         nameColor = "#009d9d"
@@ -33,7 +33,7 @@ function eventChatCommand(name, line)
         line = string.format("<font color='%s'>%s</font>: <font color='%s'>!%s</font> (args: %s)", nameColor, name, colors.invalid, command, table.concat(args, ", "))
     end
     for k,v in next,db.players do
-        if db.players[k].devMode then
+        if pData(name, "devMode") then
             tfm.exec.chatMessage(string.format("<font color='#d200ad'>~ [<b>Dev</b>]</font> %s", line), k)
         end
     end
@@ -49,10 +49,10 @@ function eventChatCommand(name, line)
                 end
                 print(align.x)
                 tfm.exec.chatMessage(string.format("<ROSE>[~Align] <BL>(<J>%s<BL>) <VP>X:<BL> %s <VP>Y:<BL> %s", possibleObject, align.x, align.y), name)
-                db.players[name].prevPoke = ""
+                pData(name, "prevPoke", "")
                 object.spawn(name, possibleObject, align.x, align.y, false)        
         else
-            db.players[name].prevPoke = ""
+            pData(name, "prevPoke", "")
             if db.fanarts[possibleObject] then
                 tfm.exec.chatMessage("<VP>This Pokémon is also available in a fan-art variant, try the G button.", name)
             end
@@ -60,7 +60,7 @@ function eventChatCommand(name, line)
         end
     end
     if db.commands[command] then
-        if db.players[name].log == true then
+        if pData(name, "log") == true then
             admin.broadcast(string.format("%s: !%s", name, command))
         end
         for k,v in pairs(moduleConfig.disabledCommands) do
@@ -75,7 +75,7 @@ function eventChatCommand(name, line)
             end
         end
         if db.commands[command][1] == "admin" then
-            if  db.players[name].roomAdmin then
+            if  pData(name, "roomAdmin") then
                 continue = true
             else
                 continue = false

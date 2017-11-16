@@ -28,8 +28,7 @@ class Builder():
             "src.lua.lib",
             "src.lua.database",
             "src.lua.console",
-            "src.lua.lib.data"
-            "src.lua.init",
+            "src.lua.misc",
             "src.lua.init",
             "config",
             "include.list",
