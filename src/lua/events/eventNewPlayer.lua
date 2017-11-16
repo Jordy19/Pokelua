@@ -63,7 +63,7 @@ end
 
 core.introduce = function(name)
     tfm.exec.removeImage(pData(name, 'introImg'))
-    ui.addTextArea(1337, table.concat(pData(name, 'console'), "<br/>"), name, 560, 32, 230, 80, 0x324650 , 0x3C5064 , 0.7, true)
+    ui.addTextArea(1337, table.concat(pData(name, 'console'), "<br/>"), name, 560, 32, 230, 80, 0x301A0C , 0x684422 , 0.8, true)
     tfm.exec.removeImage(pData(name, 'legalImg'))
     -- tfm.exec.removeImage(db.players[name].waitImg)
     for i,key in ipairs({32,81,80, 82, 46, 77, 104, 98, 100, 102, 101,72, 71, 74}) do
