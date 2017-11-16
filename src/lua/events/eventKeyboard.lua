@@ -84,7 +84,6 @@ function eventKeyboard(name,key,down,x,y)
         end
     end
     if db.players[name].intro then
-        print(1)
         if key == 0 or key == 2 then
             db.players[name].intro = false
             core.introduce(name)
