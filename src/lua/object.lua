@@ -148,7 +148,7 @@ object.updateInterface = function(name, obj)
         ui.addTextArea(01, string.format("<font size='13' color='%s'><b>%s</b></font>", string.format("#%s", typeColor), db.players[name].basePokemon), name, 560, 33 , 230, 75, backColor, string.format("0x%s", typeColor) , 0.5, true)
         ui.addTextArea(02, string.format("<V>Lv:<N> %s", db.players[name].level), name, 735, 35, 230, 50, 0x080000 , 0x080000 , 0, true)
         ui.addTextArea(03, string.format("<p align='center'><font size='10'><N>%s", obj.db.types[1], "%.", " "), name, 560, 50, 230, 50, 0x080000 , 0x080000 , 0, true)
-        ui.addTextArea(04, string.format("<p align='center'><font size='8'><pre><b><V>Gender</b>:<N> %s <V><b>Height:</b><N> %s inch<V><b>Weight:</b><N> %s lbs</pre></font></p>", gender, obj.db.height, obj.db.weight), name, 560, 70, 230, 50, 0x080000 , 0x080000 , 0, true)
+        ui.addTextArea(04, string.format("<p align='center'><font size='8'><pre><b><V>Gender</b>:<N> %s <V><b>Height:</b><N> %s inch<V> <b>Weight:</b><N> %s lbs</pre></font></p>", gender, obj.db.height, obj.db.weight), name, 560, 70, 230, 50, 0x080000 , 0x080000 , 0, true)
         if obj.db.artist ~= nil then
             ui.addTextArea(05, string.format("<p align='center'><font size='8'><b><V>Sprite Artist</b>:<N> %s</font></p>", obj.db.artist), name, 560, 85, 230, 50, 0x080000 , 0x080000 , 0, true)
         else 
