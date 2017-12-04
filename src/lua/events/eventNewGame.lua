@@ -10,7 +10,7 @@ eventNewGame = function()
 				object.updateInterface(name, db.players[name].objectData)
 				object.spawn(name, db.players[name].basePokemon, nil, nil, false)
 			else
-    			ui.addTextArea(1337, table.concat(pData(name, 'console'), "<br/>"), name, 560, 32, 230, 80, 0x301A0C , 0x684422 , 0.8, true)
+    			ui.addTextArea(1337, table.concat(pData(name, 'console'), "<br/>"), name, 560, 32, 230, 80, 0x301A0C , 0x563c29 , 0.8, true)
 			end
 		end
 	end

@@ -41,7 +41,7 @@ function eventKeyboard(name,key,down,x,y)
             if roomMatch("survivor") == false then
                 for i,key in ipairs({01,02,03,04,05,1337}) do
                     ui.removeTextArea(key, name)
-                    ui.addTextArea(1337, table.concat(db.players[name].console, "<br/>"), name, 560, 32, 230, 80, 0x080000 , 0x080000 , 0.5, true)
+                    ui.addTextArea(1337, table.concat(db.players[name].console, "<br/>"), name, 560, 32, 230, 80, 0x301A0C , 0x684422 , 0.8, true)
                 end
                 tfm.exec.removeImage(db.players[name].baseImage)
                 local xPos,yPos = x,y

@@ -28,4 +28,12 @@ eventTextAreaCallback = function(i,playerName,c)
 			eventChatCommand(playerName,p[3])
 		end
 	end
+	if p[1] == "explore" then
+		if p[2] == "random" then
+			eventChatCommand(playerName, "random")
+		elseif p[2] == "mouse" then
+			eventKeyboard(playerName, 46, true, tfm.get.room.playerList[playerName].x, tfm.get.room.playerList[playerName].y)
+			ui.removeTextArea(06, name)
+		end
+	end
 end

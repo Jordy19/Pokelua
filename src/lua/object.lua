@@ -4,7 +4,11 @@
 ]]
 
 object.spawn = function(name, obj, xPos, yPos, levelUp)
-    if db.players[name].transformPending == false and db.players[name].moduleStarted == true then
+    if db.players[name].moduleStarted == false then
+      db.players[name].intro = false
+      core.introduce(name)
+    end 
+    if db.players[name].transformPending == false then
         pD = db.objects[obj]
         if db.objects[obj] then
           pD = db.objects[obj]
@@ -87,37 +91,6 @@ object.setImage = function(name, images, axis)
     end
 end
 
--- object.updateInterface = function(name, obj) 
---     local uiString = "<font size='9px' color='%s'><b>%s:</b></font> <font size='9px' color='%s'>%s</font>"
---     local pokemonNameUiLenght = 100 + db.players[name].basePokemon:len()*10
---     typeColor = object.getTypeColor(obj)
---     if obj.db.types then
---         local pokemonNameUiLenght = 100 + db.players[name].basePokemon:len()*4
---         local typeNameUiLenght = 75 + obj.db.types[1]:len()*4
---         local uiNameLength = 28 + pokemonNameUiLenght
---         local uiTypeLenght = 407 + typeNameUiLenght
---         local uiWeightLenght = 490 + typeNameUiLenght
---         local uiArtistLenght = 583 + typeNameUiLenght
-
---         db.players[name].color = "test"
---         if db.players[name].shiny then
---             db.players[name].basePokemon = string.format("%s %s", db.players[name].basePokemon, "★")
---         end
---         tfm.exec.setNameColor(name, string.format("0x%s", db.players[name].color))
---         ui.addTextArea(01, string.format(uiString, string.format("#%s", db.players[name].color), "Pokemon", string.format("#%s", typeColor), db.players[name].basePokemon), name, 20, 383, pokemonNameUiLenght, 18, "0x182838", string.format("0x%s", typeColor), 0.7, true)
---         ui.addTextArea(02, string.format(uiString, string.format("#%s", tdb.players[name].color), "Lv", string.format("#%s", typeColor), db.players[name].level), name, uiNameLength, 383, 50, 18, "0x182838", string.format("0x%s", typeColor), 0.7, true)
---         ui.addTextArea(03, string.format(uiString, string.format("#%s", db.players[name].color), "Type", string.format("#%s", db.players[name].color), obj.db.types[1]), name, 400, 383, typeNameUiLenght, 18, "0x182838", string.format("0x%s", db.players[name].color), 0.7, true)
---         ui.addTextArea(04, string.format(uiString, string.format("#%s", db.players[name].color), "height", string.format("#%s", db.players[name].color), obj.db.height), name, uiTypeLenght, 383, 75, 18, "0x182838", string.format("0x%s", db.players[name].color), 0.7, true)
---         ui.addTextArea(05, string.format(uiString, string.format("#%s", db.players[name].color), "weight", string.format("#%s ", db.players[name].color), obj.db.weight), name, uiWeightLenght, 383, 85, 18, "0x182838", string.format("0x%s", db.players[name].color), 0.7, true)
---         if obj.db.artist ~= nil then
---             ui.addTextArea(6, string.format(uiString, string.format("#%s", db.players[name].color), "Artist", string.format("#%s", db.players[name].color), obj.db.artist), name, uiArtistLenght, 383, 120, 18, "0x182838", string.format("0x%s", typeColor), 0.7, true)
---             tfm.exec.chatMessage(string.format("<VP> The Pokemon <b>%s</b> is re-drawn by the artist <b>%s</b>, please do NOT ask them to draw a pokemon for you.", db.players[name].basePokemon, obj.db.artist), name)
---         else 
---             ui.removeTextArea(6, name)
---         end
---     end
--- end
-
 object.updateInterface = function(name, obj)
     if db.players[name].basePokemon then
       local genderTypes = {[0]="<CH>♂<N>",[1]="<PS>♀<N>",[2]="<CH>♂<N> <PS>♀<N>",[3]="?"}
@@ -145,15 +118,16 @@ object.updateInterface = function(name, obj)
       -- end
       ui.removeTextArea(1337, name)
       if typeColor ~= nil and db.players[name].basePokemon ~= nil then
-        ui.addTextArea(01, string.format("<font size='13' color='%s'><b>%s</b></font>", string.format("#%s", typeColor), db.players[name].basePokemon), name, 560, 33 , 230, 75, 0x301A0C , 0x684422 , 0.8, true)
+        ui.addTextArea(01, string.format("<font size='13' color='%s'><b>%s</b></font>", string.format("#%s", typeColor), db.players[name].basePokemon), name, 560, 32, 230, 80, 0x301A0C , 0x563c29 , 0.8, true)
         ui.addTextArea(02, string.format("<V>Lv:<N> %s", db.players[name].level), name, 735, 35, 230, 50, 0x080000 , 0x080000 , 0, true)
         ui.addTextArea(03, string.format("<p align='center'><font size='10'><N>%s", obj.db.types[1], "%.", " "), name, 560, 50, 230, 50, 0x080000 , 0x080000 , 0, true)
-        ui.addTextArea(04, string.format("<p align='center'><font size='8'><pre><b><V>Gender</b>:<N> %s <V><b>Height:</b><N> %s inch<V> <b>Weight:</b><N> %s lbs</pre></font></p>", gender, obj.db.height, obj.db.weight), name, 560, 70, 230, 50, 0x080000 , 0x080000 , 0, true)
+        ui.addTextArea(04, string.format("<p align='center'><font size='8'><pre><V>Gender:<N> %s <V>Height:<N> %s inch<V> Weight:<N> %s lbs</pre></font></p>", gender, obj.db.height, obj.db.weight), name, 560, 70, 230, 50, 0x080000 , 0x080000 , 0, true)
         if obj.db.artist ~= nil then
-            ui.addTextArea(05, string.format("<p align='center'><font size='8'><b><V>Sprite Artist</b>:<N> %s</font></p>", obj.db.artist), name, 560, 85, 230, 50, 0x080000 , 0x080000 , 0, true)
+            ui.addTextArea(05, string.format("<p align='center'><font size='8'><V>Sprite Artist:<N> %s</font></p>", obj.db.artist), name, 560, 85, 230, 50, 0x080000 , 0x080000 , 0, true)
         else 
             ui.removeTextArea(05, name)
         end
+            ui.addTextArea(06, string.format("<p align='center'><a href='event:explore.random'><font size='8' color='#FAD100'>Random Pokémon</font></a> | <a href='event:explore.mouse'><font size='8' color='#FAD100'>No Pokémon</font></a></p>", "Jordynl"), name, 560, 99, 230, 50, 0x080000 , 0x080000 , 0, true)
       else
           if db.players[name].basePokemon ~= nil then
               tfm.exec.chatMessage(string.format("<V>An error occured, the interface failed to load the data of %s", db.players[name].basePokemon), name)

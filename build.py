@@ -9,11 +9,9 @@ import os
 
 # Local build config
 config = {
-    "version": "5.0",
-    "versionName": "Alpha Version",
+    "version": "5.0 (Alpha Version)",
     "nextVersion": ""
 }
-
 
 class Builder():
 
@@ -66,13 +64,15 @@ class Builder():
         src.python.generator.debugFile(
             self.srcPath,
             self.filesList,
-            self.loadOrder
+            self.loadOrder,
+            config
         )
         src.python.generator.moduleFile(
             self.srcPath,
             self.filesList,
             self.loadOrder,
-            self.srcPath
+            self.srcPath,
+            config
         )
         src.python.debug.run(self.srcPath)
 
