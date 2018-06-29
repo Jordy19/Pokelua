@@ -3,7 +3,7 @@
 Pokelua is a *module* specifically written to be loaded with the LUA API within [Transformice](http://transformice.com).
 This repository contains the source code from the module.
 
-# Obtaining the module script
+# Getting the module script
 
 ## The requirements for using this module
 - A machine with at least [Python 3.5](https://www.python.org/downloads/) or higher and [Lua 5.3.2](https://www.lua.org/download.html) ([Windows](http://luabinaries.sourceforge.net/download.html)) *(They both have to be in the system path)*
