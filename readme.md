@@ -1,13 +1,13 @@
 <div style="text-align:center"><img src ="http://images.atelier801.com/15d14ee57bd.png" /></div>
 
-Pokelua is a *module* specifically written to be loaded with the LUA API within [Transformice](http://transformice.com).  
+Pokelua is a *module* specifically written to be loaded with the LUA API within [Transformice](http://transformice.com).
 This repository contains the source code from the module.
 
-# Getting the module script
+# Obtaining the module script
 
 ## The requirements for using this module
 - A machine with at least [Python 3.5](https://www.python.org/downloads/) or higher and [Lua 5.3.2](https://www.lua.org/download.html) ([Windows](http://luabinaries.sourceforge.net/download.html)) *(They both have to be in the system path)*
-- A member of the [Transformice Module Team](http://atelier801.com/topic?f=5&t=691642&p=1) *(This module contains functions only available to members 
+- A member of the [Transformice Module Team](http://atelier801.com/topic?f=5&t=691642&p=1) *(This module contains functions only available to members
 - of this team)*
 
 ## How to generate the module script.
