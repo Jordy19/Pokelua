@@ -9,7 +9,7 @@ import os
 
 # Local build config
 config = {
-    "version": "5.0 (Alpha Version)",
+    "version": "5.3.2 (Alpha Version)",
     "nextVersion": ""
 }
 
@@ -25,7 +25,6 @@ class Builder():
         self.loadOrder = [
             "src.lua.lib",
             "src.lua.database",
-            "src.lua.console",
             "src.lua.misc",
             "src.lua.init",
             "config",

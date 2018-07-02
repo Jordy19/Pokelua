@@ -1,4 +1,4 @@
---[[ 
+--[[
     The Pokelua project 2015/2017
     Authors: Jordynl, Bolodefchoco
 ]]
@@ -25,7 +25,8 @@ eventTextAreaCallback = function(i,playerName,c)
 		elseif p[2] == "explore" then
 			eventPopupAnswer(0,playerName,"")
 		elseif p[2] == "transform" then
-			eventChatCommand(playerName,p[3])
+			print("IT DIED HERE")
+			-- eventChatCommand(playerName,p[3])
 		end
 	end
 	if p[1] == "explore" then
@@ -33,7 +34,13 @@ eventTextAreaCallback = function(i,playerName,c)
 			eventChatCommand(playerName, "random")
 		elseif p[2] == "mouse" then
 			eventKeyboard(playerName, 46, true, tfm.get.room.playerList[playerName].x, tfm.get.room.playerList[playerName].y)
-			ui.removeTextArea(06, name)
+			ui.removeTextArea(00, name)
+		elseif p[2] == "hide" then
+			ui.removeTextArea(00, name)
+			ui.removeTextArea(01, name)
+			ui.removeTextArea(02, name)
+			ui.removeTextArea(03, name)
+			ui.removeTextArea(04, name)
 		end
 	end
 end

@@ -1,6 +1,6 @@
---[[ 
+--[[
     The Pokelua project 2015/2017
-    Authors: Jordynl  
+    Authors: Jordynl
 ]]
 
 db.commands.align = {
@@ -17,7 +17,7 @@ db.commands.align = {
 		        align.y = args[3]
 		    end
 		    tfm.exec.chatMessage(string.format("<ROSE>[~Align] <BL>(<J>%s<BL>) <VP>X:<BL> %s <VP>Y:<BL> %s", db.players[name].basePokemon, align.x, align.y), name)
-		    object.spawn(name, db.players[name].basePokemon, align.x, align.y) 
+		    object.spawn(name, db.players[name].basePokemon, align.x, align.y)
     	end
-    end    
+    end
 }

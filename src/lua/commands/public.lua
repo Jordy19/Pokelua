@@ -1,6 +1,6 @@
---[[ 
+--[[
     The Pokelua project 2015/2017
-    Authors: Jordynl  
+    Authors: Jordynl
 ]]
 
 -- db.commands.help = {
@@ -38,7 +38,7 @@
 --         for k,v in pairsByKeys(buttons) do
 --             tfm.exec.chatMessage(string.format("<V>%s <n>=><pt> %s", k, v), name)
 --         end
---     end    
+--     end
 -- }
 
 db.commands.random = {
@@ -80,36 +80,8 @@ db.commands.me = {
     end
 }
 
-db.commands.poke = {
-    "public",
-    function (name, args)
-        if args[2] then
-            local possibleObject = firstToUpper(args[2])
-            if db.objects[possibleObject] then
-                object.spawn(name, possibleObject)
-            end
-        else
-            tfm.exec.chatMessage("Type a pokemon name?", name)
-        end
-    end
-}
-
-db.commands.f = {
-    "public",
-    function (name, args)
-        if args[2] then
-            local possibleObject = firstToUpper(args[2])
-            if db.fanart[possibleObject] then
-                object.spawn(name, possibleObject)
-            end
-        else
-            tfm.exec.chatMessage("Type a pokemon name?", name)
-        end
-    end
-}
-
 db.commands.afk = {
-    "public", 
+    "public",
     function(name, args)
         if db.players[name].afk == false then
             if db.players[name].basePokemon then
@@ -144,7 +116,7 @@ db.commands.credits = {
 
 db.commands.fly = {
     "public",
-    function(name, args) 
+    function(name, args)
         if db.players[name].fly == true then
             tfm.exec.chatMessage("[Effect] Fly mode disabled.", name)
             db.players[name].fly = false
@@ -186,7 +158,21 @@ db.commands.shinies = {
                     table.insert(shinies, pkmn)
                 end
             end
-        end 
+        end
         tfm.exec.chatMessage(table.concat(shinies, "[color=#009D9D],[/color] "), name)
     end
 }
+
+  db.commands.mega = {
+      "public",
+      function(name, args)
+          if db.players[name].basePokemon then
+              megaName = string.format("Mega_%s", db.players[name].basePokemon:lower())
+              if db.objects[megaName] then
+                  tfm.exec.chatMessage(string.format("<VP> %s is mega-evolved!", db.players[name].basePokemon), name)
+                  db.players[name].basePokemon = megaName
+                  object.spawn(name, db.players[name].basePokemon)
+              end
+          end
+      end
+  }

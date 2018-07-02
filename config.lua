@@ -1,5 +1,5 @@
---[[ 
-    The Pokelua project 
+--[[
+    The Pokelua project
     Jordynl - 2015/2017
 ]]
 
@@ -9,12 +9,12 @@ moduleConfig = {
     -- Warning: Do not enable in a live enviorement.
     -- Default value: false
     debug = false,
-    
+
     -- # Auto Room Admins
     -- Usernames that are found in the list bellow will be automatically assigned as Room Admins even when their name isn't part of the room name.
     -- Warning: Do not add random players in the list bellow.
     -- Default value: {} (blank)
-    moduleDevs = {Jordynl=true},
+    moduleDevs = {["Jordy#0010"]=true},
 
     -- # Room Symbols
     -- The symbols used to split/serperate playernamnes from a room name.
@@ -35,14 +35,14 @@ moduleConfig = {
     -- By default shiny pokemons are a 0 of the 1 chance to get IF the pokemon contains shiny sprites.
     -- Warning: Don't set this to 0.
     -- Default value: 5
-    shinyEncounter = 5,
+    shinyEncounter = 450,
 
     -- # Commands disable per game-mode
     -- Commands can be disabled per game-mode to avoid them being used for unfair advantage.
     -- Default prefix: "Command", "game-mode"
     disabledCommands = {
         survivor = {fly=false,map=false},
-        racing = {fly=false,map=false} 
+        racing = {fly=false,map=false}
     }
 
 }
