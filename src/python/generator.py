@@ -37,7 +37,7 @@ def moduleFile(path, fileTree, fileOrder, srcPath, config):
         filePath = "%s\%s.lua" % (srcPath, file.replace(".", "\\"))
         new_file = parseFile(filePath)
         new_file = new_file.replace('&version&', config["version"])
-        new_file = new_file.replace('&uptime&',  time.strftime("%a %b %d %H:%M:%S %Y (UTC+1)"))
+        new_file = new_file.replace('&uptime&',  time.strftime("%a.%b.%d"))
         f.write(new_file)
     f.write("\ninit()")
     f.close()
@@ -52,6 +52,7 @@ def listFile(path):
         for file in files:
             filePath = "{}\{}".format(listPath, file)
             f = parseFile(filePath)
+            #listF.write(f.rstrip("\n").replace(" ", "").replace("\n", ""))
             listF.write(f)
     listF.close()
 

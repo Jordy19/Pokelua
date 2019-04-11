@@ -38,8 +38,8 @@ eventNewPlayer = function(name)
     for i,key in ipairs({0,1,2,3}) do
         tfm.exec.bindKeyboard(name,key,true,true)
     end
-    ui.addTextArea(00, "<p align='center'><j>PokeLua • <font size='8'><bl>(<n>Version: <v>&version& <n>Last update: <v>&uptime&<bl>)</font><font size='11'> <j>• <vp>!pikachu</font> <j>• <a href='event:explore.random'><font size='8'><bl>[<v>Random Pokémon<bl>]</font></a></p>", name, 5, 24, 790, 17, 0x301A0C , 0x684422 , 0.7, true)
-    pData(name, 'introImg', tfm.exec.addImage("1641eb32011.png", "&1", 250, 100, name))
+    ui.addTextArea(00, "<p align='center'><j>PokeLua • <font size='9'><bl>(<n>Version: <v>&version&<bl>)</font><font size='11'> <j>• <vp>!pikachu</font> <j>• <a href='event:explore.random'><font size='9'><bl>[<v>Random Pokémon<bl>]</font></a></p>", name, 5, 24, 790, 17, 0x301A0C , 0x684422 , 0.7, true)
+    pData(name, 'introImg', tfm.exec.addImage("165d4a7418a.png", "&1", 250, 130, name))
     pData(name, 'legalImg', tfm.exec.addImage("1641ec85a97.png", "&1", 10, 370, name))
     if inTribeHouse() then
         admin.login(name)
@@ -59,13 +59,11 @@ eventNewPlayer = function(name)
         tfm.exec.chatMessage("<font color='#2E72CB'>http://atelier801.com/topic?f=6&t=838708&p=104#m2066</font>", name)
         tfm.exec.chatMessage(" ", name)
     end
-    -- system.newTimer(function() core.introduce(name) end,2500,false)
 end
 
 core.introduce = function(name)
     tfm.exec.removeImage(pData(name, 'introImg'))
     tfm.exec.removeImage(pData(name, 'legalImg'))
-    -- tfm.exec.removeImage(db.players[name].waitImg)
     for i,key in ipairs({32,81,80, 82, 46, 77, 104, 98, 100, 102, 101,72, 71, 74}) do
         tfm.exec.bindKeyboard(name,key,true,true)
     end

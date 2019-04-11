@@ -1,111 +1,1734 @@
-db.objects.Turtwig={db={left={normal="1507bbd6165",shiny="",0,0},right={normal="1507bbd7ef2",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"TinyLeaf",14},weakness={5,9,16},height="0.4",weight=10.2,skill="Overgrow",region="sinnoh"}}
-db.objects.Grotle={db={left={normal="1507bbd9c8a",shiny="",0,0},right={normal="1507bbdba57",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Grove",14},weakness={5,9,16},height="1.1",weight=97,skill="Overgrow",region="sinnoh"}}
-db.objects.Torterra={db={left={normal="1507bbdd839",shiny="",0,0},right={normal="1507bbdf699",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Continent",{14,6}},weakness={5,9,16},height="2.2",weight=310,skill="Overgrow",region="sinnoh"}}
-db.objects.Chimchar={db={left={normal="1507bbe13ed",shiny="",0,0},right={normal="1507bbe3522",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Chimp",4},weakness={5,9,16},height="0.5",weight=6.2,skill="Blaze",region="sinnoh"}}
-db.objects.Monferno={db={left={normal="1507bbe518d",shiny="",0,0},right={normal="1507bbe7175",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Playful",{4,12}},weakness={5,9,16},height="0.9",weight=22,skill="Blaze",region="sinnoh"}}
-db.objects.Infernape={db={left={normal="1507bbe8fe3",shiny="",0,0},right={normal="1507bbeae51",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Flame",{4,12}},weakness={5,9,16},height="1.2",weight=55,skill="Blaze",region="sinnoh"}}
-db.objects.Piplup={db={left={normal="1507bbecd03",shiny="",0,0},right={normal="1507bbeea65",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Penguin",18},weakness={5,9,16},height="0.4",weight=5.2,skill="Torrent",region="sinnoh"}}
-db.objects.Prinplup={db={left={normal="1507bbf08ea",shiny="",0,0},right={normal="1507bbf26c8",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Penguin",18},weakness={5,9,16},height="0.8",weight=23,skill="Torrent",region="sinnoh"}}
-db.objects.Empoleon={db={left={normal="1507bbf43bc",shiny="",0,0},right={normal="1507bbf62c9",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Emperor",{18,9}},weakness={5,9,16},height="1.7",weight=84.5,skill="Torrent",region="sinnoh"}}
-db.objects.Starly={db={left={normal="1507bbf8047",shiny="",0,0},right={normal="1507bbf9ce9",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Starling",{7,13}},weakness={5,9,16},height="0.3",weight=2,skill="KeenEye",region="sinnoh"}}
-db.objects.Staravia={db={left={normal="1507bbfbb99",shiny="",0,0},right={normal="1507bbfdc21",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Starling",{7,13}},weakness={5,9,16},height="0.6",weight=15.5,skill="Intimidate",region="sinnoh"}}
-db.objects.Staraptor={db={left={normal="1507bbffb5d",shiny="",0,0},right={normal="1507bc01db1",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Predator",{7,13}},weakness={5,9,16},height="1.2",weight=24.9,skill="Intimidate",region="sinnoh"}}
-db.objects.Bidoof={db={left={normal="1507bc03bf4",shiny="",0,0},right={normal="1507bc056d0",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"PlumpMouse",7},weakness={5,9,16},height="0.5",weight=20,skill={"Simple","Unaware"},region="sinnoh"}}
-db.objects.Bibarel={db={left={normal="1507bc072ce",shiny="",0,0},right={normal="1507bc08d82",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Beaver",{7,18}},weakness={5,9,16},height="1",weight=31.5,skill={"Simple","Unaware"},region="sinnoh"}}
-db.objects.Kricketot={db={left={normal="1507bc0a878",shiny="",0,0},right={normal="15453ae7a86",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Cricket",1},weakness={5,9,16},height="0.3",weight=2.2,skill="ShedSkin",region="sinnoh"}}
-db.objects.Kricketune={db={left={normal="1507beab9d2",shiny="",0,0},right={normal="1507bc0eb0c",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Cricket",1},weakness={5,9,16},height="1",weight=25.5,skill="Swarm",region="sinnoh"}}
-db.objects.Shinx={db={left={normal="1507bc105ca",shiny="15cf9ddd2df",0,0},right={normal="1507bc12107",shiny="15cf9ddf0a5",0,0},gender=2,evolution={2,{439,122}},types={"Flash",11},weakness={5,9,16},height="0.5",weight=9.5,skill={"Intimidate","Rivalry"},region="sinnoh"}}
-db.objects.Luxio={db={left={normal="1507bc13d22",shiny="15cf9df3574",0,0},right={normal="1507bc15880",shiny="15cf9df5d8f",0,0},gender=2,evolution={2,{439,122}},types={"Spark",11},weakness={5,9,16},height="0.9",weight=30.5,skill={"Intimidate","Rivalry"},region="sinnoh"}}
-db.objects.Luxray={db={left={normal="1507bc1748a",shiny="15cf9dfd3c1",0,0},right={normal="1507bc19009",shiny="15cf9dfee1b",0,0},gender=2,evolution={2,{439,122}},types={"GleamEyes",11},weakness={5,9,16},height="1.4",weight=42,skill={"Intimidate","Rivalry"},region="sinnoh"}}
-db.objects.Budew={db={left={normal="1507bc1aaea",shiny="15d046af9f8",0,0},right={normal="1507bc1c6fb",shiny="15d046b0fde",0,0},gender=2,evolution={2,{439,122}},types={"Bud",{14,16}},weakness={5,9,16},height="0.2",weight=1.2,skill={"PoisonPoint","NaturalCure"},region="sinnoh"}}
-db.objects.Roserade={db={left={normal="1507bc1ebdf",shiny="15d04703948",0,0},right={normal="1507bc205f4",shiny="15d6c18ee63",0,0},gender=2,evolution={2,{439,122}},types={"Bouquet",{14,16}},weakness={5,9,16},height="0.9",weight=14.5,skill={"PoisonPoint","NaturalCure"},region="sinnoh"}}
-db.objects.Cranidos={db={left={normal="1507bc22054",shiny="",0,0},right={normal="1507bc23a4a",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"HeadButt",17},weakness={5,9,16},height="0.9",weight=31.5,skill="MoldBreaker",region="sinnoh"}}
-db.objects.Rampardos={db={left={normal="1507bc2558b",shiny="",0,0},right={normal="1507bc26f49",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"HeadButt",17},weakness={5,9,16},height="1.6",weight=102.5,skill="MoldBreaker",region="sinnoh"}}
-db.objects.Shieldon={db={left={normal="1507bc289d1",shiny="",0,0},right={normal="1507bc2a386",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Shield",{17,9}},weakness={5,9,16},height="0.5",weight=57,skill="Sturdy",region="sinnoh"}}
-db.objects.Bastiodon={db={left={normal="1507bc2bd9e",shiny="",0,0},right={normal="1507bc2d775",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Shield",{17,9}},weakness={5,9,16},height="1.3",weight=149.5,skill="Sturdy",region="sinnoh"}}
-db.objects.BurmyGrass={db={left={normal="1507bc2f1b3",shiny="",0,0},right={normal="1507bc30b7c",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Bagworm",1},weakness={5,9,16},height="0.2",weight=3.4,skill="ShedSkin",region="sinnoh"}}
-db.objects.BurmySand={db={left={normal="15aaab0e7bd",shiny="",0,0},right={normal="15aaab10139",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Bagworm",1},weakness={5,9,16},height="0.2",weight=3.4,skill="ShedSkin",region="sinnoh"}}
-db.objects.BurmyTrash={db={left={normal="15aaab11811",shiny="",0,0},right={normal="15aaab12da1",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Bagworm",1},weakness={5,9,16},height="0.2",weight=3.4,skill="ShedSkin",region="sinnoh"}}
-db.objects.WormadamGrass={db={left={normal="15adb9c1622",shiny="",0,0},right={normal="15adb9c2ea5",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"Bagworm",{1,14}},weakness={5,9,16},height="0.5",weight=6.5,skill="Anticipation",region="sinnoh"}}
-db.objects.WormadamSand={db={left={normal="15adb9be6b6",shiny="",0,0},right={normal="15adb9bfca9",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"Bagworm",{1,14}},weakness={5,9,16},height="0.5",weight=6.5,skill="Anticipation",region="sinnoh"}}
-db.objects.WormadamTrash={db={left={normal="15adb9c5820",shiny="",0,0},right={normal="15adb9cb22f",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"Bagworm",{1,14}},weakness={5,9,16},height="0.5",weight=6.5,skill="Anticipation",region="sinnoh"}}
-db.objects.Mothim={db={left={normal="1507bc35a2e",shiny="",0,0},right={normal="1507bc373b4",shiny="",0,0},gender=0,evolution={2,{439,122}},types={"Moth",{1,13}},weakness={5,9,16},height="0.9",weight=23.3,skill="Swarm",region="sinnoh"}}
-db.objects.Combee={db={left={normal="1507bc38d51",shiny="",0,0},right={normal="1507bc3a72f",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"TinyBee",{1,13}},weakness={5,9,16},height="0.3",weight=5.5,skill="HoneyGather",region="sinnoh"}}
-db.objects.Vespiquen={db={left={normal="1507bc3c1b9",shiny="",0,0},right={normal="1507bc3db47",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"Beehive",{1,13}},weakness={5,9,16},height="1.2",weight=38.5,skill="Pressure",region="sinnoh"}}
-db.objects.Pachirisu={db={left={normal="1507bc3f5dd",shiny="15d0469941f",0,0},right={normal="1507bc41075",shiny="15d0469b2a3",0,0},gender=2,evolution={2,{439,122}},types={"EleSquirrel",11},weakness={5,9,16},height="0.4",weight=3.9,skill={"RunAway","Pickup"},region="sinnoh"}}
-db.objects.Buizel={db={left={normal="1507bc42ab2",shiny="15cf5504337",0,0},right={normal="1507bc444aa",shiny="15cf55059fd",0,0},gender=2,evolution={2,{439,122}},types={"Seaweasel",18},weakness={5,9,16},height="0.7",weight=29.5,skill="SwiftSwim",region="sinnoh"}}
-db.objects.Floatzel={db={left={normal="1507bc45fa8",shiny="15cf551fbe7",0,0},right={normal="1507bc47980",shiny="15cf55216e1",0,0},gender=2,evolution={2,{439,122}},types={"SeaWeasel",18},weakness={5,9,16},height="1.1",weight=33.5,skill="SwiftSwim",region="sinnoh"}}
-db.objects.Cherubi={db={left={normal="1507beadac7",shiny="",0,0},right={normal="1507bc498e8",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Cherry",14},weakness={5,9,16},height="0.4",weight=3.3,skill="Chlorophyll",region="sinnoh"}}
-db.objects.Cherrim={db={left={normal="1507bc4b3be",shiny="",0,0},right={normal="1507bc4cdac",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Blossom",14},weakness={5,9,16},height="0.5",weight=9.3,skill="FlowerGift",region="sinnoh"}}
-db.objects.Shellos={db={left={normal="1507bc4e99a",shiny="",0,3},right={normal="1507bc5049c",shiny="",0,3},gender=2,evolution={2,{439,122}},types={"SeaSlug",18},weakness={5,9,16},height="0.3",weight=6.3,skill={"StickyHold","StormDrain"},region="sinnoh"}}
-db.objects.Gastrodon={db={left={normal="1507bc51f18",shiny="",0,0},right={normal="1507bc53946",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"SeaSlug",{18,6}},weakness={5,9,16},height="0.9",weight=29.9,skill={"StickyHold,StormDrain"},region="sinnoh"}}
-db.objects.Ambipom={db={left={normal="1507bc552e7",shiny="",0,-14},right={normal="1507bc56c6c",shiny="",0,-14},gender=2,evolution={2,{439,122}},types={"LongTail",7},weakness={5,9,16},height="1.2",weight=20.3,skill={"Pickup","Technician"},region="sinnoh"}}
-db.objects.Drifloon={db={left={normal="1507beaf764",shiny="",0,0},right={normal="1507beb160d",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Balloon",{5,13}},weakness={5,9,16},height="0.4",weight=1.2,skill={"Aftermath","Unburden"},region="sinnoh"}}
-db.objects.Drifblim={db={left={normal="1507bc59b8b",shiny="",0,0},right={normal="1507bc5b6ec",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Blimp",{5,13}},weakness={5,9,16},height="1.2",weight=15,skill={"Aftermath","Unburden"},region="sinnoh"}}
-db.objects.Buneary={db={left={normal="1507bc5d20f",shiny="15cf9e1c109",0,-6},right={normal="1507bc5ed6a",shiny="15cf9e1da21",0,-6},gender=2,evolution={2,{439,122}},types={"Rabbit",7},weakness={5,9,16},height="0.4",weight=5.5,skill={"RunAway","Klutz"},region="sinnoh"}}
-db.objects.Lopunny={db={left={normal="1507bc6089c",shiny="15d5716d453",0,-10},right={normal="1507bc62345",shiny="15d5716bce3",0,-10},gender=2,evolution={2,{439,122}},types={"Rabbit",7},weakness={5,9,16},height="1.2",weight=33.3,skill={"CuteCharm","Klutz"},region="sinnoh"}}
-db.objects.Mismagius={db={left={normal="1507bc63d04",shiny="",0,0},right={normal="1507bc658cd",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Magical",5},weakness={5,9,16},height="0.9",weight=4.4,skill="Levitate",region="sinnoh"}}
-db.objects.Honchkrow={db={left={normal="1507bc6754d",shiny="",0,0},right={normal="1507beb34d9",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"BigBoss",{10,13}},weakness={5,9,16},height="0.9",weight=27.3,skill={"Insomnia,SuperLuck"},region="sinnoh"}}
-db.objects.Glameow={db={left={normal="1507bc6968a",shiny="",0,0},right={normal="1507bc6b077",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Catty",7},weakness={5,9,16},height="0.5",weight=3.9,skill={"Limber","OwnTempo"},region="sinnoh"}}
-db.objects.Purugly={db={left={normal="1507bc6cb47",shiny="",0,0},right={normal="1507bc6e55d",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"TigerCat",7},weakness={5,9,16},height="1",weight=43.8,skill={"OwnTempo,ThickFat"},region="sinnoh"}}
-db.objects.Chingling={db={left={normal="1507bc7001f",shiny="",0,0},right={normal="1507bc71a98",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Bell",8},weakness={5,9,16},height="0.2",weight=0.6,skill="Levitate",region="sinnoh"}}
-db.objects.Stunky={db={left={normal="1507bc7356d",shiny="",0,0},right={normal="1507bc75062",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Skunk",{16,10}},weakness={5,9,16},height="0.4",weight=19.2,skill={"Stench","Aftermath"},region="sinnoh"}}
-db.objects.Skuntank={db={left={normal="1507bc76ae2",shiny="",0,0},right={normal="1507bc78540",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Skunk",{16,10}},weakness={5,9,16},height="1",weight=38,skill={"Stench","Aftermath"},region="sinnoh"}}
-db.objects.Bronzor={db={left={normal="1507bc7a1cf",shiny="",0,0},right={normal="1507bc7bcde",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Bronze",{9,8}},weakness={5,9,16},height="0.5",weight=60.5,skill={"Levitate","Heatproof"},region="sinnoh"}}
-db.objects.Bronzong={db={left={normal="1507bc7d918",shiny="",0,0},right={normal="1507bc7f3ea",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"BronzeBell",{9,8}},weakness={5,9,16},height="1.3",weight=187,skill={"Levitate","Heatproof"},region="sinnoh"}}
-db.objects.Bonsly={db={left={normal="1507bc80e68",shiny="",0,0},right={normal="1507bc8292a",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Bonsai",17},weakness={5,9,16},height="0.5",weight=15,skill={"RockHead","Sturdy"},region="sinnoh"}}
-db.objects.Mimejr={db={left={normal="1507bc8443c",shiny="",0,0},right={normal="1507bc85eeb",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Mime",8},weakness={5,9,16},height="0.6",weight=13,skill={"Soundproof","Filter"},region="sinnoh"}}
-db.objects.Happiny={db={left={normal="1507bc879c9",shiny="",0,0},right={normal="1507bc894c9",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"Playhouse",7},weakness={5,9,16},height="0.6",weight=24.4,skill={"NaturalCure","SereneGrace"},region="sinnoh"}}
-db.objects.Chatot={db={left={normal="1507bc8b074",shiny="",0,0},right={normal="1507bc8ca0a",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"MusicNote",{7,13}},weakness={5,9,16},height="0.5",weight=1.9,skill={"KeenEye","TangledFeet"},region="sinnoh"}}
-db.objects.Spiritomb={db={left={normal="1507bc8e427",shiny="",0,0},right={normal="1507bc8fe6e",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Forbidden",{5,10}},weakness={5,9,16},height="1",weight=108,skill="Pressure",region="sinnoh"}}
-db.objects.Gible={db={left={normal="1507bc91931",shiny="15d0435fe73",0,0},right={normal="1507bc932b8",shiny="15d043616c0",0,0},gender=2,evolution={2,{439,122}},types={"LandShark",{2,6}},weakness={5,9,16},height="0.7",weight=20.5,skill="SandVeil",region="sinnoh"}}
-db.objects.Gabite={db={left={normal="1507bc94dab",shiny="15d04362d60",0,0},right={normal="1507bc9686c",shiny="15d043643c5",0,0},gender=2,evolution={2,{439,122}},types={"Cave",{2,6}},weakness={5,9,16},height="1.4",weight=56,skill="SandVeil",region="sinnoh"}}
-db.objects.Garchomp={db={left={normal="1507bc98358",shiny="15d04366369",0,0},right={normal="1507bc99e02",shiny="15d04367a3e",0,0},gender=2,evolution={2,{439,122}},types={"Mach",{2,6}},weakness={5,9,16},height="1.9",weight=95,skill="SandVeil",region="sinnoh"}}
-db.objects.Munchlax={db={left={normal="1507bc9b8bf",shiny="",0,0},right={normal="1507bc9d33e",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"BigEater",7},weakness={5,9,16},height="0.6",weight=105,skill={"Pickup","ThickFat"},region="sinnoh"}}
-db.objects.Riolu={db={left={normal="1507bc9ecc9",shiny="15cf57fb3aa",0,0},right={normal="1507bca0746",shiny="15cf57fcec9",0,0},gender=2,evolution={2,{439,122}},types={"Emanation",12},weakness={5,9,16},height="0.7",weight=20.2,skill={"InnerFocus","Steadfast"},region="sinnoh"}}
-db.objects.Lucario={db={left={normal="1507bca2275",shiny="15cf581370f",0,-10},right={normal="1507bca3d7b",shiny="15cf58156d1",0,-10},gender=2,evolution={2,{439,122}},types={"Aura",{12,9}},weakness={5,9,16},height="1.2",weight=54,skill={"InnerFocus","Steadfast"},region="sinnoh"}}
-db.objects.Hippopotas={db={left={normal="15453b0eb1a",shiny="",0,0},right={normal="1507bca6fa2",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Hippo",6},weakness={5,9,16},height="0.8",weight=49.5,skill="SandStream",region="sinnoh"}}
-db.objects.Hippowdon={db={left={normal="1507bca8a84",shiny="",0,0},right={normal="1507bcaa4c8",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Heavyweight",6},weakness={5,9,16},height="2",weight=300,skill="SandStream",region="sinnoh"}}
-db.objects.Skorupi={db={left={normal="1507bcabda2",shiny="",0,0},right={normal="1507bcad818",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Scorpion",{16,1}},weakness={5,9,16},height="0.8",weight=12,skill={"Sniper","BattleArmor"},region="sinnoh"}}
-db.objects.Drapion={db={left={normal="1507bcaf32c",shiny="",0,0},right={normal="1507bcb0da4",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"OgreScorpion",{16,10}},weakness={5,9,16},height="1.3",weight=61.5,skill={"Sniper","BattleArmor"},region="sinnoh"}}
-db.objects.Croagunk={db={left={normal="1507bcb27fc",shiny="",0,0},right={normal="1507bcb4288",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"ToxicMouth",{16,12}},weakness={5,9,16},height="0.7",weight=23,skill={"DrySkin","Anticipation"},region="sinnoh"}}
-db.objects.Toxicroak={db={left={normal="1507bcb5d04",shiny="",0,0},right={normal="1507bcb7860",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"ToxicMouth",{16,12}},weakness={5,9,16},height="1.3",weight=44.4,skill={"DrySkin,Anticipation"},region="sinnoh"}}
-db.objects.Carnivine={db={left={normal="1507bcb93e9",shiny="",0,0},right={normal="1507bcbae5b",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"BugCatcher",14},weakness={5,9,16},height="1.4",weight=27,skill={"Levitate"},region="sinnoh"}}
-db.objects.Finneon={db={left={normal="1507bcbc906",shiny="",0,0},right={normal="1507bcbe383",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"WingFish",18},weakness={5,9,16},height="0.4",weight=7,skill={"SwiftSwim","StormDrain"},region="sinnoh"}}
-db.objects.Lumineon={db={left={normal="1507bcbfe8e",shiny="",0,0},right={normal="1507bcc1982",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Neon",18},weakness={5,9,16},height="1.2",weight=24,skill={"SwiftSwim","StormDrain"},region="sinnoh"}}
-db.objects.Mantyke={db={left={normal="1507bcc3447",shiny="",0,0},right={normal="1507bcc4eb1",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Kite",{18,13}},weakness={5,9,16},height="1",weight=65,skill={"WaterAbsorb","SwiftSwim"},region="sinnoh"}}
-db.objects.Snover={db={left={normal="1507bcc69a3",shiny="",0,0},right={normal="1507bcc84c0",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"FrostTree",{14,15}},weakness={5,9,16},height="1",weight=50.5,skill="SnowWarning",region="sinnoh"}}
-db.objects.Abomasnow={db={left={normal="1507bcca04a",shiny="",0,0},right={normal="1507bccbafe",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"FrostTree",{14,15}},weakness={5,9,16},height="2.2",weight=135.5,skill="SnowWarning",region="sinnoh"}}
-db.objects.Weavile={db={left={normal="1507bccd69d",shiny="",0,0},right={normal="1507bccf1fb",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"SharpClaw",{10,15}},weakness={5,9,16},height="1.1",weight=34,skill="Pressure",region="sinnoh"}}
-db.objects.Magnezone={db={left={normal="1507bcd0be8",shiny="",0,0},right={normal="1507bcd2568",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"MagnetArea",{11,9}},weakness={5,9,16},height="1.2",weight=180,skill={"Sturdy","MagnetPull"},region="sinnoh"}}
-db.objects.Lickilicky={db={left={normal="1507bcd3b5a",shiny="",0,0},right={normal="1507bcd5581",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Licking",7},weakness={5,9,16},height="1.7",weight=140,skill={"Oblivious","OwnTempo"},region="sinnoh"}}
-db.objects.Rhyperior={db={left={normal="1507bcd7277",shiny="",0,0},right={normal="1507bcd8d46",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Drill",{6,17}},weakness={5,9,16},height="2.4",weight=282.8,skill={"LightningRod","SolidRock"},region="sinnoh"}}
-db.objects.Tangrowth={db={left={normal="1507bcda7dd",shiny="",0,0},right={normal="1507bcdc2a4",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Vine",14},weakness={5,9,16},height="2",weight=128.6,skill={"Chlorophyll","LeafGuard"},region="sinnoh"}}
-db.objects.Electivire={db={left={normal="1507bcddd0b",shiny="",0,0},right={normal="1507bcdf943",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Thunderbolt",11},weakness={5,9,16},height="1.8",weight=138.6,skill="MotorDrive",region="sinnoh"}}
-db.objects.Magmortar={db={left={normal="1507bce149d",shiny="",0,0},right={normal="1507bce2f42",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Blast",4},weakness={5,9,16},height="1.6",weight=68,skill="FlameBody",region="sinnoh"}}
-db.objects.Togekiss={db={left={normal="1507bce4a73",shiny="",0,0},right={normal="1507bce6230",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Jubilee",{7,13}},weakness={5,9,16},height="1.5",weight=38,skill={"SereneGrace","Hustle"},region="sinnoh"}}
-db.objects.Yanmega={db={left={normal="1507bce7cdf",shiny="",0,-10},right={normal="1507bce96f9",shiny="",0,-10},gender=2,evolution={2,{439,122}},types={"OgreDarner",{1,13}},weakness={5,9,16},height="1.9",weight=51.5,skill={"TintedLens","SpeedBoost"},region="sinnoh"}}
-db.objects.Leafeon={db={left={normal="1507bceb1c9",shiny="15cf5618333",0,0},right={normal="1507bcecd82",shiny="15cf561a6f3",0,0},gender=2,evolution={2,{439,122}},types={"Verdant",14},weakness={5,9,16},height="1",weight=25.5,skill="LeafGuard",region="sinnoh"}}
-db.objects.Glaceon={db={left={normal="1507bcee886",shiny="15cf560877f",0,0},right={normal="1507bcf02bd",shiny="15cf560a036",0,0},gender=2,evolution={2,{439,122}},types={"FreshSnow",15},weakness={5,9,16},height="0.8",weight=25.9,skill="SnowCloak",region="sinnoh"}}
-db.objects.Gliscor={db={left={normal="1507bcf1d04",shiny="",0,0},right={normal="1507bcf3859",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"FangScorpion",{6,13}},weakness={5,9,16},height="2",weight=42.5,skill={"SandVeil","HyperCutter"},region="sinnoh"}}
-db.objects.Mamoswine={db={left={normal="1507bcf5355",shiny="",0,0},right={normal="1507bcf6e30",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"TwinTusk",{15,6}},weakness={5,9,16},height="2.5",weight=291,skill={"Oblivious","SnowCloak"},region="sinnoh"}}
-db.objects.Porygonz={db={left={normal="1507bcf88db",shiny="",0,0},right={normal="1507beb52ed",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Virtual",7},weakness={5,9,16},height="0.9",weight=34,skill={"Adaptability","Download"},region="sinnoh"}}
-db.objects.Gallade={db={left={normal="1507beb6a97",shiny="15d5716fce4",0,0},right={normal="1507bcfb590",shiny="15d5716e889",0,0},gender=1,evolution={2,{439,122}},types={"Blade",{8,12}},weakness={5,9,16},height="1.6",weight=52,skill="Steadfast",region="sinnoh"}}
-db.objects.Probopass={db={left={normal="1507bcfd079",shiny="",0,0},right={normal="1507bcfeb71",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Compass",{17,9}},weakness={5,9,16},height="1.4",weight=340,skill={"Sturdy","MagnetPull"},region="sinnoh"}}
-db.objects.Dusknoir={db={left={normal="157d3b759e0",shiny="",0,0},right={normal="157d3b76bc5",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Gripper",5},weakness={5,9,16},height="2.2",weight=106.6,skill="Pressure",region="sinnoh"}}
-db.objects.Froslass={db={left={normal="1507bd03c71",shiny="",0,0},right={normal="1507bd05738",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"SnowLand",{15,5}},weakness={5,9,16},height="1.3",weight=26.6,skill="SnowCloak",region="sinnoh"}}
-db.objects.Rotom={db={left={normal="1507bd07289",shiny="",0,0},right={normal="1507bd08de4",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Plasma",{11,5}},weakness={5,9,16},height="0.3",weight=0.3,skill="Levitate",region="sinnoh"}}
-db.objects.Uxie={db={left={normal="1507bd0a8de",shiny="",0,0},right={normal="1507bd0c425",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Knowledge",8},weakness={5,9,16},height="0.3",weight=0.3,skill="Levitate",region="sinnoh"}}
-db.objects.Mesprit={db={left={normal="1507bd0df9e",shiny="",0,0},right={normal="1507bd0fb82",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Emotion",8},weakness={5,9,16},height="0.3",weight=0.3,skill="Levitate",region="sinnoh"}}
-db.objects.Azelf={db={left={normal="1507bd11591",shiny="",0,0},right={normal="1507bd1319a",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Willpower",8},weakness={5,9,16},height="0.3",weight=0.3,skill="Levitate",region="sinnoh"}}
-db.objects.Dialga={db={left={normal="1507bd14e17",shiny="",0,0},right={normal="1507bd16970",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Temporal",{9,2}},weakness={5,9,16},height="5.4",weight=683,skill="Pressure",region="sinnoh"}}
-db.objects.Palkia={db={left={normal="1507bd184d2",shiny="",0,0},right={normal="1507bd19f67",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Spatial",{18,2}},weakness={5,9,16},height="4.2",weight=336,skill="Pressure",region="sinnoh"}}
-db.objects.Heatran={db={left={normal="1507bd1bb21",shiny="",0,0},right={normal="1507bd1d6b4",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"LavaDome",{4,9}},weakness={5,9,16},height="1.7",weight=430,skill="FlashFire",region="sinnoh"}}
-db.objects.Regigigas={db={left={normal="1507bd1f1cb",shiny="15cf9dc4de4",0,-15},right={normal="1507bd20be7",shiny="15cf9dc6ec0",0,-15},gender=3,evolution={2,{439,122}},types={"Colossal",7},weakness={5,9,16},height="3.7",weight=420,skill="SlowStart",region="sinnoh"}}
-db.objects.Giratina={db={left={normal="1507bd22764",shiny="",0,0},right={normal="1507bd242a3",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Renegade",{5,2}},weakness={5,9,16},height="4.5",weight=750,skill="Pressure",region="sinnoh"}}
-db.objects.Cresselia={db={left={normal="1507bd25eb1",shiny="",0,0},right={normal="1507bd279d1",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"Lunar",8},weakness={5,9,16},height="1.5",weight=85.6,skill="Levitate",region="sinnoh"}}
-db.objects.Phione={db={left={normal="1507bd295fb",shiny="",0,0},right={normal="1507bd2b175",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"SeaDrifter",18},weakness={5,9,16},height="0.4",weight=3.1,skill="Hydration",region="sinnoh"}}
-db.objects.Manaphy={db={left={normal="1507bd2cd60",shiny="",0,0},right={normal="1507bd2e99b",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Seafaring",18},weakness={5,9,16},height="0.3",weight=1.4,skill="Hydration",region="sinnoh"}}
-db.objects.Darkrai={db={left={normal="1507bd30517",shiny="",0,0},right={normal="1507bd32052",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Pitch-Black",10},weakness={5,9,16},height="1.5",weight=50.5,skill="BadDreams",region="sinnoh"}}
-db.objects.Shaymin={db={left={normal="1507bd33c0d",shiny="",0,0},right={normal="1507bd35821",shiny="",0,0},gender=3,evolution={2,{439,122}},types={"Gratitude",14},weakness={5,9,16},height="0.2",weight=2.1,skill="NaturalCure",region="sinnoh"}}
-db.objects.Arceus={db={left={normal="1507bd3749f",shiny="",0,-16},right={normal="1507bd3911b",shiny="",0,-16},gender=3,evolution={2,{439,122}},types={"Alpha",7},weakness={5,9,16},height="3.2",weight=320,skill="Multitypes",region="sinnoh"}}
+db.objects.Turtwig={
+    id=387,
+    species="Tiny.Leaf.Pokémon",
+    types={14},
+    region="sinnoh",
+    gender=2,
+    height=0.4,
+    weight=10.2,
+    images={
+        normal={"1507bbd6165","1507bbd7ef2"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Grotle={
+    id=388,
+    species="Grove.Pokémon",
+    types={14},
+    region="sinnoh",
+    gender=2,
+    height=1.1,
+    weight=97.0,
+    images={
+        normal={"1507bbd9c8a","1507bbdba57"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Torterra={
+    id=389,
+    species="Continent.Pokémon",
+    types={14,6},
+    region="sinnoh",
+    gender=2,
+    height=2.2,
+    weight=310.0,
+    images={
+        normal={"1507bbdd839","1507bbdf699"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Chimchar={
+    id=390,
+    species="Chimp.Pokémon",
+    types={4},
+    region="sinnoh",
+    gender=2,
+    height=0.5,
+    weight=6.2,
+    images={
+        normal={"1507bbe13ed","1507bbe3522"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Monferno={
+    id=391,
+    species="Playful.Pokémon",
+    types={4,12},
+    region="sinnoh",
+    gender=2,
+    height=0.9,
+    weight=22.0,
+    images={
+        normal={"1507bbe518d","1507bbe7175"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Infernape={
+    id=392,
+    species="Flame.Pokémon",
+    types={4,12},
+    region="sinnoh",
+    gender=2,
+    height=1.2,
+    weight=55.0,
+    images={
+        normal={"1507bbe8fe3","1507bbeae51"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Piplup={
+    id=393,
+    species="Penguin.Pokémon",
+    types={18},
+    region="sinnoh",
+    gender=2,
+    height=0.4,
+    weight=5.2,
+    images={
+        normal={"1507bbecd03","1507bbeea65"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Prinplup={
+    id=394,
+    species="Penguin.Pokémon",
+    types={18},
+    region="sinnoh",
+    gender=2,
+    height=0.8,
+    weight=23.0,
+    images={
+        normal={"1507bbf08ea","1507bbf26c8"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Empoleon={
+    id=395,
+    species="Emperor.Pokémon",
+    types={18,9},
+    region="sinnoh",
+    gender=2,
+    height=1.7,
+    weight=84.5,
+    images={
+        normal={"1507bbf43bc","1507bbf62c9"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Starly={
+    id=396,
+    species="Starling.Pokémon",
+    types={7,13},
+    region="sinnoh",
+    gender=2,
+    height=0.3,
+    weight=2.0,
+    images={
+        normal={"1507bbfbb99","1507bbfdc21"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Staravia={
+    id=397,
+    species="Starling.Pokémon",
+    types={7,13},
+    region="sinnoh",
+    gender=2,
+    height=0.6,
+    weight=15.5,
+    images={
+        normal={"1507bbfbb99","1507bbfdc21"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Staraptor={
+    id=398,
+    species="Predator.Pokémon",
+    types={7,13},
+    region="sinnoh",
+    gender=2,
+    height=1.2,
+    weight=24.9,
+    images={
+        normal={"1507bbfbb99","1507bbfdc21"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Bidoof={
+    id=399,
+    species="Plump.Mouse.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=0.5,
+    weight=20.0,
+    images={
+        normal={"1507bc03bf4","1507bc056d0"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Bibarel={
+    id=400,
+    species="Beaver.Pokémon",
+    types={7,18},
+    region="sinnoh",
+    gender=2,
+    height=1.0,
+    weight=31.5,
+    images={
+        normal={"1507bc072ce","1507bc08d82"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Kricketot={
+    id=401,
+    species="Cricket.Pokémon",
+    types={1},
+    region="sinnoh",
+    gender=2,
+    height=0.3,
+    weight=2.2,
+    images={
+        normal={"1507bc0a878","15453ae7a86"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Kricketune={
+    id=402,
+    species="Cricket.Pokémon",
+    types={1},
+    region="sinnoh",
+    gender=2,
+    height=1.0,
+    weight=25.5,
+    images={
+        normal={"1507beab9d2","1507bc0eb0c"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Shinx={
+    id=403,
+    species="Flash.Pokémon",
+    types={11},
+    region="sinnoh",
+    gender=2,
+    height=0.5,
+    weight=9.5,
+    images={
+        normal={"1507bc105ca","1507bc12107"},
+        shiny={"15cf9ddd2df","15cf9ddf0a5"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Luxio={
+    id=404,
+    species="Spark.Pokémon",
+    types={11},
+    region="sinnoh",
+    gender=2,
+    height=0.9,
+    weight=30.5,
+    images={
+        normal={"1507bc13d22","1507bc15880"},
+        shiny={"15cf9df3574","15cf9df5d8f"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Luxray={
+    id=405,
+    species="Gleam.Eyes.Pokémon",
+    types={11},
+    region="sinnoh",
+    gender=2,
+    height=1.4,
+    weight=42.0,
+    images={
+        normal={"1507bc1748a","1507bc19009"},
+        shiny={"15cf9dfd3c1","15cf9dfee1b"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Budew={
+    id=406,
+    species="Bud.Pokémon",
+    types={14,16},
+    region="sinnoh",
+    gender=2,
+    height=0.2,
+    weight=1.2,
+    images={
+        normal={"1507bc1aaea","1507bc1c6fb"},
+        shiny={"15d046af9f8","15d046b0fde"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Roserade={
+    id=407,
+    species="Bouquet.Pokémon",
+    types={14,16},
+    region="sinnoh",
+    gender=2,
+    height=0.9,
+    weight=14.5,
+    images={
+        normal={"1507bc1ebdf","1507bc205f4"},
+        shiny={"15d04703948","15d6c18ee63"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Cranidos={
+    id=408,
+    species="Head.Butt.Pokémon",
+    types={17},
+    region="sinnoh",
+    gender=2,
+    height=0.9,
+    weight=31.5,
+    images={
+        normal={"1507bc22054","1507bc23a4a"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Rampardos={
+    id=409,
+    species="Head.Butt.Pokémon",
+    types={17},
+    region="sinnoh",
+    gender=2,
+    height=1.6,
+    weight=102.5,
+    images={
+        normal={"1507bc2558b","1507bc26f49"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Shieldon={
+    id=410,
+    species="Shield.Pokémon",
+    types={17,9},
+    region="sinnoh",
+    gender=2,
+    height=0.5,
+    weight=57.0,
+    images={
+        normal={"1507bc289d1","1507bc2a386"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Bastiodon={
+    id=411,
+    species="Shield.Pokémon",
+    types={17,9},
+    region="sinnoh",
+    gender=2,
+    height=1.3,
+    weight=149.5,
+    images={
+        normal={"1507bc2bd9e",""},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Burmy={ -- grass
+    id=412,
+    species="Bagworm.Pokémon",
+    types={1},
+    region="sinnoh",
+    gender=2,
+    height=0.2,
+    weight=3.4,
+    images={
+        normal={"1507bc2f1b3","1507bc30b7c"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+-- db.objects.BurmyGrass={db={left={normal="1507bc2f1b3",shiny="",0,0},right={normal="1507bc30b7c",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Bagworm",1},weakness={5,9,16},height="0.2",weight=3.4,skill="ShedSkin",region="sinnoh"}}
+-- db.objects.BurmySand={db={left={normal="15aaab0e7bd",shiny="",0,0},right={normal="15aaab10139",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Bagworm",1},weakness={5,9,16},height="0.2",weight=3.4,skill="ShedSkin",region="sinnoh"}}
+-- db.objects.BurmyTrash={db={left={normal="15aaab11811",shiny="",0,0},right={normal="15aaab12da1",shiny="",0,0},gender=2,evolution={2,{439,122}},types={"Bagworm",1},weakness={5,9,16},height="0.2",weight=3.4,skill="ShedSkin",region="sinnoh"}}
+
+db.objects.Wormadam={ -- grass
+    id=413,
+    species="Bagworm.Pokémon",
+    types={1,14},
+    region="sinnoh",
+    gender=1,
+    height=0.5,
+    weight=6.5,
+    images={
+        normal={"15adb9be6b6","15adb9bfca9"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+-- db.objects.WormadamGrass={db={left={normal="15adb9c1622",shiny="",0,0},right={normal="15adb9c2ea5",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"Bagworm",{1,14}},weakness={5,9,16},height="0.5",weight=6.5,skill="Anticipation",region="sinnoh"}}
+-- db.objects.WormadamSand={db={left={normal="15adb9be6b6",shiny="",0,0},right={normal="15adb9bfca9",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"Bagworm",{1,14}},weakness={5,9,16},height="0.5",weight=6.5,skill="Anticipation",region="sinnoh"}}
+-- db.objects.WormadamTrash={db={left={normal="15adb9c5820",shiny="",0,0},right={normal="15adb9cb22f",shiny="",0,0},gender=1,evolution={2,{439,122}},types={"Bagworm",{1,14}},weakness={5,9,16},height="0.5",weight=6.5,skill="Anticipation",region="sinnoh"}}
+
+db.objects.Mothim={
+    id=414,
+    species="Moth.Pokémon",
+    types={1,13},
+    region="sinnoh",
+    gender=0,
+    height=0.9,
+    weight=23.3,
+    images={
+        normal={"1507bc35a2e","1507bc373b4"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Combee={
+    id=415,
+    species="Tiny.Bee.Pokémon",
+    types={1,13},
+    region="sinnoh",
+    gender=2,
+    height=0.3,
+    weight=5.5,
+    images={
+        normal={"1507bc38d51","1507bc3a72f"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Vespiquen={
+    id=416,
+    species="Beehive.Pokémon",
+    types={1,13},
+    region="sinnoh",
+    gender=1,
+    height=1.2,
+    weight=38.5,
+    images={
+        normal={"1507bc3c1b9","1507bc3db47"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Pachirisu={
+    id=417,
+    species="EleSquirrel.Pokémon",
+    types={11},
+    region="sinnoh",
+    gender=2,
+    height=0.4,
+    weight=3.9,
+    images={
+        normal={"1507bc3f5dd","1507bc41075"},
+        shiny={"15d0469941f","15d0469b2a3"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Buizel={
+    id=418,
+    species="Sea.Weasel.Pokémon",
+    types={18},
+    region="sinnoh",
+    gender=2,
+    height=0.7,
+    weight=29.5,
+    images={
+        normal={"1507bc42ab2","1507bc444aa"},
+        shiny={"15cf5504337","15cf55059fd"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Floatzel={
+    id=419,
+    species="Sea.Weasel.Pokémon",
+    types={18},
+    region="sinnoh",
+    gender=2,
+    height=1.1,
+    weight=33.5,
+    images={
+        normal={"1507bc45fa8","1507bc47980"},
+        shiny={"15cf551fbe7","15cf55216e1"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Cherubi={
+    id=420,
+    species="Cherry.Pokémon",
+    types={14},
+    region="sinnoh",
+    gender=2,
+    height=0.4,
+    weight=3.3,
+    images={
+        normal={"1507beadac7","1507bc498e8"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Cherrim={
+    id=421,
+    species="Blossom.Pokémon",
+    types={14},
+    region="sinnoh",
+    gender=2,
+    height=0.5,
+    weight=9.3,
+    images={
+        normal={"1507bc4b3be","1507bc4cdac"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Shellos={
+    id=422,
+    species="Sea.Slug.Pokémon",
+    types={18},
+    region="sinnoh",
+    gender=2,
+    height=0.3,
+    weight=6.3,
+    images={
+        normal={"1507bc4e99a","1507bc5049c"},
+        shiny={"",""},
+        left={0,3},
+        right={nil,nil}
+    }
+}
+
+db.objects.Gastrodon={
+    id=423,
+    species="Sea.Slug.Pokémon",
+    types={18,6},
+    region="sinnoh",
+    gender=2,
+    height=0.9,
+    weight=29.9,
+    images={
+        normal={"1507bc51f18","1507bc53946"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Ambipom={
+    id=424,
+    species="Long.Tail.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=1.2,
+    weight=20.3,
+    images={
+        normal={"1507bc552e7","1507bc56c6c"},
+        shiny={"",""},
+        left={0,-14},
+        right={nil,nil}
+    }
+}
+
+db.objects.Drifloon={
+    id=425,
+    species="Balloon.Pokémon",
+    types={5,13},
+    region="sinnoh",
+    gender=2,
+    height=0.4,
+    weight=1.2,
+    images={
+        normal={"1507beaf764","1507beb160d"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Drifblim={
+    id=426,
+    species="Blimp.Pokémon",
+    types={5,13},
+    region="sinnoh",
+    gender=2,
+    height=1.2,
+    weight=15.0,
+    images={
+        normal={"1507bc59b8b","1507bc5b6ec"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Buneary={
+    id=427,
+    species="Rabbit.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=0.4,
+    weight=5.5,
+    images={
+        normal={"1507bc5d20f","1507bc5ed6a"},
+        shiny={"",""},
+        left={0,-6},
+        right={nil,nil}
+    }
+}
+
+db.objects.Lopunny={
+    id=428,
+    species="Rabbit.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=1.2,
+    weight=33.3,
+    images={
+        normal={"1507bc6089c","1507bc62345"},
+        shiny={"15d5716d453","15d5716bce3"},
+        left={0,-10},
+        right={nil,nil}
+    }
+}
+
+db.objects.Mismagius={
+    id=429,
+    species="Magical.Pokémon",
+    types={5},
+    region="sinnoh",
+    gender=2,
+    height=0.9,
+    weight=4.4,
+    images={
+        normal={"1507bc63d04","1507bc658cd"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Honchkrow={
+    id=430,
+    species="Big.Boss.Pokémon",
+    types={10,13},
+    region="sinnoh",
+    gender=2,
+    height=0.9,
+    weight=27.3,
+    images={
+        normal={"1507bc6754d","1507beb34d9"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Glameow={
+    id=431,
+    species="Catty.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=0.5,
+    weight=3.9,
+    images={
+        normal={"1507bc6968a","1507bc6b077"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Purugly={
+    id=432,
+    species="Tiger.Cat.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=1.0,
+    weight=43.8,
+    images={
+        normal={"1507bc6cb47","1507bc6e55d"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Chingling={
+    id=433,
+    species="Bell.Pokémon",
+    types={8},
+    region="sinnoh",
+    gender=2,
+    height=0.2,
+    weight=0.6,
+    images={
+        normal={"1507bc7001f","1507bc71a98"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Stunky={
+    id=434,
+    species="Skunk.Pokémon",
+    types={16,10},
+    region="sinnoh",
+    gender=2,
+    height=0.4,
+    weight=19.2,
+    images={
+        normal={"1507bc7356d","1507bc75062"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Skuntank={
+    id=435,
+    species="Skunk.Pokémon",
+    types={16,10},
+    region="sinnoh",
+    gender=2,
+    height=1.0,
+    weight=38.0,
+    images={
+        normal={"1507bc76ae2","1507bc78540"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Bronzor={
+    id=436,
+    species="Bronze.Pokémon",
+    types={9,8},
+    region="sinnoh",
+    gender=2,
+    height=0.5,
+    weight=60.5,
+    images={
+        normal={"1507bc7a1cf","1507bc7bcde"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Bronzong={
+    id=437,
+    species="Bronze.Bell.Pokémon",
+    types={9,8},
+    region="sinnoh",
+    gender=2,
+    height=1.3,
+    weight=187.0,
+    images={
+        normal={"1507bc7d918","1507bc7f3ea"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Bonsly={
+    id=438,
+    species="Bonsai.Pokémon",
+    types={17},
+    region="sinnoh",
+    gender=2,
+    height=0.5,
+    weight=15.0,
+    images={
+        normal={"1507bc80e68","1507bc8292a"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Mimejr={
+    id=439,
+    species="Mime.Pokémon",
+    types={8,3},
+    region="sinnoh",
+    gender=2,
+    height=0.6,
+    weight=13.0,
+    images={
+        normal={"1507bc8443c","1507bc85eeb"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Happiny={
+    id=440,
+    species="Playhouse.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=1,
+    height=0.6,
+    weight=24.4,
+    images={
+        normal={"1507bc879c9","1507bc894c9"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Chatot={
+    id=441,
+    species="Music.Note.Pokémon",
+    types={7,13},
+    region="sinnoh",
+    gender=2,
+    height=0.5,
+    weight=1.9,
+    images={
+        normal={"1507bc8b074","1507bc8ca0a"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Spiritomb={
+    id=442,
+    species="Forbidden.Pokémon",
+    types={5,10},
+    region="sinnoh",
+    gender=2,
+    height=1.0,
+    weight=108.0,
+    images={
+        normal={"1507bc8e427","1507bc8fe6e"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Gible={
+    id=443,
+    species="Land.Shark.Pokémon",
+    types={2,6},
+    region="sinnoh",
+    gender=2,
+    height=0.7,
+    weight=20.5,
+    images={
+        normal={"1507bc91931","1507bc932b8"},
+        shiny={"15d0435fe73","15d043616c0"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Gabite={
+    id=444,
+    species="Cave.Pokémon",
+    types={2,6},
+    region="sinnoh",
+    gender=2,
+    height=1.4,
+    weight=56.0,
+    images={
+        normal={"1507bc94dab","1507bc9686c"},
+        shiny={"15d04362d60","15d043643c5"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Garchomp={
+    id=445,
+    species="Mach.Pokémon",
+    types={2,6},
+    region="sinnoh",
+    gender=2,
+    height=1.9,
+    weight=95.0,
+    images={
+        normal={"1507bc98358","1507bc99e02"},
+        shiny={"15d04366369","15d04367a3e"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Munchlax={
+    id=446,
+    species="Big.Eater.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=0.6,
+    weight=105.0,
+    images={
+        normal={"1507bc9b8bf","1507bc9d33e"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Riolu={
+    id=447,
+    species="Emanation.Pokémon",
+    types={12},
+    region="sinnoh",
+    gender=2,
+    height=0.7,
+    weight=20.2,
+    images={
+        normal={"1507bc9ecc9","1507bca0746"},
+        shiny={"15cf57fb3aa","15cf57fcec9"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Lucario={
+    id=448,
+    species="Aura.Pokémon",
+    types={12,9},
+    region="sinnoh",
+    gender=2,
+    height=1.2,
+    weight=54.0,
+    images={
+        normal={"1507bca2275","1507bca3d7b"},
+        shiny={"15cf581370f","15cf58156d1"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Hippopotas={
+    id=449,
+    species="Hippo.Pokémon",
+    types={6},
+    region="sinnoh",
+    gender=2,
+    height=0.8,
+    weight=49.5,
+    images={
+        normal={"15453b0eb1a","1507bca6fa2"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Hippowdon={
+    id=450,
+    species="Heavyweight.Pokémon",
+    types={6},
+    region="sinnoh",
+    gender=2,
+    height=2.0,
+    weight=300.0,
+    images={
+        normal={"1507bca8a84","1507bcaa4c8"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Skorupi={
+    id=451,
+    species="Scorpion.Pokémon",
+    types={16,1},
+    region="sinnoh",
+    gender=2,
+    height=0.8,
+    weight=12.0,
+    images={
+        normal={"1507bcabda2","1507bcad818"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Drapion={
+    id=452,
+    species="Ogre.Scorp.Pokémon",
+    types={16,10},
+    region="sinnoh",
+    gender=2,
+    height=1.3,
+    weight=61.5,
+    images={
+        normal={"1507bcaf32c","1507bcb0da4"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Croagunk={
+    id=453,
+    species="Toxic.Mouth.Pokémon",
+    types={16,12},
+    region="sinnoh",
+    gender=2,
+    height=0.7,
+    weight=23.0,
+    images={
+        normal={"1507bcb27fc","1507bcb4288"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Toxicroak={
+    id=454,
+    species="Toxic.Mouth.Pokémon",
+    types={16,12},
+    region="sinnoh",
+    gender=2,
+    height=1.3,
+    weight=44.4,
+    images={
+        normal={"1507bcb5d04","1507bcb7860"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Carnivine={
+    id=455,
+    species="Bug.Catcher.Pokémon",
+    types={14},
+    region="sinnoh",
+    gender=2,
+    height=1.4,
+    weight=27.0,
+    images={
+        normal={"1507bcb93e9","1507bcbae5b"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Finneon={
+    id=456,
+    species="Wing.Fish.Pokémon",
+    types={18},
+    region="sinnoh",
+    gender=2,
+    height=0.4,
+    weight=7.0,
+    images={
+        normal={"1507bcbc906","1507bcbe383"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Lumineon={
+    id=457,
+    species="Neon.Pokémon",
+    types={18},
+    region="sinnoh",
+    gender=2,
+    height=1.2,
+    weight=24.0,
+    images={
+        normal={"1507bcbfe8e","1507bcc1982"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Mantyke={
+    id=458,
+    species="Kite.Pokémon",
+    types={18,13},
+    region="sinnoh",
+    gender=2,
+    height=1.0,
+    weight=65.0,
+    images={
+        normal={"1507bcc3447","1507bcc4eb1"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Snover={
+    id=459,
+    species="Frost.Tree.Pokémon",
+    types={14,15},
+    region="sinnoh",
+    gender=2,
+    height=1.0,
+    weight=50.5,
+    images={
+        normal={"1507bcc69a3","1507bcc84c0"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Abomasnow={
+    id=460,
+    species="Frost.Tree.Pokémon",
+    types={14,15},
+    region="sinnoh",
+    gender=2,
+    height=2.2,
+    weight=135.5,
+    images={
+        normal={"1507bcca04a","1507bccbafe"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Weavile={
+    id=461,
+    species="Sharp.Claw.Pokémon",
+    types={10,15},
+    region="sinnoh",
+    gender=2,
+    height=1.1,
+    weight=34.0,
+    images={
+        normal={"1507bccd69d","1507bccf1fb"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Magnezone={
+    id=462,
+    species="Magnet.Area.Pokémon",
+    types={11,9},
+    region="sinnoh",
+    gender=2,
+    height=1.2,
+    weight=180.0,
+    images={
+        normal={"1507bcd0be8","1507bcd2568"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Lickilicky={
+    id=463,
+    species="Licking.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=1.7,
+    weight=140.0,
+    images={
+        normal={"1507bcd3b5a","1507bcd5581"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Rhyperior={
+    id=464,
+    species="Drill.Pokémon",
+    types={6,17},
+    region="sinnoh",
+    gender=2,
+    height=2.4,
+    weight=282.8,
+    images={
+        normal={"1507bcd7277","1507bcd8d46"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Tangrowth={
+    id=465,
+    species="Vine.Pokémon",
+    types={14},
+    region="sinnoh",
+    gender=2,
+    height=2.0,
+    weight=128.6,
+    images={
+        normal={"1507bcda7dd","1507bcdc2a4"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Electivire={
+    id=466,
+    species="Thunderbolt.Pokémon",
+    types={11},
+    region="sinnoh",
+    gender=2,
+    height=1.8,
+    weight=138.6,
+    images={
+        normal={"1507bcddd0b","1507bcdf943"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Magmortar={
+    id=467,
+    species="Blast.Pokémon",
+    types={4},
+    region="sinnoh",
+    gender=2,
+    height=1.6,
+    weight=68.0,
+    images={
+        normal={"1507bce149d","1507bce2f42"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Togekiss={
+    id=468,
+    species="Jubilee.Pokémon",
+    types={3,13},
+    region="sinnoh",
+    gender=2,
+    height=1.5,
+    weight=38.0,
+    images={
+        normal={"1507bce4a73","1507bce6230"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Yanmega={
+    id=469,
+    species="Ogre.Darner.Pokémon",
+    types={1,13},
+    region="sinnoh",
+    gender=2,
+    height=1.9,
+    weight=51.5,
+    images={
+        normal={"1507bce7cdf","1507bce96f9"},
+        shiny={"",""},
+        left={0,-10},
+        right={nil,nil}
+    }
+}
+
+db.objects.Leafeon={
+    id=470,
+    species="Verdant.Pokémon",
+    types={14},
+    region="sinnoh",
+    gender=2,
+    height=1.0,
+    weight=25.5,
+    images={
+        normal={"1507bceb1c9","1507bcecd82"},
+        shiny={"15cf5618333","15cf561a6f3"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Glaceon={
+    id=471,
+    species="Fresh.Snow.Pokémon",
+    types={15},
+    region="sinnoh",
+    gender=2,
+    height=0.8,
+    weight=25.9,
+    images={
+        normal={"1507bcee886","1507bcf02bd"},
+        shiny={"15cf560877f","15cf560a036"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Gliscor={
+    id=472,
+    species="Fang.Scorp.Pokémon",
+    types={6,13},
+    region="sinnoh",
+    gender=2,
+    height=2.0,
+    weight=42.5,
+    images={
+        normal={"1507bcf1d04","1507bcf3859"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Mamoswine={
+    id=473,
+    species="Twin.Tusk.Pokémon",
+    types={15,6},
+    region="sinnoh",
+    gender=2,
+    height=2.5,
+    weight=291.0,
+    images={
+        normal={"1507bcf5355","1507bcf6e30"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+
+db.objects.Porygonz={
+    id=474,
+    species="Virtual.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=0.9,
+    weight=34.0,
+    images={
+        normal={"1507bcf88db","1507beb52ed"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Gallade={
+    id=475,
+    species="Blade.Pokémon",
+    types={8,12},
+    region="sinnoh",
+    gender=0,
+    height=1.6,
+    weight=52.0,
+    images={
+        normal={"1507beb6a97","15d5716fce4"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Probopass={
+    id=476,
+    species="Compass.Pokémon",
+    types={17,9},
+    region="sinnoh",
+    gender=2,
+    height=1.4,
+    weight=340.0,
+    images={
+        normal={"1507bcfd079","1507bcfd079"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Dusknoir={
+    id=477,
+    species="Gripper.Pokémon",
+    types={5},
+    region="sinnoh",
+    gender=2,
+    height=2.2,
+    weight=106.6,
+    images={
+        normal={"157d3b759e0","157d3b76bc5"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Froslass={
+    id=478,
+    species="Snow.Land.Pokémon",
+    types={15,5},
+    region="sinnoh",
+    gender=1,
+    height=1.3,
+    weight=26.6,
+    images={
+        normal={"1507bd03c71","1507bd05738"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Froslass={
+    id=478,
+    species="Snow.Land.Pokémon",
+    types={15,5},
+    region="sinnoh",
+    gender=1,
+    height=1.3,
+    weight=26.6,
+    images={
+        normal={"1507bd07289","1507bd08de4"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Rotom={
+    id=479,
+    species="Plasma.Pokémon",
+    types={11,5},
+    region="sinnoh",
+    gender=2,
+    height=0.3,
+    weight=0.3,
+    images={
+        normal={"1507bd07289","1507bd07289"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Uxie={
+    id=480,
+    species="Knowledge.Pokémon",
+    types={8},
+    region="sinnoh",
+    gender=2,
+    height=0.3,
+    weight=0.3,
+    images={
+        normal={"1507bd0a8de","1507bd0c425"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Mesprit={
+    id=481,
+    species="Emotion.Pokémon",
+    types={8},
+    region="sinnoh",
+    gender=2,
+    height=0.3,
+    weight=0.3,
+    images={
+        normal={"1507bd0df9e","1507bd0fb82"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Azelf={
+    id=482,
+    species="Willpower.Pokémon",
+    types={8},
+    region="sinnoh",
+    gender=2,
+    height=0.3,
+    weight=0.3,
+    images={
+        normal={"1507bd11591","1507bd1319a"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Dialga={
+    id=483,
+    species="Temporal.Pokémon",
+    types={9,2},
+    region="sinnoh",
+    gender=2,
+    height=5.4,
+    weight=683.0,
+    images={
+        normal={"1507bd14e17","1507bd16970"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Palkia={
+    id=484,
+    species="Spatial.Pokémon",
+    types={18,2},
+    region="sinnoh",
+    gender=2,
+    height=4.2,
+    weight=336.0,
+    images={
+        normal={"1507bd184d2","1507bd19f67"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Heatran={
+    id=485,
+    species="Lava.Dome.Pokémon",
+    types={4,9},
+    region="sinnoh",
+    gender=2,
+    height=1.7,
+    weight=430.0,
+    images={
+        normal={"1507bd1bb21","1507bd1d6b4"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Regigigas={
+    id=486,
+    species="Colossal.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=3.7,
+    weight=420.0,
+    images={
+        normal={"1507bd1f1cb","1507bd20be7"},
+        shiny={"15cf9dc4de4","15cf9dc6ec0"},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Giratina={
+    id=487,
+    species="Renegade.Pokémon",
+    types={5,2},
+    region="sinnoh",
+    gender=2,
+    height=4.5,
+    weight=750.0,
+    images={
+        normal={"1507bd22764","1507bd242a3"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Cresselia={
+    id=488,
+    species="Lunar.Pokémon",
+    types={8},
+    region="sinnoh",
+    gender=1,
+    height=1.5,
+    weight=85.6,
+    images={
+        normal={"1507bd25eb1","1507bd279d1"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Phione={
+    id=489,
+    species="Sea.Drifter.Pokémon",
+    types={18},
+    region="sinnoh",
+    gender=2,
+    height=0.4,
+    weight=3.1,
+    images={
+        normal={"1507bd295fb","1507bd2b175"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Manaphy={
+    id=490,
+    species="Seafaring.Pokémon",
+    types={18},
+    region="sinnoh",
+    gender=2,
+    height=0.3,
+    weight=1.4,
+    images={
+        normal={"1507bd2cd60","1507bd2e99b"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Darkrai={
+    id=491,
+    species="Pitch-Black.Pokémon",
+    types={10},
+    region="sinnoh",
+    gender=2,
+    height=1.5,
+    weight=50.5,
+    images={
+        normal={"1507bd30517","1507bd32052"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Shaymin={
+    id=492,
+    species="Gratitude.Pokémon",
+    types={14},
+    region="sinnoh",
+    gender=2,
+    height=0.2,
+    weight=2.1,
+    images={
+        normal={"1507bd33c0d","1507bd35821"},
+        shiny={"",""},
+        left={0,0},
+        right={nil,nil}
+    }
+}
+
+db.objects.Arceus={
+    id=493,
+    species="Alpha.Pokémon",
+    types={7},
+    region="sinnoh",
+    gender=2,
+    height=3.2,
+    weight=320.0,
+    images={
+        normal={"1507bd3749f","1507bd3911b"},
+        shiny={"",""},
+        left={0,-16},
+        right={nil,nil}
+    }
+}

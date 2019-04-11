@@ -1,8 +1,7 @@
---[[ 
+--[[
     The Pokelua project 2015/2017
-    Authors: Jordynl  
+    Authors: Jordynl
 ]]
 
 function eventPlayerLeft(name)
-    console.log(string.format("<R><b>%s</b> left the room.<N>", name))
 end

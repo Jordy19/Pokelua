@@ -1,10 +1,10 @@
-db.objects.Manaphyegg={db={left={normal="1534c06f211",shiny="",10,10},right={normal="1534c06f211",shiny="",10,10},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
-db.objects.Missingno={db={left={normal="1534c02391e",shiny="",0,10},right={normal="15cd43c988d",shiny="",0,10},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
-db.objects.Missingno2={db={left={normal="1534c00c8d3",shiny="",10,15},right={normal="15cd43d2fed",shiny="",10,15},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
-db.objects.Missingno3={db={left={normal="1534c06d1e7",shiny="",10,15},right={normal="15cd43e317c",shiny="",10,15},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
-db.objects.Missingno4={db={left={normal="1534c05ba7d",shiny="",10,15},right={normal="15cd43e824d",shiny="",10,15},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
--- Trainers work in progress
-db.objects.Trainer={db={left={normal="15cd44857e2",shiny="",10,-60},right={normal="15cd448403b",shiny="",10,-60},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="trainer"}}
-db.objects.Trainer2={db={left={normal="15cd448706a",shiny="",10,-60},right={normal="15cd4488813",shiny="",10,-60},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="trainer"}}
-db.objects.Trainer3={db={left={normal="15d610edcf3",shiny="",0,-14},right={normal="15d610ef4fa",shiny="",0,-14},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="trainer"}}
-db.objects.Trainer4={db={left={normal="15cf8bb88eb",shiny="",0,-12},right={normal="15cf9e60de2",shiny="",0,-12},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="trainer"}}
+-- db.objects.Manaphyegg={db={left={normal="1534c06f211",shiny="",10,10},right={normal="1534c06f211",shiny="",10,10},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
+-- db.objects.Missingno={db={left={normal="1534c02391e",shiny="",0,10},right={normal="15cd43c988d",shiny="",0,10},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
+-- db.objects.Missingno2={db={left={normal="1534c00c8d3",shiny="",10,15},right={normal="15cd43d2fed",shiny="",10,15},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
+-- db.objects.Missingno3={db={left={normal="1534c06d1e7",shiny="",10,15},right={normal="15cd43e317c",shiny="",10,15},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
+-- db.objects.Missingno4={db={left={normal="1534c05ba7d",shiny="",10,15},right={normal="15cd43e824d",shiny="",10,15},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
+-- -- Trainers work in progress
+-- db.objects.Trainer={db={left={normal="15cd44857e2",shiny="",10,-60},right={normal="15cd448403b",shiny="",10,-60},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="trainer"}}
+-- db.objects.Trainer2={db={left={normal="15cd448706a",shiny="",10,-60},right={normal="15cd4488813",shiny="",10,-60},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="trainer"}}
+-- db.objects.Trainer3={db={left={normal="15d610edcf3",shiny="",0,-14},right={normal="15d610ef4fa",shiny="",0,-14},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="trainer"}}
+-- db.objects.Trainer4={db={left={normal="15cf8bb88eb",shiny="",0,-12},right={normal="15cf9e60de2",shiny="",0,-12},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="trainer"}}

@@ -1,3 +1,3 @@
-db.objects.Pokeball={db={left={normal="1534bff7873",shiny="",44,50},right={normal="1534bff7873",shiny="",44,50},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
-db.objects.Masterball={db={left={normal="157bfac671b",shiny="",44,50},right={normal="157bfac671b",shiny="",44,50},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
-db.objects.Egg={db={left={normal="1534bfe985e",shiny="",10,10},right={normal="1534bfe985e",shiny="",10,10},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
+-- db.objects.Pokeball={db={left={normal="1534bff7873",shiny="",44,50},right={normal="1534bff7873",shiny="",44,50},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
+-- db.objects.Masterball={db={left={normal="157bfac671b",shiny="",44,50},right={normal="157bfac671b",shiny="",44,50},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}
+-- db.objects.Egg={db={left={normal="1534bfe985e",shiny="",10,10},right={normal="1534bfe985e",shiny="",10,10},gender=1,evolution={1,{1,1}},types={"?",{1,1}},weakness={1,1,1},height="?",weight=1,skill="?",region="misc"}}

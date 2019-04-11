@@ -1,6 +1,6 @@
---[[ 
+--[[
     The Pokelua project 2015/2017
-    Authors: Jordynl  
+    Authors: Jordynl
 ]]
 
 function eventKeyboard(name,key,down,x,y)
@@ -25,13 +25,16 @@ function eventKeyboard(name,key,down,x,y)
             end
             tfm.exec.removeImage(db.players[name].baseImage)
             if key == 0 then
+                db.players[name].currentImage = db.players[name].images.l
                 db.players[name].baseImage = tfm.exec.addImage(db.players[name].images.l..".png","%"..name,db.players[name].axis.l.x,db.players[name].axis.l.y)
             elseif key == 2 then
+                db.players[name].currentImage = db.players[name].images.r
                 db.players[name].baseImage = tfm.exec.addImage(db.players[name].images.r..".png","%"..name,db.players[name].axis.r.x,db.players[name].axis.r.y)
             end
         end
         if key == 32 then
-            if db.players[name].fly == true then
+            if inTable(db.abilities.canFly, db.players[name].types) then
+            -- if db.players[name].fly == true then
                 local yPos = y - 10
                 tfm.exec.displayParticle(1, x, yPos, 0, 0, 0, 0, nil)
                 tfm.exec.movePlayer(name, 0, 0, false, 0, -50, false, true)
@@ -39,9 +42,8 @@ function eventKeyboard(name,key,down,x,y)
         end
         if key == 46 or key == 77 then
             if roomMatch("survivor") == false then
-                for i,key in ipairs({01,02,03,04,05,1337}) do
+                for i,key in ipairs({01,02,03,04,05,06,1337}) do
                     ui.removeTextArea(key, name)
-                    ui.addTextArea(1337, table.concat(db.players[name].console, "<br/>"), name, 560, 32, 230, 80, 0x301A0C , 0x684422 , 0.8, true)
                 end
                 tfm.exec.removeImage(db.players[name].baseImage)
                 local xPos,yPos = x,y
@@ -75,11 +77,12 @@ function eventKeyboard(name,key,down,x,y)
                 db.players[name].localx = 0
                 db.players[name].localy = 0
                 object.spawn(name, db.players[name].basePokemon)
-            end            
+            end
             tfm.exec.removeImage(db.players[name].baseImage)
-            db.players[name].baseImage = tfm.exec.addImage(db.players[name].images.l..".png","%"..name,db.players[name].axis.l.x,db.players[name].axis.l.y)
+            db.players[name].baseImage = tfm.exec.addImage(db.players[name].currentImage..".png","%"..name,db.players[name].axis.l.x,db.players[name].axis.l.y)
             if inDebugRoom() or moduleConfig.moduleDevs[name] or name == "Bolodefchoco" then
-                tfm.exec.chatMessage(string.format("<ROSE>[~Align] <BL>(<J>%s<BL>) <VP>X:<BL> %s <VP>Y:<BL> %s", db.players[name].basePokemon, db.players[name].localx, db.players[name].localy), name)
+                tfm.exec.chatMessage(string.format("<ROSE>[~Align(R)] <BL>(<J>%s<BL>) <VP>X:<BL> %s <VP>Y:<BL> %s", db.players[name].basePokemon, axis.r.x+48, axis.r.y+53), name)
+                tfm.exec.chatMessage(string.format("<ROSE>[~Align(L)] <BL>(<J>%s<BL>) <VP>X:<BL> %s <VP>Y:<BL> %s", db.players[name].basePokemon, axis.l.x+48, axis.l.y+53), name)
             end
         end
     end
@@ -87,15 +90,6 @@ function eventKeyboard(name,key,down,x,y)
         if key == 0 or key == 2 then
             db.players[name].intro = false
             core.introduce(name)
-        end
-    end
-    if key == 80 then
-        if db.players[name].pokedexOpen then
-            pokedex.close(name, true)
-            db.players[name].pokedexOpen = false
-        else
-            pokedex.open(name, true)
-            db.players[name].pokedexOpen = true
         end
     end
     if key == 81 then

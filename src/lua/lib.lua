@@ -1,6 +1,6 @@
---[[ 
+--[[
     The Pokelua project 2015/2017
-    Authors: Jordynl  
+    Authors: Jordynl
 ]]
 
 library = {}
@@ -101,4 +101,14 @@ function pairsByKeys (t, f)
     end
   end
   return iter
+end
+
+function inTable (tab, val)
+    for index, value in ipairs(tab) do
+        if value == val then
+            return true
+        end
+    end
+
+    return false
 end
