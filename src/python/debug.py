@@ -2,7 +2,6 @@ import subprocess
 import os
 
 def run(path):
-    print(path)
     try:
         subprocess.check_output(['lua', 'debug.lua'], cwd=path)
     except subprocess.CalledProcessError:
