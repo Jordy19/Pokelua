@@ -1,6 +1,6 @@
---[[ 
+--[[
     The Pokelua project 2015/2017
-    Authors: Jordynl  
+    Authors: Jordynl
 ]]
 
 init = function()
@@ -8,7 +8,6 @@ init = function()
     for k,v in next,tfm.get.room.playerList do
         eventNewPlayer(k)
     end
-    db.room.community = tfm.get.room.community
     room.setRoom()
     for k,v in next,room.roomAdmins do
         admin.login(k)
