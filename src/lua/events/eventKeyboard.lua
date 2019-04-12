@@ -95,10 +95,10 @@ function eventKeyboard(name,key,down,x,y)
     if key == 81 then
         if db.players[name].qc == true then
             qc.stop(name)
-            tfm.exec.chatMessage("<font color='#d87cff'>Quality control stopped.</font>", name)
+            tfm.exec.chatMessage(translate.string("quality_control_stop"), name)
         else
             qc.start(name)
-            tfm.exec.chatMessage("<font color='#C53DFF'>Quality control started.</font>", name)
+            tfm.exec.chatMessage(translate.string("quality_control_start"), name)
         end
     end
     if key == 72 then
@@ -116,10 +116,10 @@ function eventKeyboard(name,key,down,x,y)
     if key == 74 and moduleConfig.moduleDevs[name] then
         if db.players[name].devMode == false then
             db.players[name].devMode = true
-            tfm.exec.chatMessage("<font color='#d87cff'>Developers Mode enabled.</font>", name)
+            tfm.exec.chatMessage(translate.string("developers_mode_enabled"), name)
         else
             db.players[name].devMode = false
-            tfm.exec.chatMessage("<font color='#d87cff'>Developers Mode disabled.</font>", name)
+            tfm.exec.chatMessage(translate.string("developers_mode_disabled"), name)
         end
     end
 end

@@ -38,7 +38,7 @@ function eventChatCommand(name, line)
             if pData(name, "roomAdmin") then
                 object.spawn(name, possibleObject, nil, nil, false)
             else
-                tfm.exec.chatMessage("<VP>You need a mega-capable Pokémon if you want to use mega-evolve with !mega", name)
+                tfm.exec.chatMessage(translate.string("no_mega_capability"), name)
             end
         else
             align = {}
@@ -57,7 +57,7 @@ function eventChatCommand(name, line)
             else
                 pData(name, "prevPoke", "")
                 if db.fanarts[possibleObject] then
-                    tfm.exec.chatMessage("<VP>This Pokémon is also available in a fan-art variant, try the G button.", name)
+                    tfm.exec.chatMessage(translate.string("fanart_available"), name)
                 end
                 object.spawn(name, possibleObject, nil, nil, true)
             end
@@ -72,7 +72,7 @@ function eventChatCommand(name, line)
                 print(moduleConfig.disabledCommands[k])
                 for k,v in next,moduleConfig.disabledCommands[k] do
                     if string.lower(command) == k then
-                        print(string.format("This command has disabled for this game-mode (%s).", k))
+                        print(string.format(translate.string("command_disabled"), k))
                         continue = false
                     end
                 end

@@ -10,22 +10,14 @@ admin.login = function(name)
 	    db.players[name].devMode = true
 	    db.players[name].log = true;
 	    db.players[name].name = string.format("<font color='#EB1D51'>%s</font>", name)
-	    admin.broadcast(string.format("New room administrator: <b>%s</b>",db.players[name].name))
+	    admin.broadcast(string.format(translate.string("new_admin"),db.players[name].name))
 	end
 end
 
 admin.broadcast = function(message)
     for k,v in next,db.room.admins do
     	if db.players[k].log == true then
-       		tfm.exec.chatMessage(string.format("<font color='#EB1D51'>~ [<b>A</b>]</font><font color='#CB2655'> %s</font>", message), k)
+       		tfm.exec.chatMessage(string.format(translate.string("admin_message"), message), k)
        	end
-    end
-end
-
-admin.broadcastDebug = function(message)
-    for k,v in next,db.room.admins do
-        if db.players[k].log == true then
-            tfm.exec.chatMessage(string.format("<font color='#EB1D51'>~ [<b>A</b>]</font><font color='#CB2655'> %s</font>", message), k)
-        end
     end
 end
