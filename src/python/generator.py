@@ -36,7 +36,7 @@ def moduleFile(path, fileTree, fileOrder, srcPath, config):
     for file in tree:
         filePath = "%s\%s.lua" % (srcPath, file.replace(".", "\\"))
         new_file = parseFile(filePath)
-        new_file = new_file.replace('&version&', time.strftime("%a.%b.%d"))
+        new_file = new_file.replace('&version&', time.strftime("%d.%m.%y"))
         f.write(new_file)
     f.write("\ninit()")
     f.close()

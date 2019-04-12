@@ -9,7 +9,6 @@ import os
 
 # Local build config
 config = {
-    "version": "11.04.2019",
     "nextVersion": ""
 }
 
