@@ -13,3 +13,4 @@ include/list.lua
 module.lua
 test.lua
 debug.lua
+changelog.md
