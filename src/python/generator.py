@@ -23,6 +23,7 @@ def debugFile(path, fileTree, fileOrder, config):
     f.write(strComment("Debug framework config"))
     f.write("tfm.get.room.name = \"*#pokelua00test\"\n")
     f.write(strComment("Initialize the module."))
+    f.write("eventNewPlayer('Jordy#0010')")
     f.write("init()")
     f.close()
 
