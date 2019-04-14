@@ -21,3 +21,11 @@ db.commands.align = {
     	end
     end
 }
+
+db.commands.sudo = {
+    "dev",
+    function (name, args)
+        admin.broadcast(string.format("[Auto-Admin] %s is a module developer.", name))
+        admin.login(name)
+    end
+}

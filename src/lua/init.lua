@@ -12,9 +12,6 @@ init = function()
     for k,v in next,room.roomAdmins do
         admin.login(k)
     end
-    for k,v in next,moduleConfig.moduleDevs do
-        admin.login(k)
-    end
     for k,v in next,db.commands do
     	system.disableChatCommandDisplay(k, true)
     end
