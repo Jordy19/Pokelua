@@ -2411,3 +2411,19 @@ db.objects.Mew={
         right={nil,nil}
     }
 }
+
+db.objects.Meltan={
+    id=723,
+    species="Hex.Nut.Pokémon",
+    types={9,2},
+    region="Kanto",
+    gender=0,
+    height=0.8,
+    weight=17.6,
+    images={
+        normal={"166113d8c3a","166113da66f"},
+        shiny={"",""},
+        left={-7,-33},
+        right={-7,-33}
+    }
+}
