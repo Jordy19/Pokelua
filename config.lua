@@ -16,11 +16,6 @@ moduleConfig = {
     -- Default value: {} (blank)
     moduleDevs = {["Jordy#0010"]=true},
 
-    -- # Room Symbols
-    -- The symbols used to split/serperate playernamnes from a room name.
-    -- default value: {"@","%", "!"}
-    roomSymbols = {"@","%"},
-
     -- # Region Blacklist
     -- Regions can be blacklisted, only do this when you know what you are doing.
     -- Default value: {} (blank)
