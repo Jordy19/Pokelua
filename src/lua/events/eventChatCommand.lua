@@ -86,7 +86,9 @@ function eventChatCommand(name, line)
             end
         end
         if db.commands[command][1] == "dev" then
-            if name:lower() ~= "jordynl" then
+            if moduleConfig.moduleDevs[name] == true then
+                continue = true
+            else
                 continue = false
             end
         end
