@@ -23,7 +23,7 @@ class Builder():
         }
         self.loadOrder = [
             "src.lua.lib",
-            "src.lua.strings",
+            "include.strings",
             "src.lua.database",
             "src.lua.misc",
             "src.lua.init",
