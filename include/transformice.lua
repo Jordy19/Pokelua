@@ -1,12 +1,12 @@
 print("Transformice Lua Framework - Jordynl - Version 1.2\n")
 
-local tfm = {	
-	output = {},
+local tfm = {
+	hideOutput = {disableChatCommandDisplay=true},
 	debug = true,
 	get = {
 		room = {
 			playerList = {
-					Jordynl={
+					["Jordy#0010"]={
 							isFacingRight=true,
 							tribeName="Lua devs"
 					},
@@ -19,7 +19,7 @@ local tfm = {
 							tribeName="test",
 					}
 			},
-			name = "*#pokelua0debug",
+			name = "*#pokelua0Jordy#0010",
 			-- name = "*Something cute",
 			community = "en"
 		},
@@ -88,7 +88,7 @@ argList = {
 }
 
 function printArgs(event, ...)
-	if tfm.output[event] == true then
+	if tfm.hideOutput[event] ~= true then
 		local args = {...}
 		local tbl = {}
 		local i = 1
