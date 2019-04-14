@@ -66,9 +66,6 @@ core.introduce = function(name)
         tfm.exec.bindKeyboard(name,key,true,true)
     end
     system.bindMouse(name, true)
-    if name == "Jordy#0010" then
-        pData(name, 'displayName', "<font color='#EC35CC'>Jordynl</font> (Module Dev)")
-    end
     if pData(name, 'displayName') then
       displayName = pData(name, 'displayName')
     else
