@@ -9,7 +9,7 @@
 db = {}
 db.objects = setmetatable({}, {__newindex = table.newidx})
 db.fanart = setmetatable({}, {__newindex = table.newidx})
-db.module, db.players, db.commands, console, object, admin, room, qc, help, core = {}, {}, {}, {}, {}, {}, {}, {}, {}, {}
+db.module, db.players, db.commands, console, object, admin, room, qc, help, core, translate = {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}
 db.room = {community="en", admins={}}
 
 db.types = {
