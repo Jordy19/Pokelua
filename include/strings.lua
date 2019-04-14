@@ -1,4 +1,4 @@
-t_strings = {
+translate.text = {
     en = {
         forum_thread = "<font color='#2E72CB'>http://atelier801.com/topic?f=6&t=838708</font>",
         infobar = "<p align='center'><j>PokeLua <bl>[<v>EN<bl>] • <font size='9'><bl>(<n>Version: <v>&version&<bl>)</font><font size='11'> <j>• <vp>!pikachu</font> <j>• <a href='event:explore.random'><font size='9'><bl>[<v>Random Pokémon<bl>]</font></a></p>",
@@ -18,8 +18,11 @@ t_strings = {
 
 
     },
+    xx = en,
     nl = {
         infobar = "<p align='center'><j>PokeLua <bl>[<v>NL<bl>] • <font size='9'><bl>(<n>Versie: <v>&version&<bl>)</font><font size='11'> <j>• <vp>!pikachu</font> <j>• <a href='event:explore.random'><font size='9'><bl>[<v>Willekeurige Pokémon<bl>]</font></a></p>",
     }
 }
-
+-- For international, e2 community we will fall back to EN.
+translate.text.xx = translate.text.en
+translate.text.e2 = translate.text.en

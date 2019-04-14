@@ -1,19 +1,16 @@
 --[[
-    The Pokelua project 2015/2017
+    The Pokelua project 2015/2019
     Authors: Jordynl
 ]]
 
-translate = {}
-
-translate.string = function(string)
+ translate.string = function(string)
     commu = tfm.get.room.community
-    if t_strings[commu][string] then
-        return t_strings[commu][string]
+    if translate.text[commu] then
+        tString = translate.text[commu][string] or string.format("<font color='#CB546B'>$string.%s.%s</font>", commu, string)
     else
-        if t_strings['en'][string] then
-            return t_strings['en'][string]
-        else
-            return string.format("<font color='#CB546B'>$string.%s.%s</font>", commu, string)
-        end
+        commu = "en"
+        tString = translate.text[commu][string] or string.format("<font color='#CB546B'>$string.%s.%s</font>", commu, string)
     end
-end
+    return tString
+ end
+
