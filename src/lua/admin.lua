@@ -7,7 +7,6 @@ admin.login = function(name)
 	if type(db.players[name]) == "table" then
 	    db.room.admins[name] = true
         db.players[name].roomAdmin = true
-	    db.players[name].devMode = true
 	    db.players[name].log = true;
 	    db.players[name].name = string.format("<font color='#EB1D51'>%s</font>", name)
 	    admin.broadcast(string.format(translate.string("new_admin"),db.players[name].name))
