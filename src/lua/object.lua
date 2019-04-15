@@ -127,6 +127,9 @@ object.updateInterface = function(name, obj)
               tfm.exec.chatMessage("<V>An error occured, the interface failed to load and this would crash the module normally.", name)
           end
       end
+      if obj.artist then
+        tfm.exec.chatMessage(string.format("<VP>[%s] Sprite Artist: %s", db.players[name].basePokemon, obj.artist))
+      end
     end
     ui.removeTextArea(00, name)
 end
