@@ -217,7 +217,7 @@ db.objects.Bibarel={
     images={
         normal={"1507bc072ce","1507bc08d82"},
         shiny={"",""},
-        left={0,0},
+        left={0,-5},
         right={nil,nil}
     }
 }

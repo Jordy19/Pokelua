@@ -103,8 +103,8 @@ db.objects.Mudkip={
     height=0.4,
     weight=7.6,
     images={
-        normal={"1507b8952d3","15cf60817cb"},
-        shiny={"1507b896a2a","15cf6083331"},
+        normal={"1507b8952d3","1507b896a2a"},
+        shiny={"15cf60817cb","15cf6083331"},
         left={0,0},
         right={nil,nil}
     }

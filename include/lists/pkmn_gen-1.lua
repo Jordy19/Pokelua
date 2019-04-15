@@ -2421,9 +2421,9 @@ db.objects.Meltan={
     height=0.8,
     weight=17.6,
     images={
-        normal={"166113d8c3a","166113da66f"},
-        shiny={"",""},
-        left={-7,-33},
-        right={-7,-33}
+        normal={"16a229f2869","16a229f0927"},
+        shiny={"16a229f574e","16a229f3fdb"},
+        left={25,10},
+        right={nil,nil}
     }
 }

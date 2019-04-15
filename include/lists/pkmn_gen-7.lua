@@ -1376,6 +1376,7 @@ db.objects.Blacephalon={
 
 db.objects.Zeraora={
     id=807,
+    artist="leParagon, TheAetherPlayer (shiny)",
     species="Thunderclap.Pokémon",
     types={11},
     region="alola",
@@ -1383,9 +1384,9 @@ db.objects.Zeraora={
     height=1.5,
     weight=44.5,
     images={
-        normal={"",""},
-        shiny={"",""},
-        left={0,0},
+        normal={"16a22b87aad","16a22b899ef"},
+        shiny={"16a22b8b931","16a22b8d0a1"},
+        left={0,-7},
         right={nil,nil}
     }
 }
