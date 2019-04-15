@@ -2414,6 +2414,7 @@ db.objects.Mew={
 
 db.objects.Meltan={
     id=723,
+    artist="Fable-Amare (Deviantart)",
     species="Hex.Nut.Pokémon",
     types={9,2},
     region="Kanto",
