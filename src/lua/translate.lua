@@ -5,7 +5,7 @@
 
  translate.string = function(string)
     commu = tfm.get.room.community
-    if translate.text[commu] then
+    if translate.text[commu] and translate.text[commu][string] then
         tString = translate.text[commu][string] or string.format("<font color='#CB546B'>$string.%s.%s</font>", commu, string)
     else
         commu = "en"
@@ -13,4 +13,3 @@
     end
     return tString
  end
-
