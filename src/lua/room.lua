@@ -13,7 +13,7 @@ room.setRoom = function()
         if name:find('^' .."0") then
             name = string.sub(name, 2)
         end
-        room.roomAdmins[string.nick(name)] = true
+        admin.login(name)
     end
 end
 
