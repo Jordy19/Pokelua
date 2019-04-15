@@ -59,7 +59,7 @@ function eventChatCommand(name, line)
                 if db.fanarts[possibleObject] then
                     tfm.exec.chatMessage(translate.string("fanart_available"), name)
                 end
-                object.spawn(name, possibleObject, nil, nil, true)
+                object.spawn(name, possibleObject, nil, nil, true, true)
             end
         end
     end

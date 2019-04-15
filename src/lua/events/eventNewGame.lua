@@ -8,7 +8,7 @@ eventNewGame = function()
 		if db.players[name] then
 			if db.players[name].basePokemon then
 				object.updateInterface(name, db.players[name].objectData)
-				object.spawn(name, db.players[name].basePokemon, nil, nil, false)
+				object.spawn(name, db.players[name].basePokemon, nil, nil, false, false)
 			end
 		end
 	end

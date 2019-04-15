@@ -3,7 +3,7 @@
     Authors: Jordynl
 ]]
 
-object.spawn = function(name, obj, xPos, yPos, levelUp)
+object.spawn = function(name, obj, xPos, yPos, levelUp, artistFlag)
     if db.players[name].moduleStarted == false then
       db.players[name].intro = false
       core.introduce(name)
@@ -39,6 +39,9 @@ object.spawn = function(name, obj, xPos, yPos, levelUp)
                   db.players[name].localy = 0
                   if db.players[name].qc == false then
                       object.updateInterface(name, pD)
+                  end
+                  if pD.artist and artistFlag == true then
+                    tfm.exec.chatMessage(string.format("<VP>[%s] Sprite Artist: %s", db.players[name].basePokemon, pD.artist))
                   end
               end
           end
@@ -126,9 +129,6 @@ object.updateInterface = function(name, obj)
           else
               tfm.exec.chatMessage("<V>An error occured, the interface failed to load and this would crash the module normally.", name)
           end
-      end
-      if obj.artist then
-        tfm.exec.chatMessage(string.format("<VP>[%s] Sprite Artist: %s", db.players[name].basePokemon, obj.artist))
       end
     end
     ui.removeTextArea(00, name)
