@@ -72,6 +72,8 @@ class LuaCombiner:
                     self._openScript(script_name)
                 else:
                     pass
+            elif "print(" in line:
+                print("• [!] DEBUG: print() found: {} ({}.lua)".format(line.strip(), file_name))
             else:
                 if line != "":
                     self.combined_script.append(line)
