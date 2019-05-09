@@ -12,15 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import os
 import subprocess
 
-
-def run(path):
+def run(path, debug_commands=False):
     """This function calls lua.exe so we can run our module.lua.
 
     Args:
         path: A string containing the work directory.
     """
+    if debug_commands:
+        commands_file = open("{}\\debug.lua".format(path), "r")
+        module_file = open("{}\\module.lua".format(path), "a+")
+        commands_file_content = commands_file.read()
+        commands_file.close()
+        module_file.write(commands_file_content)
+        module_file.close()
+
     call = subprocess.Popen("lua module.lua", cwd=path)
     # We want to read the output from lua.exe
     result = call.communicate()

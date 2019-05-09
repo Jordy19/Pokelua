@@ -18,26 +18,22 @@ import src.debug
 
 
 class ModuleBuilder():
-    """"
-        Module Builder Class
-    """
+    """"Module Builder Class"""
 
     def __init__(self):
-        """
-            Inits the ModuleBuilder class.
-        """
+        """Inits the ModuleBuilder class."""
+        self.debug_cmds = True
         self.srcPath = os.getcwd()
         self.combiner = src.combiner.LuaCombiner(self.srcPath)
 
     def run(self):
-        """
-            This function will call the Lua Combiner.
+        """This function will call the Lua Combiner.
             Afterwards, the Debugger will run.
         """
         print("• [+] Starting #pokelua builder.")
         print("• [+] Source path: %s" % self.srcPath)
         self.combiner.get_source()
-        src.debug.run(self.srcPath)
+        src.debug.run(self.srcPath, debug_commands=self.debug_cmds)
 
 
 # We don't want this script to be used with import.
