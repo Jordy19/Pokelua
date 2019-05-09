@@ -16,9 +16,7 @@ import re
 
 
 class LuaCombiner:
-    """Lua Combiner class.
-
-    """
+    """Lua Combiner class."""
 
     def __init__(self, work_path):
         """Inits LuaCombiner.
@@ -30,7 +28,6 @@ class LuaCombiner:
         self.module_core = "{}\\{}.lua".format(self.source_path, "module")
         self.work_path = work_path
         self.combined_script = []
-        self.debug = debug
         self.scripts = {}
 
     def get_source(self):

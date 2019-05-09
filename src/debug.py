@@ -16,7 +16,13 @@ import subprocess
 
 
 def run(path):
+    """This function calls lua.exe so we can run our module.lua.
 
+    Args:
+        path: A string containing the work directory.
+    """
     call = subprocess.Popen("lua module.lua", cwd=path)
+    # We want to read the output from lua.exe
     result = call.communicate()
+    # We want to print the results from Lua.
     print(result)
