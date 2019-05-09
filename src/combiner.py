@@ -113,7 +113,10 @@ class LuaCombiner:
                 pass
             elif "-- " in line:
                 snippet = line.split("--")[0]
-                stripped_source.append(snippet)
+                if snippet is not "":
+                    stripped_source.append(snippet)
+                else:
+                    pass
             else:
                 if not comment_check and line != "":
                     stripped_source.append(line)
