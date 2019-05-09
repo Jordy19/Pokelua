@@ -15,6 +15,7 @@
 import os
 import subprocess
 
+
 def run(path, debug_commands=False):
     """This function calls lua.exe so we can run our module.lua.
 
@@ -28,9 +29,18 @@ def run(path, debug_commands=False):
         commands_file.close()
         module_file.write(commands_file_content)
         module_file.close()
+        print("• [+] Debug commands injected.")
 
-    call = subprocess.Popen("lua module.lua", cwd=path)
+    call = subprocess.Popen("lua module.lua", cwd=path, stderr=subprocess.PIPE)
     # We want to read the output from lua.exe
-    result = call.communicate()
-    # We want to print the results from Lua.
-    print(result)
+    output = call.communicate()
+    # Let's pull the output to the output() function.
+    info_output(output)
+
+def info_output(output):
+    """Debug output."""
+    error_message = output[1].decode('utf-8')
+    if error_message:
+        print("• [!] [FAIL] {}".format(error_message))
+    else:
+        print("• [+] No errors were detected. *-*")
