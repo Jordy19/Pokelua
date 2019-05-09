@@ -9,7 +9,6 @@ __pycache__/
 *.pyc
 
 # Generated files
-include/list.lua
 module.lua
 test.lua
 debug.lua
