@@ -17,6 +17,11 @@ ObjectC = {}
 ObjectC.__index = ObjectC
 
 function ObjectC:create(playerName, objName)
+    --[[Creates a new object
+
+    Args:
+        playerName: A string containing the player name.
+        objName: A string containing the object name.]]
     if objects[objName] then
         players_data[playerName].object = {
             name = objName,

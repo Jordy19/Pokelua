@@ -27,9 +27,7 @@ require "object"
 require "player"
 
 function init()
-    --[[
-        Inits the module.
-    ]]
+    --[[ Inits the module. ]]
     for k,v in pairs(tfm.get.room.playerList) do
         eventNewPlayer(k)
     end

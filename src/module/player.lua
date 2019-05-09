@@ -16,8 +16,12 @@
 PlayerC = {}
 PlayerC.__index = PlayerC
 
--- Function to create new player data.
 function PlayerC:create(name)
+    --[[ Function to create new player data.
+
+    Args:
+        name: A string containing the player name.
+    ]]
    self.data = {
         ["name"] = name,
         ["role"] = "Public",
@@ -26,26 +30,26 @@ function PlayerC:create(name)
     return self
 end
 
--- Function to obtain the stored player data.
 function PlayerC:getData()
-    return self.data
+    --[[ Function to obtain the stored player data. ]]
+     return self.data
 end
 
--- Function to promote a player to admin.
 function PlayerC:promote()
+    --[[ Function to promote a player to admin. ]]
     if self.data.role ~= "Admin" then
         self.data.role = "Admin"
     end
 end
 
--- Function to depromote a player from admin.
 function PlayerC:depromote()
+    --[[ Function to depromote a player from admin. ]]
     if self.data.role ~= "Public" then
         self.data.role = "Public"
     end
 end
 
--- Function to save the changed player data.
 function PlayerC:save()
+    --[[ Function to save the changed player data. ]]
     players_data[self.data.name].data = self.data
 end

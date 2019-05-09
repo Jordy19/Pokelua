@@ -124,5 +124,5 @@ for k,v in next, argList do
     _G[k] = function(...) printArgs(k, ...) end
 end
 
-print("Psuedo Transformice Lua API - Jordynl - Version 1.3\n")
+print("• [+] Psuedo Transformice Lua API initialized.\n")
 return tfm

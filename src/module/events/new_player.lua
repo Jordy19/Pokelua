@@ -13,5 +13,10 @@
 -- limitations under the License. ]]
 
 function eventNewPlayer(name)
+    --[[ Triggered when a new player joins the room
+
+    Args:
+        name: A string containing the name of the player.
+    ]]
     players_data[name] = PlayerC:create(name)
 end

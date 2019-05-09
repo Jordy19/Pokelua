@@ -73,7 +73,7 @@ class LuaCombiner:
                 else:
                     pass
             elif "print(" in line:
-                print("• [!] DEBUG: print() found: {} ({}.lua)".format(line.strip(), file_name))
+                print("• [@] DEBUG: print() found: {} ({}.lua)".format(line.strip(), file_name))
             else:
                 if line != "":
                     self.combined_script.append(line)
