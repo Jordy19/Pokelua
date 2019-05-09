@@ -14,4 +14,4 @@ test.lua
 debug.lua
 
 # We need those.
-!module/module.lua
+!*/module/module.lua
