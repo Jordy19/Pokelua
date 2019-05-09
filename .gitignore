@@ -1,0 +1,15 @@
+# Local debug env
+utilities/images/*
+utilities/*.py
+lab/*
+test.py
+
+# Python junk
+__pycache__/
+*.pyc
+
+# Generated files
+include/list.lua
+module.lua
+test.lua
+debug.lua
