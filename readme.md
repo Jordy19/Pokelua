@@ -1,4 +1,4 @@
-<div style="text-align:center"><img src ="http://images.atelier801.com/15d14ee57bd.png" /></div>
+<div style="text-align:center"><img src ="https://github.com/Jordy19/pokelua/blob/develop/logo.png?raw=true" /></div>
 
 Pokelua is a *module* specifically written to be loaded with the LUA API within [Transformice](http://transformice.com).
 This repository contains the source code from the module.
