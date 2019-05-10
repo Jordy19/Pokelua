@@ -13,5 +13,5 @@
 -- limitations under the License. ]]
 
 -- Create the room class.
-RoomObj = {}
-RoomObj.__index = RoomObj
+RoomC = {}
+RoomC.__index = RoomC
