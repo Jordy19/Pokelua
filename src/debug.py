@@ -39,6 +39,7 @@ def run(path, debug_commands=False):
 
 def info_output(output):
     """Debug output."""
+    #Convert the output to string with utf-8 formatting.
     error_message = output[1].decode('utf-8')
     if error_message:
         print("• [!] [FAIL] {}".format(error_message))
