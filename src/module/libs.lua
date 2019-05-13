@@ -24,3 +24,7 @@ table.newidx = function(t, k, v)
     rawset(t, k, v)
     rawset(t, #t + 1, k)
 end
+
+firstToUpper = function(str)
+    return (str:gsub("^%l", string.upper))
+end

@@ -24,15 +24,18 @@ function Room:init()
     Returns: A table with room settings.
     ]]
     self.data = {
+        dev = {["Jordy#0010"]=true},
         admins = {}
     }
     isRoom = tfm.get.room.name:byte(2) ~= 3
     attributes = isRoom and tfm.get.room.name:match("%*?#pokelua(.*)") or nil
-    for name in attributes:gmatch("[^@,&,$]+") do
-        if name:find('^' .."0") then
-            name = string.sub(name, 2)
+    if attributes then
+        for name in attributes:gmatch("[^@,&,$]+") do
+            if name:find('^' .."0") then
+                name = string.sub(name, 2)
+            end
+            players_data[name]:promote()
         end
-        players_data[name]:promote()
     end
     return self.data
 end
@@ -46,10 +49,10 @@ function Room:broadcast(message, group)
     ]]
     if group == "admin" then
         players_list = room_settings.data.admins
-        messageString = string.format(tString("room_message_admin"), message)
+        messageString = string.format(tString("room_broadcast_admin"), message)
     else
         players_list = tfm.get.room.playerList
-        message_string = string.format(tString("room_message_global"), message)
+        message_string = string.format(tString("room_broadcast_global"), message)
     end
     for k,v in pairs(players_list) do
         tfm.exec.chatMessage(message_string, k)
