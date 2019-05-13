@@ -18,5 +18,9 @@ function eventNewPlayer(name)
     Args:
         name: A string containing the name of the player.
     ]]
+    for i,key in ipairs({0,1,2,3,32,81,80, 82, 46, 77, 104, 98, 100, 102, 101,72, 71, 74}) do
+        tfm.exec.bindKeyboard(name,key,true,true)
+    end
     players_data[name] = Player:create(name)
+    -- tfm.exec.chatMessage(tString("room_introduction"), name)
 end
