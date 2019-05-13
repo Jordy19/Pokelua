@@ -32,16 +32,26 @@ function Player:create(name)
     return self
 end
 
-function Player:getData()
-    --[[ Function to obtain the stored player data. ]]
-     return self.data
+function Player:getData(key)
+    --[[ Function to obtain the stored player data by key ]]
+     return self.data[key]
+end
+
+function Player:setData(key, value)
+    --[[ Function to store data.
+
+    Args:
+        key: String with the key name
+        value: String with the value
+    ]]
+    self.data[key] = value
 end
 
 function Player:promote()
     --[[ Function to promote a player to admin. ]]
     if self.data.role ~= "Admin" then
         self.data.role = "Admin"
-        Room.broadcast(string.format(tString("room_admin_promotion"),self.data.name))
+        Room:broadcast(string.format(tString("room_admin_promotion"),self.data.name))
     end
 end
 
@@ -49,7 +59,7 @@ function Player:depromote()
     --[[ Function to depromote a player from admin. ]]
     if self.data.role ~= "Public" then
         self.data.role = "Public"
-        Room.broadcast(string.format(tString("room_admin_depromotion"),self.data.name))
+        Room:broadcast(string.format(tString("room_admin_depromotion"),self.data.name))
     end
 end
 
