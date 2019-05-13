@@ -13,21 +13,44 @@
 -- limitations under the License. ]]
 
 -- Create the class.
-ObjectC = {}
-ObjectC.__index = ObjectC
+Object = {}
+Object.__index = Object
 
-function ObjectC:create(playerName, objName)
+function Object:create(playerName, objName)
     --[[Creates a new object
 
     Args:
         playerName: A string containing the player name.
-        objName: A string containing the object name.]]
-    if objects[objName] then
-        players_data[playerName].object = {
-            name = objName,
-        }
-    end
+        objName: A string containing the object name, else random.
+
+    Returns: a tbl if the object exists, otherwise nil]]
+    self.data = {
+        object = objects[objName] or Object:generate(),
+        name = objName,
+        level = 5,
+        shiny = math.random(0,500),
+        artist = false,
+    }
+    players_data[playerName].object = self
+    return self
 end
+
+function Object:getAxis()
+    tbl = {l={}, r={}}
+    tbl.l.x = self.data.object.images.left[1] + -48
+    tbl.l.y = self.data.object.images.left[2] + -53
+    if self.data.object.images.right[1] then
+        tbl.r.x = self.data.object.images.right[1]
+    else
+        tbl.r.x = tbl.l.x
+    end
+    if self.data.object.images.right[2] then
+        tbl.r.y = self.data.object.images.right[2]
+    else
+        tbl.r.y = tbl.l.y
+    end
+    return tbl
+ end
 
 
 
