@@ -107,7 +107,9 @@ class LuaCombiner:
         comment_check = False
         lines = script_source.split("\n")
         for line in lines:
-            if "--[[" in line:
+            if "--[[" in line and "]]" in line:
+                pass
+            elif "--[[" in line:
                 comment_check = True
                 pass
             elif "]]" in line and comment_check:

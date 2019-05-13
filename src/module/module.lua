@@ -17,6 +17,9 @@ db = {}
 objects = {}
 players_data = {}
 
+-- Generate a random seed.
+math.randomseed(os.time())
+
 -- Data lists.
 require "lists.pokemon.first_generation"
 
@@ -31,5 +34,4 @@ function init()
     for k,v in pairs(tfm.get.room.playerList) do
         eventNewPlayer(k)
     end
-
 end
