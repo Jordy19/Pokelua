@@ -19,11 +19,13 @@ require "libs"
 db = {}
 objects = setmetatable({}, {__newindex = table.newidx})
 players_data = {}
+admins = {}
 
 -- Data lists.
 require "lists.pokemon.first_generation"
 
 -- Module files.
+require "Translator"
 require "events.new_player"
 require "room"
 require "object"
@@ -36,4 +38,5 @@ function init()
     for k,v in pairs(tfm.get.room.playerList) do
         eventNewPlayer(k)
     end
+    roomData = Room:init()
 end

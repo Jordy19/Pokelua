@@ -39,6 +39,7 @@ function Player:promote()
     --[[ Function to promote a player to admin. ]]
     if self.data.role ~= "Admin" then
         self.data.role = "Admin"
+        Room.broadcast(string.format(tString"room_admin_promotion"),self.data.name)
     end
 end
 
