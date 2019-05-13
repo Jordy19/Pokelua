@@ -10,7 +10,9 @@
 -- distributed under the License is distributed on an "AS IS" BASIS,
 -- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 -- See the License for the specific language governing permissions and
--- limitations under the License. ]]
+-- limitations under the License.
+
+Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
 -- Lua libs
 require "libs"
@@ -22,7 +24,15 @@ players_data = {}
 admins = {}
 
 -- Data lists.
-require "lists.pokemon.first_generation"
+require "lists.pokemon.kanto"
+require "lists.pokemon.jotho"
+require "lists.pokemon.hoenn"
+require "lists.pokemon.sinnoh"
+require "lists.pokemon.unova"
+require "lists.pokemon.kalos"
+require "lists.pokemon.mega"
+require "lists.pokemon.fakemon"
+require "lists.pokemon.misc"
 
 -- Module files.
 require "Translator"

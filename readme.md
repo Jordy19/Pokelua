@@ -1,7 +1,7 @@
 <div style="text-align:center"><img src ="https://github.com/Jordy19/pokelua/blob/develop/logo.png?raw=true" /></div>
 
 Pokelua is a *module* specifically written to be loaded with the LUA API within [Transformice](http://transformice.com).
-This repository contains the source code from the module.
+This module allows you to transform into a Pokémon of your choice.
 
 # Getting the module script
 
@@ -17,3 +17,5 @@ This repository contains the source code from the module.
 # Support
 
 - [Our official thread at the Atelier801 forums](http://atelier801.com/topic?f=6&t=838708&p=1) *Please use this thread for posting bugs and suggestions*
+
+**Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019**
