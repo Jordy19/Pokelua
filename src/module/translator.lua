@@ -36,6 +36,8 @@ tString = function(string)
 tStrings = {
     en = {
         -- Room
+        room_introduction = [[Welcome to #pokelua. The Pokémon module for Transformice!]],
+        room_advice = "Try !Pikachu",
         room_broadcast_global = "[Global] %s",
         room_broadcast_admin = "<font color='#EB1D51'>~ [<b>A</b>]</font><font color='#CB2655'> %s</font>",
         room_admin_promotion = "New room administrator: <b>%s</b>",
