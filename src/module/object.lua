@@ -23,7 +23,8 @@ function Object:create(playerName, objName)
         playerName: A string containing the player name.
         objName: A string containing the object name, else random.
 
-    Returns: a tbl if the object exists, otherwise nil]]
+    Returns: a tbl if the object exists, otherwise nil
+    ]]
     if objects[objName] then
         self.data = {
             object = objects[objName],
@@ -43,7 +44,8 @@ end
 function Object:getAxis()
     --[[Get's the axis of the Object.
 
-    Returns: Table wiith the x/y values.]]
+    Returns: Table wiith the x/y values.
+    ]]
     tbl = {l={}, r={}}
     tbl.l.x = self.data.object.images.left[1] + -48
     tbl.l.y = self.data.object.images.left[2] + -53
