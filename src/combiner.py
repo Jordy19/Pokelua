@@ -62,7 +62,7 @@ class LuaCombiner:
             file_name: A string with the name of the Lua script file.
             script_name: A string that contains the file name of scripts.
         """
-        for line in lua_script.split("\n"):
+        for line in lua_script.splitlines():
             if "require" in line:
                 required_script_name = line.split("require")[1]
                 required_script_name = required_script_name.replace('"', '').strip()
@@ -74,6 +74,7 @@ class LuaCombiner:
                     pass
             elif "print(" in line:
                 print("• [@] DEBUG: print() found: {} ({}.lua)".format(line.strip(), file_name))
+                self.combined_script.append(line)
             else:
                 if line != "":
                     self.combined_script.append(line)
@@ -105,7 +106,7 @@ class LuaCombiner:
         """
         stripped_source = []
         comment_check = False
-        lines = script_source.split("\n")
+        lines = script_source.splitlines()
         for line in lines:
             if "--[[" in line and "]]" in line:
                 pass
