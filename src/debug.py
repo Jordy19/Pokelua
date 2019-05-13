@@ -16,32 +16,66 @@ import os
 import subprocess
 
 
-def run(path, debug_commands=False):
-    """This function calls lua.exe so we can run our module.lua.
+class LuaDebugger():
+    """Lua Debugger Class
 
     Args:
-        path: A string containing the work directory.
+        path: A string containing the work path.
+        debug_commands: A boolean for debug commands to the source.
     """
-    if debug_commands:
-        commands_file = open("{}\\debug.lua".format(path), "r")
-        module_file = open("{}\\module.lua".format(path), "a+")
-        commands_file_content = commands_file.read()
-        commands_file.close()
-        module_file.write(commands_file_content)
-        module_file.close()
-        print("• [+] Debug commands injected.")
 
-    call = subprocess.Popen("lua module.lua", cwd=path, stderr=subprocess.PIPE)
-    # We want to read the output from lua.exe
-    output = call.communicate()
-    # Let's pull the output to the output() function.
-    info_output(output)
+    def __init__(self, path, debug_commands=False):
+        """Inits LuaDebugger()"""
+        self.debug = debug_commands
+        self.path = path
 
-def info_output(output):
-    """Debug output."""
-    # Convert the output to string with utf-8 formatting.
-    error_message = output[1].decode('utf-8')
-    if error_message:
-        print("• [!] [FAIL] {}".format(error_message))
-    else:
-        print("• [+] No errors were detected. *-*")
+    def run(self):
+        """This function calls lua.exe so we can run our module.lua.
+
+        Args:
+            path: A string containing the work directory.
+        """
+        if self.debug:
+            commands_file = open("{}\\debug.lua".format(self.path), "r")
+            module_file = open("{}\\module.lua".format(self.path), "a+")
+            commands_file_content = commands_file.read()
+            commands_file.close()
+            module_file.write(commands_file_content)
+            module_file.close()
+            print("• [+] Debug commands injected.")
+
+        call = subprocess.Popen("lua module.lua", cwd=self.path, stderr=subprocess.PIPE)
+        # We want to read the output from lua.exe
+        output = call.communicate()
+        # Let's pull the output to the output() function.
+        self.info_output(output)
+
+    def info_output(self, output):
+        """Debug output."""
+        # Convert the output to string with utf-8 formatting.
+        error = False
+        error_message = output[1].decode('utf-8')
+        try:
+            traceback = error_message.splitlines()[0]
+            error = True
+        except IndexError:
+            print(error_message)
+        else:
+            if error:
+                line_number = error_message.split(".lua:")[1].split(":")[0]
+                print("• [!] [FAIL] {}".format(error_message))
+                self.printErrorLine(line_number)
+            else:
+                print("• [+] No errors were detected. *-*")
+
+    def printErrorLine(self, line_number):
+        """Prints the line that caused the error.
+
+        Args:
+            line_number: A string converted to int with the line number.
+        """
+        script_file = open("{}\\module.lua".format(self.path), "r+")
+        script_content = script_file.read()
+        script_lines = script_content.splitlines()
+        script_line = script_lines[int(line_number) - 1]
+        print("• [!] [Error] {}".format(script_line))

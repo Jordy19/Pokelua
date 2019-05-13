@@ -33,7 +33,8 @@ class ModuleBuilder():
         print("• [+] Starting #pokelua builder.")
         print("• [+] Source path: %s" % self.srcPath)
         self.combiner.get_source()
-        src.debug.run(self.srcPath, debug_commands=self.debug_cmds)
+        debugger = src.debug.LuaDebugger(self.srcPath, debug_commands=self.debug_cmds)
+        debugger.run()
 
 
 # We don't want this script to be used with import.
