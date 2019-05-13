@@ -18,5 +18,5 @@ function eventNewPlayer(name)
     Args:
         name: A string containing the name of the player.
     ]]
-    players_data[name] = PlayerC:create(name)
+    players_data[name] = Player:create(name)
 end

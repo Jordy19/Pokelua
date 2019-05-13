@@ -12,11 +12,11 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License. ]]
 
--- Create the PlayerClass class.
-PlayerC = {}
-PlayerC.__index = PlayerC
+-- Create the Playerlass class.
+Player = {}
+Player.__index = Player
 
-function PlayerC:create(name)
+function Player:create(name)
     --[[ Function to create new player data.
 
     Args:
@@ -30,26 +30,26 @@ function PlayerC:create(name)
     return self
 end
 
-function PlayerC:getData()
+function Player:getData()
     --[[ Function to obtain the stored player data. ]]
      return self.data
 end
 
-function PlayerC:promote()
+function Player:promote()
     --[[ Function to promote a player to admin. ]]
     if self.data.role ~= "Admin" then
         self.data.role = "Admin"
     end
 end
 
-function PlayerC:depromote()
+function Player:depromote()
     --[[ Function to depromote a player from admin. ]]
     if self.data.role ~= "Public" then
         self.data.role = "Public"
     end
 end
 
-function PlayerC:save()
+function Player:save()
     --[[ Function to save the changed player data. ]]
     players_data[self.data.name].data = self.data
 end
