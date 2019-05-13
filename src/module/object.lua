@@ -63,7 +63,6 @@ function Object:setImage(name)
     --[[ "Draws" the object to the screen. ]]
     local images = self:getImages(name)
     local axis = self:getAxis()
-    print("spawn")
     local base_image = tfm.exec.addImage(images.left..".png","%"..name,axis.l.x, axis.l.y)
     Player:setData("object_image", base_image)
 end
