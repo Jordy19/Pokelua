@@ -18,7 +18,17 @@ Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 Object = {}
 Object.__index = Object
 
-function Object:create(playerName, objName)
+function Object:createTable()
+    self.data = {
+        name = obj_name,
+        level = 5,
+        shiny = math.random(0,500),
+        artist = false,
+    }
+    return self
+end
+
+function Object:create(player_name, obj_name)
     --[[Creates a new object
 
     Args:
@@ -27,20 +37,35 @@ function Object:create(playerName, objName)
 
     Returns: a tbl if the object exists, otherwise nil
     ]]
-    if objects[objName] then
-        self.data = {
-            object = objects[objName],
-            name = objName,
-            level = 5,
-            shiny = math.random(0,500),
-            artist = false,
-        }
-        players_data[playerName].object = self
-        return self
+    self:createTable()
+    if objects[obj_name] then
+        self.data.object = objects[obj_name]
+        players_data[player_name].object = self
     else
-        randomObject = objects[math.random(#objects)]
-        self:create(playerName, randomObject)
+        random_object = objects[math.random(#objects)]
+        self:create(playerName, random_object)
     end
+    self:setImage(player_name)
+end
+
+function Object:getImages(name)
+    --[[ Gets the images for the Object.]]
+    images = {left="",right=""}
+    if self.data.shiy == 1 then
+        images.left, images.right = self.data.object.images.shiny[1],  self.data.object.images.shiny[2]
+    else
+        images.left, images.right =  self.data.object.images.normal[1],  self.data.object.images.normal[2]
+    end
+    return images
+end
+
+function Object:setImage(name)
+    --[[ "Draws" the object to the screen. ]]
+    local images = self:getImages(name)
+    local axis = self:getAxis()
+    print("spawn")
+    local base_image = tfm.exec.addImage(images.left..".png","%"..name,axis.l.x, axis.l.y)
+    Player:setData("object_image", base_image)
 end
 
 function Object:getAxis()

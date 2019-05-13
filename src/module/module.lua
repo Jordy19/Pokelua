@@ -19,6 +19,7 @@ require "libs"
 
 -- We need tables.
 db = {}
+cmds = {}
 objects = setmetatable({}, {__newindex = table.newidx})
 players_data = {}
 admins = {}
@@ -37,6 +38,7 @@ require "lists.pokemon.misc"
 -- Module files.
 require "Translator"
 require "events.new_player"
+require "events.chat_command"
 require "room"
 require "object"
 require "player"
