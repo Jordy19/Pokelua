@@ -22,14 +22,14 @@ local tfm = {
                             isFacingRight=true,
                             tribeName="Lua devs"
                     },
-                    Jordy19={
+                    ["+Jordy#0000"]={
                             isFacingRight=true,
                             tribeName=nil
                     },
-                    Tigrounette={
-                            isFacingRight=false,
-                            tribeName="test",
-                    }
+                    -- Tigrounette={
+                    --         isFacingRight=false,
+                    --         tribeName="test",
+                    -- }
             },
             name = "*#pokelua0Jordy#0010",
             -- name = "*Something cute",
