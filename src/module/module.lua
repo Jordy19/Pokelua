@@ -12,13 +12,13 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License. ]]
 
+-- Lua libs
+require "libs"
+
 -- We need tables.
 db = {}
-objects = {}
+objects = setmetatable({}, {__newindex = table.newidx})
 players_data = {}
-
--- Generate a random seed.
-math.randomseed(os.time())
 
 -- Data lists.
 require "lists.pokemon.first_generation"
@@ -31,6 +31,8 @@ require "player"
 
 function init()
     --[[ Inits the module. ]]
+    -- Generate a random seed.
+    math.randomseed(os.time())
     for k,v in pairs(tfm.get.room.playerList) do
         eventNewPlayer(k)
     end

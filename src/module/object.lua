@@ -24,18 +24,26 @@ function Object:create(playerName, objName)
         objName: A string containing the object name, else random.
 
     Returns: a tbl if the object exists, otherwise nil]]
-    self.data = {
-        object = objects[objName] or Object:generate(),
-        name = objName,
-        level = 5,
-        shiny = math.random(0,500),
-        artist = false,
-    }
-    players_data[playerName].object = self
-    return self
+    if objects[objName] then
+        self.data = {
+            object = objects[objName],
+            name = objName,
+            level = 5,
+            shiny = math.random(0,500),
+            artist = false,
+        }
+        players_data[playerName].object = self
+        return self
+    else
+        randomObject = objects[math.random(#objects)]
+        self:create(playerName, randomObject)
+    end
 end
 
 function Object:getAxis()
+    --[[Get's the axis of the Object.
+
+    Returns: Table wiith the x/y values.]]
     tbl = {l={}, r={}}
     tbl.l.x = self.data.object.images.left[1] + -48
     tbl.l.y = self.data.object.images.left[2] + -53
