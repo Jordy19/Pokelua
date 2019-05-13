@@ -49,7 +49,6 @@ function Room:broadcast(message, group)
         players_list = tfm.get.room.playerList
         message_string = string.format(tString("room_message_global"), message)
     end
-    print(players_list)
     for k,v in pairs(players_list) do
         tfm.exec.chatMessage(message_string, k)
     end

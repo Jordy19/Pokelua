@@ -39,7 +39,7 @@ function Player:promote()
     --[[ Function to promote a player to admin. ]]
     if self.data.role ~= "Admin" then
         self.data.role = "Admin"
-        Room.broadcast(string.format(tString"room_admin_promotion"),self.data.name)
+        Room.broadcast(string.format(tString("room_admin_promotion"),self.data.name))
     end
 end
 
@@ -47,6 +47,7 @@ function Player:depromote()
     --[[ Function to depromote a player from admin. ]]
     if self.data.role ~= "Public" then
         self.data.role = "Public"
+        Room.broadcast(string.format(tString("room_admin_depromotion"),self.data.name))
     end
 end
 

@@ -36,7 +36,8 @@ tStrings = {
         -- Room
         room_broadcast_global = "[Global] %s",
         room_broadcast_admin = "<font color='#EB1D51'>~ [<b>A</b>]</font><font color='#CB2655'> %s</font>",
-        new_admin = "New room administrator: <b>%s</b>",
+        room_admin_promotion = "New room administrator: <b>%s</b>",
+        room_admin_depromotion = "Room admin removed: <b>%s</b>",
 
     },
     xx = en,
