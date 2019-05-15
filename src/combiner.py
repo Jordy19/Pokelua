@@ -48,7 +48,7 @@ class LuaCombiner:
         script_path = os.path.join(self.source_path, "{}.lua".format(file_name))
         script_file = open(script_path, "r")
         script = self._luaCommentStripper(script_file.read())
-        if "lists\\" in file_name:
+        if "lists" in file_name:
             script = re.sub(r"[\n\t\s]*", "", script)
         self._readScript(file_name, script)
 
@@ -66,7 +66,8 @@ class LuaCombiner:
             if "require" in line:
                 required_script_name = line.split("require")[1]
                 required_script_name = required_script_name.replace('"', '').strip()
-                required_script_name = required_script_name.replace(".", "\\")
+                required_script_name = required_script_name.replace('.', os.sep)
+                print(required_script_name)
                 if required_script_name != file_name:
                     script_name = "{}".format(required_script_name)
                     self._openScript(script_name)
