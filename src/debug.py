@@ -36,19 +36,27 @@ class LuaDebugger():
             path: A string containing the work directory.
         """
         if self.debug:
-            commands_file = open(os.path.join(self.path, "debug.lua"), "r")
-            module_file = open(os.path.join(self.path, "module.lua"), "a+")
-            commands_file_content = commands_file.read()
-            commands_file.close()
-            module_file.write(commands_file_content)
-            module_file.close()
-            print("• [+] Debug commands injected.")
+            self.insert_debug_commands()
 
         call = subprocess.Popen("lua module.lua", cwd=self.path, stderr=subprocess.PIPE)
         # We want to read the output from lua.exe
         output = call.communicate()
         # Let's pull the output to the output() function.
         self.info_output(output)
+
+    def insert_debug_commands(self):
+        """Adds debug commands from debug.lua to module.lua"""
+        try:
+            commands_file = open(os.path.join(self.path, "debug.lua"), "r")
+        except FileNotFoundError:
+            pass
+        else:
+            module_file = open(os.path.join(self.path, "module.lua"), "a+")
+            commands_file_content = commands_file.read()
+            module_file.write(commands_file_content)
+            module_file.close()
+            commands_file.close()
+            print("• [+] Debug commands injected.")
 
     def info_output(self, output):
         """Debug output."""
