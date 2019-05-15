@@ -1,0 +1,31 @@
+language: python
+sudo: false
+
+python:
+  "3.6"
+
+env:
+  - LUA="lua 5.1"       COMPAT=default
+  - LUA="lua 5.2"       COMPAT=default
+  - LUA="lua 5.3"       COMPAT=default
+  - LUA="lua 5.3"       COMPAT=none
+  - LUA="lua 5.3"       COMPAT=default  CFLAGS="-DLUA_NOCVTN2S -DLUA_NOCVTS2N"
+  - LUA="luajit 2.0"    COMPAT=none
+  - LUA="luajit 2.1"    COMPAT=none
+  - LUA="luajit 2.1"    COMPAT=all
+
+before_install:
+  - pip install hererocks
+  - hererocks HERE --$LUA --compat $COMPAT --cflags="$CFLAGS" --no-readline --luarocks latest --verbose
+  - hererocks HERE --show
+  - source HERE/bin/activate
+
+install:
+  - luarocks install luacheck
+  - luarocks install luacov-coveralls
+
+script:
+  - python build.py
+  - luacheck --codes --std=max module.lua module
+  - export LUA_PATH=";;test/?.lua"
+  - lua module.lua
