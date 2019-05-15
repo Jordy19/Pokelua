@@ -36,7 +36,7 @@ require "lists.pokemon.fakemon"
 require "lists.pokemon.misc"
 
 -- Module files.
-require "Translator"
+require "translator"
 require "events.new_player"
 require "events.chat_command"
 require "room"

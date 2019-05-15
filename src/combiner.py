@@ -67,7 +67,6 @@ class LuaCombiner:
                 required_script_name = line.split("require")[1]
                 required_script_name = required_script_name.replace('"', '').strip()
                 required_script_name = required_script_name.replace('.', os.sep)
-                print(required_script_name)
                 if required_script_name != file_name:
                     script_name = "{}".format(required_script_name)
                     self._openScript(script_name)
