@@ -16,6 +16,8 @@ import os
 import src.combiner
 import src.debug
 
+import time
+
 
 class ModuleBuilder():
     """"Module Builder Class"""
@@ -34,6 +36,7 @@ class ModuleBuilder():
         print("• [+] Source path: %s" % self.srcPath)
         self.combiner.get_source()
         debugger = src.debug.LuaDebugger(self.srcPath, debug_commands=self.debug_cmds)
+        time.sleep(5)
         debugger.run()
 
 
