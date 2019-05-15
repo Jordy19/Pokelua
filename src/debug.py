@@ -36,8 +36,8 @@ class LuaDebugger():
             path: A string containing the work directory.
         """
         if self.debug:
-            commands_file = open("{}\\debug.lua".format(self.path), "r")
-            module_file = open("{}\\module.lua".format(self.path), "a+")
+            commands_file = open(os.path.join(self.path, "debug.lua"), "r")
+            module_file = open(os.path.join(self.path, "module.lua"), "a+")
             commands_file_content = commands_file.read()
             commands_file.close()
             module_file.write(commands_file_content)
@@ -74,7 +74,7 @@ class LuaDebugger():
         Args:
             line_number: A string converted to int with the line number.
         """
-        script_file = open("{}\\module.lua".format(self.path), "r+")
+        script_file = open(os.path.join(self.path, "module.lua"), "r+")
         script_content = script_file.read()
         script_lines = script_content.splitlines()
         script_line = script_lines[int(line_number) - 1]
