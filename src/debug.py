@@ -37,13 +37,15 @@ class LuaDebugger():
         """
         if self.debug:
             self.insert_debug_commands()
-
-        print(self.path)
-        call = subprocess.Popen("lua module.lua", cwd=self.path, stderr=subprocess.PIPE)
-        # We want to read the output from lua.exe
-        output = call.communicate()
-        # Let's pull the output to the output() function.
-        self.info_output(output)
+        try:
+            call = subprocess.Popen("lua module.lua", cwd=self.path, stderr=subprocess.PIPE)
+        except FileNotFoundError:
+            pass
+        else:
+            # We want to read the output from lua.exe
+            output = call.communicate()
+            # Let's pull the output to the output() function.
+            self.info_output(output)
 
     def insert_debug_commands(self):
         """Adds debug commands from debug.lua to module.lua"""
