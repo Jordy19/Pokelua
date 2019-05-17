@@ -23,21 +23,17 @@ function Room:init()
 
     Returns: A table with room settings.
     ]]
-    self.data = {
-        dev = {["Jordy#0010"]=true},
-        admins = {}
-    }
     isRoom = tfm.get.room.name:byte(2) ~= 3
     attributes = isRoom and tfm.get.room.name:match("%*?#pokelua(.*)") or nil
     if attributes then
         for name in attributes:gmatch("[^@,&,$]+") do
             if name:find('^' .."0") then
                 name = string.sub(name, 2)
+                name = firstToUpper(name)
             end
-            players_data[name]:promote()
+           players_data[name]:promote()
         end
     end
-    return self.data
 end
 
 function Room:broadcast(message, group)
