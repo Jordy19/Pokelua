@@ -24,17 +24,21 @@ function Player:create(name)
     Args:
         name: A string containing the player name.
     ]]
-   self.data = {
+   local data = {
         ["name"] = name,
-        ["role"] = "Public",
+        ["roles"] = {public=true,admin=false,dev=false},
         ["object"] = "Reserved",
     }
-    return self
+    if name:lower() == "jordy#0010" then
+        data.roles.admin = true
+        data.roles.dev = true
+    end
+    return setmetatable(data, self)
 end
 
 function Player:getData(key)
     --[[ Function to obtain the stored player data by key ]]
-     return self.data[key]
+     return self[key]
 end
 
 function Player:setData(key, value)
@@ -44,26 +48,26 @@ function Player:setData(key, value)
         key: String with the key name
         value: String with the value
     ]]
-    self.data[key] = value
+    self[key] = value
 end
 
 function Player:promote()
     --[[ Function to promote a player to admin. ]]
-    if self.data.role ~= "Admin" then
-        self.data.role = "Admin"
-        Room:broadcast(string.format(tString("room_admin_promotion"),self.data.name))
+    if self.roles.admin == false then
+        self.roles.admin = true
+        Room:broadcast(string.format(tString("room_admin_promotion"),self.name))
     end
 end
 
 function Player:depromote()
     --[[ Function to depromote a player from admin. ]]
-    if self.data.role ~= "Public" then
-        self.data.role = "Public"
-        Room:broadcast(string.format(tString("room_admin_depromotion"),self.data.name))
+    if self.roles.admin == true then
+        self.roles.admin = false
+        Room:broadcast(string.format(tString("room_admin_depromotion"),self.name))
     end
 end
 
 function Player:save()
     --[[ Function to save the changed player data. ]]
-    players_data[self.data.name].data = self.data
+    players_data[self.data.name] = self
 end
