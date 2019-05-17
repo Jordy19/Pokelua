@@ -19,7 +19,7 @@ require "libs"
 
 -- We need tables.
 db = {}
-cmds = {}
+cmd = {}
 objects = setmetatable({}, {__newindex = table.newidx})
 players_data = {}
 admins = {}
@@ -36,12 +36,15 @@ require "lists.pokemon.fakemon"
 require "lists.pokemon.misc"
 
 -- Module files.
+require "commands.dev"
+require "commands.admin"
+require "commands.public"
 require "translator"
 require "events.new_player"
 require "events.chat_command"
-require "room"
 require "object"
 require "player"
+require "room"
 
 function init()
     --[[ Inits the module. ]]
