@@ -42,6 +42,7 @@ tStrings = {
         room_broadcast_admin = "<font color='#EB1D51'>~ [<b>A</b>]</font><font color='#CB2655'> %s</font>",
         room_admin_promotion = "New room administrator: <b>%s</b>",
         room_admin_depromotion = "Room admin removed: <b>%s</b>",
+        commands_no_permission = "Access denied: You have insufficient permissions.",
 
     },
     xx = en,

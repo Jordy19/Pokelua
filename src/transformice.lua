@@ -26,12 +26,12 @@ local tfm = {
                             isFacingRight=true,
                             tribeName=nil
                     },
-                    -- Tigrounette={
-                    --         isFacingRight=false,
-                    --         tribeName="test",
-                    -- }
+                    ["Pikashu#0001"]={
+                            isFacingRight=false,
+                            tribeName="test",
+                    }
             },
-            name = "*#pokelua0Jordy#0010",
+            name = "*#pokelua0jordy#0010",
             -- name = "*Something cute",
             community = "en"
         },
