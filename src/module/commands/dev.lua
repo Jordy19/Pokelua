@@ -12,7 +12,7 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License. ]]
 
-function killFunction()
+function killFunction(name, args)
     --[[Help command.]]
     print("DIE!")
 end
