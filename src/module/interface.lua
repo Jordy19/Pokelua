@@ -12,9 +12,7 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License. ]]
 
-interface = {}
-
-function interface.update(player_name)
+function update(player_name)
     local player_data = players_data[player_name]
     local transformed = player_data:getData("transformed")
     if transformed then
@@ -39,7 +37,7 @@ function interface.update(player_name)
     end
 end
 
-function interface.intro(player_name, hide)
+function intro(player_name, hide)
     if hide == true then
         tfm.exec.removeImage(players_data[player_name].intro_image)
         tfm.exec.removeImage(players_data[player_name].legal_imgage)
@@ -51,3 +49,8 @@ function interface.intro(player_name, hide)
         players_data[player_name].intro = true
     end
 end
+
+interface = {
+    intro = intro,
+    update = update,
+}

@@ -14,11 +14,7 @@
 
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
--- Create the room class.
-Room = {}
-Room.__index = Room
-
-function Room:init()
+local function init()
     --[[Inits the Module Room
 
     Returns: A table with room settings.
@@ -36,7 +32,7 @@ function Room:init()
     end
 end
 
-function Room:broadcast(message, group)
+local function broadcast(message, group)
     --[[Room broadcast for module messages
 
     Args:
@@ -54,3 +50,8 @@ function Room:broadcast(message, group)
         tfm.exec.chatMessage(message_string, k)
     end
 end
+
+Room = {
+    init      = init,
+    broadcast = broadcast
+}
