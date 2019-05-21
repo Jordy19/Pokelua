@@ -13,7 +13,7 @@
 -- limitations under the License. ]]
 
 function killFunction(name, args)
-    --[[Help command.]]
-    print("DIE!")
+  --[[Help command.]]
+  print("DIE!")
 end
 cmd["die"] = {killFunction, "dev"}

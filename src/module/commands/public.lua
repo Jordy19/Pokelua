@@ -13,7 +13,7 @@
 -- limitations under the License. ]]
 
 function helpFunction(name, args)
-    --[[Help command.]]
-    print("HELP!")
+  --[[Help command.]]
+  print("HELP!")
 end
 cmd["help"] = {helpFunction, "public"}
