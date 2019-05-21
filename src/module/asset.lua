@@ -1,3 +1,19 @@
+--[[ The #pokelua Project.
+--
+-- Licensed under the Apache License, Version 2.0 (the 'License');
+-- you may not use this file except in compliance with the License.
+-- You may obtain a copy of the License at
+--
+--      https://www.apache.org/licenses/LICENSE-2.0
+--
+-- Unless required by applicable law or agreed to in writing, software
+-- distributed under the License is distributed on an 'AS IS' BASIS,
+-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-- See the License for the specific language governing permissions and
+-- limitations under the License.
+
+Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
+
 Asset = {}
 Asset.__index = Asset
 
@@ -12,12 +28,12 @@ function Asset:new(player_name, object_name)
 			direction='left',
 			name = object_name,
 			object = objects[object_name],
-			shiny = math.random(0,500),
+			shiny = math.random(0, 500),
 			artist = false,
 		}
 		players_data[player_name].object = data
 	end
-	for k,v in pairs(objects[object_name].types) do
+	for _,v in pairs(objects[object_name].types) do
 		-- Flying types
 		if v == 5 or v == 13 then
 			players_data[player_name].can_fly = true
@@ -50,9 +66,9 @@ function Asset:_setImage(player_name)
 		tfm.exec.removeImage(players_data[player_name].image)
 	end
 	if direction == 'left' then
-		local base_image = tfm.exec.addImage(images.left..'.png','%'..player_name,axis.l.x, axis.l.y)
+		local base_image = tfm.exec.addImage(images.left .. '.png', '%' .. player_name, axis.l.x, axis.l.y)
 	else
-		local base_image = tfm.exec.addImage(images.right..'.png','%'..player_name,axis.r.x, axis.r.y)
+		local base_image = tfm.exec.addImage(images.right .. '.png', '%' .. player_name, axis.r.x, axis.r.y)
 	end
 	player_data.image = base_image
 	player_data.transformed = true
@@ -71,12 +87,12 @@ function Asset:_getImages(player_name)
 
 	Returns: Table with image ids.
 	]]
-	local images = {left='',right=''}
+	local images = {left='', right=''}
 	local obj = self:getData(player_name, 'object')
 	if self:getData(player_name, 'shiny') == 1 then
-		images.left, images.right = obj.images.shiny[1],  obj.images.shiny[2]
+		images.left, images.right = obj.images.shiny[1], obj.images.shiny[2]
 	else
-		images.left, images.right =  obj.images.normal[1],  obj.images.normal[2]
+		images.left, images.right = obj.images.normal[1], obj.images.normal[2]
 	end
 	return images
 end
