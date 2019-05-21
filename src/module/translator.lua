@@ -13,27 +13,8 @@
 -- limitations under the License.
 
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
-tStrings = {}
 
-function tString(string)
-    --[[ Translates strings to other languages.
-    Defaults to EN community.
-
-    Args:
-        string: A string.
-
-    Returns: A translated version of  input string.]]
-    commu = tfm.get.room.community
-    if tStrings[commu] and tStrings[commu][string] then
-        t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
-    else
-        commu = 'en'
-        t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
-    end
-    return t_string
- end
-
-tStrings = {
+local tStrings = {
     en = {
         infobar = '<p align="center"><j>PokeLua <bl>[<v>EN<bl>] • <font size="9"><bl>(<n>' ..
             'Version: <v>&version&<bl>)</font><font size="11"> <j>• <vp>!pikachu</font>' ..
@@ -53,3 +34,21 @@ tStrings = {
 -- For international, e2 community we will fall back to EN.
 tStrings.xx = tStrings.en
 tStrings.e2 = tStrings.en
+
+function tString(string)
+    --[[ Translates strings to other languages.
+    Defaults to EN community.
+
+    Args:
+        string: A string.
+
+    Returns: A translated version of  input string.]]
+    local commu = tfm.get.room.community
+    if tStrings[commu] and tStrings[commu][string] then
+        local t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
+    else
+        local commu = 'en'
+        local t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
+    end
+    return t_string
+ end

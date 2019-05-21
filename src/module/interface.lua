@@ -63,7 +63,7 @@ function intro(player_name, hide)
     end
 end
 
-interface = {
+local interface = {
     intro = intro,
     update = update
 }

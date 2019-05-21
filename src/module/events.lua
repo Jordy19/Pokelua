@@ -35,7 +35,7 @@ function eventChatCommand(player_name, msg)
    local player_data = players_data[player_name]
    local args = {}
    for chunk in string.gmatch(msg, '[^"]+') do
-        quote = not quote
+        local quote = not quote
         if quote then
             table.insert(args, chunk)
         else
@@ -63,34 +63,34 @@ function eventChatCommand(player_name, msg)
  end
 
  function eventKeyboard(player_name, key, down, xPos, yPos)
-       -- If we move left or right.
-        player_data = players_data[player_name]
-        transformed = player_data:getData('transformed')
-        if players_data[player_name].intro then
-            interface.intro(player_name, true)
-        end
-        if transformed then
-            object = player_data:getData('object')
-            if object then
-                -- When we move left or right.
-                if key == 0 or key == 2 then
-                    if key == 0 then
-                        direction = 'left'
-                    elseif key == 2 then
-                        direction = 'right'
-                    end
-                    players_data[player_name].object.direction = direction
-                    Asset:new(player_name, firstToUpper(object.name))
+   -- If we move left or right.
+    local player_data = players_data[player_name]
+    local is_transformed = player_data:getData('transformed')
+    if players_data[player_name].intro then
+        interface.intro(player_name, true)
+    end
+    if is_transformed then
+        local object = player_data:getData('object')
+        if object then
+            -- When we move left or right.
+            if key == 0 or key == 2 then
+                if key == 0 then
+                   local direction = 'left'
+                elseif key == 2 then
+                   local direction = 'right'
                 end
-                -- We flying
-                if key == 32 then
-                    can_fly = player_data:getData('can_fly')
-                    if can_fly then
-                        local y = yPos - 10
-                        tfm.exec.displayParticle(1, xPos, y, 0, 0, 0, 0, nil)
-                        tfm.exec.movePlayer(player_name, 0, 0, false, 0, -50, false, true)
-                    end
+                players_data[player_name].object.direction = direction
+                Asset:new(player_name, firstToUpper(object.name))
+            end
+            -- We flying
+            if key == 32 then
+                local is_flying = player_data:getData('can_fly')
+                if is_flying then
+                    local y = yPos - 10
+                    tfm.exec.displayParticle(1, xPos, y, 0, 0, 0, 0, nil)
+                    tfm.exec.movePlayer(player_name, 0, 0, false, 0, -50, false, true)
                 end
             end
         end
+    end
  end

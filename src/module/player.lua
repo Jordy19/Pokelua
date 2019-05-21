@@ -15,7 +15,7 @@
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
 -- Create the Playerlass class.
-Player = {}
+local Player = {}
 Player.__index = Player
 
 function Player:create(name)

@@ -19,8 +19,8 @@ local function init()
 
     Returns: A table with room settings.
     ]]
-    isRoom = tfm.get.room.name:byte(2) ~= 3
-    attributes = isRoom and tfm.get.room.name:match('%*?#pokelua(.*)') or nil
+    local isRoom = tfm.get.room.name:byte(2) ~= 3
+    local attributes = isRoom and tfm.get.room.name:match('%*?#pokelua(.*)') or nil
     if attributes then
         for name in attributes:gmatch('[^@,&,$]+') do
             if name:find('^' ..'0') then
@@ -40,18 +40,18 @@ local function broadcast(message, group)
         group: A string with the group, ex: admin
     ]]
     if group == 'admin' then
-        players_list = room_settings.data.admins
-        messageString = string.format(tString('room_broadcast_admin'), message)
+        local players_list = room_settings.data.admins
+        local messageString = string.format(tString('room_broadcast_admin'), message)
     else
-        players_list = tfm.get.room.playerList
-        message_string = string.format(tString('room_broadcast_global'), message)
+        local players_list = tfm.get.room.playerList
+        local message_string = string.format(tString('room_broadcast_global'), message)
     end
     for k,v in pairs(players_list) do
         tfm.exec.chatMessage(message_string, k)
     end
 end
 
-Room = {
+local Room = {
     init      = init,
     broadcast = broadcast
 }

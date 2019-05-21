@@ -18,11 +18,10 @@ Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 require 'libs'
 
 -- We need tables.
-db = {}
-cmd = {}
-objects = setmetatable({}, {__newindex = table.newidx})
-players_data = {}
-admins = {}
+local db = {}
+local cmd = {}
+local objects = setmetatable({}, {__newindex = table.newidx})
+local players_data = {}
 
 -- Data lists.
 require 'lists.pokemon.kanto'
