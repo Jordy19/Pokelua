@@ -15,7 +15,7 @@
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 tStrings = {}
 
-tString = function(string)
+function tString(string)
     --[[ Translates strings to other languages.
     Defaults to EN community.
 
