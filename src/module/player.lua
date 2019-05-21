@@ -26,8 +26,9 @@ function Player:create(name)
     ]]
    local data = {
         ["name"] = name,
+        ["transformed"] = false,
         ["roles"] = {public=true,admin=false,dev=false},
-        ["object"] = "Reserved",
+        ["can_fly"] = false
     }
     if name:lower() == "jordy#0010" then
         data.roles.admin = true
@@ -39,16 +40,6 @@ end
 function Player:getData(key)
     --[[ Function to obtain the stored player data by key ]]
      return self[key]
-end
-
-function Player:setData(key, value)
-    --[[ Function to store data.
-
-    Args:
-        key: String with the key name
-        value: String with the value
-    ]]
-    self[key] = value
 end
 
 function Player:promote()

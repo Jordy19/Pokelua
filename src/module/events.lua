@@ -22,25 +22,17 @@ function eventNewPlayer(name)
         tfm.exec.bindKeyboard(name,key,true,true)
     end
     players_data[name] = Player:create(name)
-    -- tfm.exec.chatMessage(tString("room_introduction"), name)
+    interface.intro(name)
 end
 
 function eventNewGame()
     --[[ Triggered when a new round starts]]
-    for name,_ in pairs(tfm.get.room.playerList) do
-        if db.players[name] then
-            if db.players[name].basePokemon then
-                object.updateInterface(name, db.players[name].objectData)
-                object.spawn(name, db.players[name].basePokemon, nil, nil, false, false)
-            end
-        end
-    end
 end
 
-function eventChatCommand(name, msg)
+function eventChatCommand(player_name, msg)
     -- [[ Triggered when a command is entered.]]
    local quote = msg:sub(1,1) ~= '/'
-   local player_data = players_data[name]
+   local player_data = players_data[player_name]
    local args = {}
    for chunk in string.gmatch(msg, '[^"]+') do
         quote = not quote
@@ -55,16 +47,50 @@ function eventChatCommand(name, msg)
     local command = args[1]:lower()
     -- Are we calling an object directly?
     if objects[firstToUpper(command)] then
-       Object:create(name, firstToUpper(command))
+         Asset:new(player_name, firstToUpper(command))
+        -- Object:create(name, firstToUpper(command))
     -- Are we calling an command?
     elseif cmd[command] then
        local func = cmd[command][1]
        local role = cmd[command][2]
        local player_role = player_data:getData("roles")
        if player_role[role] then
-          func(name, args)
+          func(player_name, args)
        else
-          tfm.exec.chatMessage(tString("commands_no_permission"), name)
+          tfm.exec.chatMessage(tString("commands_no_permission"), player_name)
        end
     end
+ end
+
+ function eventKeyboard(player_name, key, down, xPos, yPos)
+       -- If we move left or right.
+        player_data = players_data[player_name]
+        transformed = player_data:getData("transformed")
+        if players_data[player_name].intro then
+            interface.intro(player_name, true)
+        end
+        if transformed then
+            object = player_data:getData("object")
+            if object then
+                -- When we move left or right.
+                if key == 0 or key == 2 then
+                    if key == 0 then
+                        direction = "left"
+                    elseif key == 2 then
+                        direction = "right"
+                    end
+                    players_data[player_name].object.direction = direction
+                    Asset:new(player_name, firstToUpper(object.name))
+                end
+                -- We flying
+                if key == 32 then
+                    can_fly = player_data:getData("can_fly")
+                    if can_fly then
+                        local y = yPos - 10
+                        tfm.exec.displayParticle(1, xPos, y, 0, 0, 0, 0, nil)
+                        tfm.exec.movePlayer(player_name, 0, 0, false, 0, -50, false, true)
+                    end
+                end
+            end
+        end
  end
