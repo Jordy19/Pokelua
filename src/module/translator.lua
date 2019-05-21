@@ -35,8 +35,7 @@ tString = function(string)
 
 tStrings = {
     en = {
-        -- Room
-        room_introduction = [[Welcome to #pokelua. The Pokémon module for Transformice!]],
+        infobar = "<p align='center'><j>PokeLua <bl>[<v>NL<bl>] • <font size='9'><bl>(<n>Versie: <v>&version&<bl>)</font><font size='11'> <j>• <vp>!pikachu</font> <j>• <a href='event:explore.random'><font size='9'><bl>[<v>Willekeurige Pokémon<bl>]</font></a></p>",
         room_advice = "Try !Pikachu",
         room_broadcast_global = "[Global] %s",
         room_broadcast_admin = "<font color='#EB1D51'>~ [<b>A</b>]</font><font color='#CB2655'> %s</font>",
@@ -45,7 +44,6 @@ tStrings = {
         commands_no_permission = "Access denied: You have insufficient permissions.",
 
     },
-    xx = en,
     nl = {
         infobar = "<p align='center'><j>PokeLua <bl>[<v>NL<bl>] • <font size='9'><bl>(<n>Versie: <v>&version&<bl>)</font><font size='11'> <j>• <vp>!pikachu</font> <j>• <a href='event:explore.random'><font size='9'><bl>[<v>Willekeurige Pokémon<bl>]</font></a></p>",
     }
