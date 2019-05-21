@@ -3,13 +3,13 @@ Asset.__index = Asset
 
  function Asset:new(player_name, object_name)
     player_data = players_data[player_name]
-    if players_data[player_name]:getData("object") then
+    if players_data[player_name]:getData('object') then
        players_data[player_name].object.name = object_name
        players_data[player_name].object.object = objects[object_name]
     else
         local data = {
             player_name = player_name,
-            direction="left",
+            direction='left',
             name = object_name,
             object = objects[object_name],
             shiny = math.random(0,500),
@@ -42,16 +42,16 @@ function Asset:setData(player_name, key, value)
 end
 
 function Asset:_setImage(player_name)
-    local direction = self:getData(player_name, "direction")
+    local direction = self:getData(player_name, 'direction')
     local images = self:_getImages(player_name)
     local axis = self:_getAxis(player_name)
     if players_data[player_name].image then
         tfm.exec.removeImage(players_data[player_name].image)
     end
-    if direction == "left" then
-        base_image = tfm.exec.addImage(images.left..".png","%"..player_name,axis.l.x, axis.l.y)
+    if direction == 'left' then
+        base_image = tfm.exec.addImage(images.left..'.png','%'..player_name,axis.l.x, axis.l.y)
     else
-        base_image = tfm.exec.addImage(images.right..".png","%"..player_name,axis.r.x, axis.r.y)
+        base_image = tfm.exec.addImage(images.right..'.png','%'..player_name,axis.r.x, axis.r.y)
     end
     players_data[player_name].image = base_image
     players_data[player_name].transformed = true
@@ -70,9 +70,9 @@ function Asset:_getImages(player_name)
 
     Returns: Table with image ids.
     ]]
-    images = {left="",right=""}
-    obj = self:getData(player_name, "object")
-    if self:getData(player_name, "shiny") == 1 then
+    images = {left='',right=''}
+    obj = self:getData(player_name, 'object')
+    if self:getData(player_name, 'shiny') == 1 then
         images.left, images.right = obj.images.shiny[1],  obj.images.shiny[2]
     else
         images.left, images.right =  obj.images.normal[1],  obj.images.normal[2]
@@ -88,7 +88,7 @@ end
         l={},
         r={}
     }
-    obj = self:getData(player_name, "object")
+    obj = self:getData(player_name, 'object')
     tbl.l.x = obj.images.left[1] - 48
     tbl.l.y = obj.images.left[2] - 53
     tbl.r.x = (obj.images.right[1] or tbl.l.x)
