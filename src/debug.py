@@ -38,7 +38,7 @@ class LuaDebugger():
         if self.debug:
             self.insert_debug_commands()
         try:
-            call = subprocess.Popen("lua module.lua", cwd=self.path, stderr=subprocess.PIPE)
+            call = subprocess.Popen("lua module_debug.lua", cwd=self.path, stderr=subprocess.PIPE)
         except FileNotFoundError:
             pass
         else:
@@ -56,7 +56,7 @@ class LuaDebugger():
         except FileNotFoundError:
             pass
         else:
-            module_file = open(os.path.join(self.path, "module.lua"), "a+")
+            module_file = open(os.path.join(self.path, "module_debug.lua"), "a+")
             module_file.write(commands_file_content)
             module_file.close()
             print("• [+] Debug commands injected.")
@@ -85,7 +85,7 @@ class LuaDebugger():
         Args:
             line_number: A string converted to int with the line number.
         """
-        script_file = open(os.path.join(self.path, "module.lua"), "r+")
+        script_file = open(os.path.join(self.path, "module_debug.lua"), "r+")
         script_content = script_file.read()
         script_lines = script_content.splitlines()
         script_line = script_lines[int(line_number) - 1]
