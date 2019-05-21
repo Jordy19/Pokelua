@@ -15,40 +15,40 @@
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
 local tStrings = {
-    en = {
-        infobar = '<p align="center"><j>PokeLua <bl>[<v>EN<bl>] • <font size="9"><bl>(<n>' ..
-            'Version: <v>&version&<bl>)</font><font size="11"> <j>• <vp>!pikachu</font>' ..
-            '<j>• <a href="event:explore.random"><font size="9"><bl>[<v>Random Pokémon<bl>]</font></a></p>',
-        room_advice = 'Try !Pikachu',
-        room_broadcast_global = '[Global] %s',
-        room_broadcast_admin = '<font color="#EB1D51">~ [<b>A</b>]</font><font color="#CB2655"> %s</font>',
-        room_admin_promotion = 'New room administrator: <b>%s</b>',
-        room_admin_depromotion = 'Room admin removed: <b>%s</b>',
-        commands_no_permission = 'Access denied: You have insufficient permissions.',
+  en = {
+  infobar = '<p align="center"><j>PokeLua <bl>[<v>EN<bl>] • <font size="9"><bl>(<n>' ..
+    'Version: <v>&version&<bl>)</font><font size="11"> <j>• <vp>!pikachu</font>' ..
+    '<j>• <a href="event:explore.random"><font size="9"><bl>[<v>Random Pokémon<bl>]</font></a></p>',
+  room_advice = 'Try !Pikachu',
+  room_broadcast_global = '[Global] %s',
+  room_broadcast_admin = '<font color="#EB1D51">~ [<b>A</b>]</font><font color="#CB2655"> %s</font>',
+  room_admin_promotion = 'New room administrator: <b>%s</b>',
+  room_admin_depromotion = 'Room admin removed: <b>%s</b>',
+  commands_no_permission = 'Access denied: You have insufficient permissions.',
 
-    },
-    nl = {
-        infobar = '<p align="center"><j>PokeLua <bl>[<v>NL<bl>] • <font size="9"><bl>(<n>Versie: <v>&version&<bl>)</font><font size="11"> <j>• <vp>!pikachu</font> <j>• <a href="event:explore.random"><font size="9"><bl>[<v>Willekeurige Pokémon<bl>]</font></a></p>',
-    }
+  },
+  nl = {
+    infobar = '<p align="center"><j>PokeLua <bl>[<v>NL<bl>] • <font size="9"><bl>(<n>Versie: <v>&version&<bl>)</font><font size="11"> <j>• <vp>!pikachu</font> <j>• <a href="event:explore.random"><font size="9"><bl>[<v>Willekeurige Pokémon<bl>]</font></a></p>',
+  }
 }
 -- For international, e2 community we will fall back to EN.
 tStrings.xx = tStrings.en
 tStrings.e2 = tStrings.en
 
 function tString(string)
-    --[[ Translates strings to other languages.
-    Defaults to EN community.
+  --[[ Translates strings to other languages.
+  Defaults to EN community.
 
-    Args:
-        string: A string.
+  Args:
+    string: A string.
 
-    Returns: A translated version of  input string.]]
-    local commu = tfm.get.room.community
-    if tStrings[commu] and tStrings[commu][string] then
-        local t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
-    else
-        local commu = 'en'
-        local t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
-    end
-    return t_string
+  Returns: A translated version of  input string.]]
+  local commu = tfm.get.room.community
+  if tStrings[commu] and tStrings[commu][string] then
+    local t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
+  else
+    local commu = 'en'
+    local t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
+  end
+  return t_string
  end

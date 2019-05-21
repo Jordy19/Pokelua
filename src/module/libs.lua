@@ -15,16 +15,16 @@
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
  function table.count(t)
-   local count = 0
-    for _ in pairs(t) do count = count + 1 end
-    return count
+  local count = 0
+  for _ in pairs(t) do count = count + 1 end
+  return count
 end
 
 function table.newidx(t, k, v)
-    rawset(t, k, v)
-    rawset(t, #t + 1, k)
+  rawset(t, k, v)
+  rawset(t, #t + 1, k)
 end
 
 function firstToUpper(str)
-    return (str:gsub("^%l", string.upper))
+  return (str:gsub("^%l", string.upper))
 end

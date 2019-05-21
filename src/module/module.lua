@@ -46,36 +46,36 @@ require 'events'
 require 'room'
 
 db.types = {
-    [1] = {'Bug','aabb22'},
-    [2] = {'Dragon','7766ee'},
-    [3] = {'Fairy','ffaaff'},
-    [4] = {'Fire','ff4422'},
-    [5] = {'Ghost','6666bb'},
-    [6] = {'Ground','eecc99'},
-    [7] = {'Normal','bbbbaa'},
-    [8] = {'Psychic','ff5599'},
-    [9] = {'Steel','aaaabb'},
-    [10] = {'Dark','775544'},
-    [11] = {'Electric','ffdd77'},
-    [12] = {'Fighting','bb5544'},
-    [13] = {'Flying','6699ff'},
-    [14] = {'Grass','77cc55'},
-    [15] = {'Ice','77ddff'},
-    [16] = {'Poison','aa5599'},
-    [17] = {'Rock','bbaa66'},
-    [18] = {'Water','3399ff'},
+  [1] = {'Bug','aabb22'},
+  [2] = {'Dragon','7766ee'},
+  [3] = {'Fairy','ffaaff'},
+  [4] = {'Fire','ff4422'},
+  [5] = {'Ghost','6666bb'},
+  [6] = {'Ground','eecc99'},
+  [7] = {'Normal','bbbbaa'},
+  [8] = {'Psychic','ff5599'},
+  [9] = {'Steel','aaaabb'},
+  [10] = {'Dark','775544'},
+  [11] = {'Electric','ffdd77'},
+  [12] = {'Fighting','bb5544'},
+  [13] = {'Flying','6699ff'},
+  [14] = {'Grass','77cc55'},
+  [15] = {'Ice','77ddff'},
+  [16] = {'Poison','aa5599'},
+  [17] = {'Rock','bbaa66'},
+  [18] = {'Water','3399ff'},
 }
 
 db.abilities = {
-    canFly = {5, 13},
+  canFly = {5, 13},
 }
 
 function init()
-    --[[ Inits the module. ]]
-    -- Generate a random seed.
-    math.randomseed(os.time())
-    for k,v in pairs(tfm.get.room.playerList) do
-        eventNewPlayer(k)
-    end
-    room_data = Room:init()
+  --[[ Inits the module. ]]
+  -- Generate a random seed.
+  math.randomseed(os.time())
+  for k,v in pairs(tfm.get.room.playerList) do
+    eventNewPlayer(k)
+  end
+  room_data = Room:init()
 end
