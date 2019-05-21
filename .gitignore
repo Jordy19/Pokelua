@@ -12,6 +12,7 @@ __pycache__/
 module.lua
 test.lua
 debug.lua
+module_debug.lua
 
 # We need those.
 !*/module/module.lua
