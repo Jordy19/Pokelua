@@ -74,7 +74,7 @@ function init()
   --[[ Inits the module. ]]
   -- Generate a random seed.
   math.randomseed(os.time())
-  for k,v in pairs(tfm.get.room.playerList) do
+  for k,_ in pairs(tfm.get.room.playerList) do
     eventNewPlayer(k)
   end
   room_data = Room:init()

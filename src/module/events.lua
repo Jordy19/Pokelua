@@ -10,7 +10,9 @@
 -- distributed under the License is distributed on an 'AS IS' BASIS,
 -- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 -- See the License for the specific language governing permissions and
--- limitations under the License. ]]
+-- limitations under the License.
+
+Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
 function eventNewPlayer(name)
 	--[[ Triggered when a new player joins the room
@@ -18,8 +20,8 @@ function eventNewPlayer(name)
 	Args:
 			name: A string containing the name of the player.
 	]]
-	for i,key in ipairs({0,1,2,3,32,81,80, 82, 46, 77, 104, 98, 100, 102, 101,72, 71, 74}) do
-			tfm.exec.bindKeyboard(name,key,true,true)
+	for _,key in ipairs({0, 1, 2, 3, 32, 81, 80, 82, 46, 77, 104, 98, 100, 102, 101, 72, 71, 74}) do
+			tfm.exec.bindKeyboard(name, key, true, true)
 	end
 	players_data[name] = Player:create(name)
 	interface.intro(name)
@@ -31,7 +33,7 @@ end
 
 function eventChatCommand(player_name, msg)
 	-- [[ Triggered when a command is entered.]]
-	local quote = msg:sub(1,1) ~= '/'
+	local quote = msg:sub(1, 1) ~= '/'
 	local player_data = players_data[player_name]
 	local args = {}
 	for chunk in string.gmatch(msg, '[^"]+') do

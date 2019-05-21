@@ -46,7 +46,7 @@ local function broadcast(message, group)
     local players_list = tfm.get.room.playerList
     local message_string = string.format(tString('room_broadcast_global'), message)
   end
-  for k,v in pairs(players_list) do
+  for k,_ in pairs(players_list) do
     tfm.exec.chatMessage(message_string, k)
   end
 end

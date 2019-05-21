@@ -27,7 +27,7 @@ function Player:create(name)
   local data = {
     ['name'] = name,
     ['transformed'] = false,
-    ['roles'] = {public=true,admin=false,dev=false},
+    ['roles'] = {public=true, admin=false, dev=false},
     ['can_fly'] = false
   }
   if name:lower() == 'jordy#0010' then
@@ -46,7 +46,7 @@ function Player:promote()
   --[[ Function to promote a player to admin. ]]
   if self.roles.admin == false then
     self.roles.admin = true
-    Room:broadcast(string.format(tString('room_admin_promotion'),self.name))
+    Room:broadcast(string.format(tString('room_admin_promotion'), self.name))
   end
 end
 
@@ -54,7 +54,7 @@ function Player:depromote()
     --[[ Function to depromote a player from admin. ]]
   if self.roles.admin == true then
     self.roles.admin = false
-    Room:broadcast(string.format(tString('room_admin_depromotion'),self.name))
+    Room:broadcast(string.format(tString('room_admin_depromotion'), self.name))
   end
 end
 

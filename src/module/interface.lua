@@ -20,7 +20,7 @@ function update(player_name)
     -- print(object.species)
     if object then
       local object_name = Asset:getData(player_name, 'name')
-      local gender_types = {[0]='<CH>♂<N>',[1]='<PS>♀<N>',[2]='<CH>♂<N> <PS>♀<N>',[3]='?'}
+      local gender_types = {[0]='<CH>♂<N>', [1]='<PS>♀<N>', [2]='<CH>♂<N> <PS>♀<N>', [3]='?'}
       local gender = gender_types[object.gender]
       local effects = {}
       local can_fly = player_data.can_fly
@@ -34,18 +34,18 @@ function update(player_name)
         '%s m <bl>Weight: <v>%s kg<bl>)<n> %s</font></p>',
         object.species:gsub('%.', ' '), object.height, object.weight, table.concat(effects))
       local type_color = Asset.getTypeColor(object)
-      ui.addTextArea(00, '', player_name, 5, 24, 790, 17, 0x301A0C , 0x684422 , 0.7, true)
+      ui.addTextArea(00, '', player_name, 5, 24, 790, 17, 0x301A0C, 0x684422, 0.7, true)
 
       ui.addTextArea(02, string.format(
         '%s <b><a href="event:artist"><font size="13" color="%s">%s</font></a></b><n>' ..
         '<font size="9px"><bl></font> %s', gender,
         string.format('#%s', type_color), object_name, pokedex_info),
-        player_name, 5, 23, 1000, 22, 0x301A0C , 0x684422 , 0.0, true)
+        player_name, 5, 23, 1000, 22, 0x301A0C, 0x684422, 0.0, true)
 
       ui.addTextArea(03, string.format(
         '<p align="center"><a href="event:explore.random"><font size="9"><bl>[<v>Random Pokémon<bl>]</font></a>' ..
         '<a href="event:explore.mouse"><font size="9"><bl>[<v>No Pokémon<bl>]</font></a></p>', can_we_fly),
-        player_name, 610, 25, 200, 17, 0x301A0C , 0x684422 , 0.0, true)
+        player_name, 610, 25, 200, 17, 0x301A0C, 0x684422, 0.0, true)
     end
   end
 end
