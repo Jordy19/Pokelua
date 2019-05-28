@@ -18,6 +18,7 @@ Asset = {}
 Asset.__index = Asset
 
 function Asset:new(player_name, object_name)
+	object_name = object_name or objects[math.random(#objects)]
 	local player_data = players_data[player_name]
 	if players_data[player_name]:getData('object') then
 		players_data[player_name].object.name = object_name
@@ -30,8 +31,10 @@ function Asset:new(player_name, object_name)
 			object = objects[object_name],
 			shiny = math.random(0, 500),
 			artist = false,
+			spawned = false,
 		}
 		players_data[player_name].object = data
+		print(string.format("\t%s", object_name))
 	end
 	for _,v in pairs(objects[object_name].types) do
 		-- Flying types
@@ -42,6 +45,23 @@ function Asset:new(player_name, object_name)
 		end
 	end
 	self:_setImage(player_name)
+end
+
+function Asset.destroy(player_name)
+	--[[ Completely destroys the object table. ]]
+	local player_data = players_data[player_name]
+	if player_data.object then
+		players_data[player_name].object = nil
+		tfm.exec.removeImage(players_data.image)
+	end
+end
+
+function Asset.hide(player_name)
+	--[[ Hides the images. ]]
+	local player_data = players_data[player_name]
+	if player_data.object then
+		tfm.exec.removeImage(player_data.image)
+	end
 end
 
 function Asset:getData(player_name, key)
@@ -62,29 +82,26 @@ function Asset:_setImage(player_name)
 	local direction = self:getData(player_name, 'direction')
 	local images = self:_getImages(player_name)
 	local axis = self:_getAxis(player_name)
-	if self:getData(player_name, 'object') then
-		tfm.exec.removeImage(players_data[player_name].image)
-	end
-	-- local direction_key = 'l'
-	-- if direction == 'right' then
-	-- 	direction_key = 'r'
-	-- end
-	local direction = 'left'
 	local direction_key = 'l'
-	local is_moving_right = tfm.get.room.playerList[player_name].movingRight or false
-	if is_moving_right then
+	if direction == 'right' then
 		direction = 'right'
 		direction_key = 'r'
 	end
+	self.hide(player_name)
 	local base_image = tfm.exec.addImage(images[direction] .. '.png', '%' .. player_name, axis[direction_key].x, axis[direction_key].y)
 	player_data.image = base_image
 	player_data.transformed = true
+	players_data[player_name].spawned = true
 	interface.update(player_name)
 end
 
 function Asset.getTypeColor(object)
 	if (object.types) then
-		return db.types[object.types[1]][2]
+		 color = db.types[object.types[1]][2]
+		 if color == nil then
+		 		color = db.types[1]
+		 	end
+		return color
 	end
 end
 
