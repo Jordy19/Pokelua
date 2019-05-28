@@ -64,6 +64,7 @@ function eventChatCommand(player_name, msg)
 end
 
 function eventKeyboard(player_name, key, down, xPos, yPos)
+	-- [[ Triggered when a button is pressed.]]
 	-- If we move left or right.
 	local player_data = players_data[player_name]
 	local is_transformed = player_data:getData('transformed')
@@ -91,6 +92,37 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
 					tfm.exec.movePlayer(player_name, 0, 0, false, 0, -50, false, true)
 				end
 			end
+		end
+	end
+end
+
+function eventTextAreaCallback(i,player_name,c)
+	-- [[ Triggered when a hyperlink is pressed at text_area's.]]
+	p = {}
+	for i in string.gmatch(c, "[^%.]+") do
+		table.insert(p, i)
+	end
+	if p[1] == 'explore' then
+		if p[2] == 'random' then
+			Asset:new(player_name)
+		elseif p[2] == 'mouse' then
+			local player_x = tfm.get.room.playerList[player_name].x
+			local player_y = tfm.get.room.playerList[player_name].y
+			Asset.destroy(player_name)
+			tfm.exec.killPlayer(player_name)
+			tfm.exec.respawnPlayer(player_name)
+			tfm.exec.movePlayer(player_name, player_x, player_y)
+			ui.removeTextArea(00, name)
+			ui.removeTextArea(01, name)
+			ui.removeTextArea(02, name)
+			ui.removeTextArea(03, name)
+			ui.removeTextArea(04, name)
+		elseif p[2] == 'hide' then
+			ui.removeTextArea(00, name)
+			ui.removeTextArea(01, name)
+			ui.removeTextArea(02, name)
+			ui.removeTextArea(03, name)
+			ui.removeTextArea(04, name)
 		end
 	end
 end
