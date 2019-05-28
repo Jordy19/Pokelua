@@ -14,7 +14,7 @@
 
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
-local tStrings = {
+local string_list = {
   en = {
   infobar = '<p align="center"><j>PokeLua <bl>[<v>EN<bl>] • <font size="9"><bl>(<n>' ..
     'Version: <v>&version&<bl>)</font><font size="11"> <j>• <vp>!pikachu</font>' ..
@@ -32,10 +32,10 @@ local tStrings = {
   }
 }
 -- For international, e2 community we will fall back to EN.
-tStrings.xx = tStrings.en
-tStrings.e2 = tStrings.en
+string_list.xx = string_list.en
+string_list.e2 = string_list.en
 
-function tString(string)
+function tString(text)
   --[[ Translates strings to other languages.
   Defaults to EN community.
 
@@ -44,11 +44,6 @@ function tString(string)
 
   Returns: A translated version of  input string.]]
   local commu = tfm.get.room.community
-  if tStrings[commu] and tStrings[commu][string] then
-    local t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
-  else
-    local commu = 'en'
-    local t_string = tStrings[commu][string] or string.format('<font color="#CB546B">$string.%s.%s</font>', commu, string)
-  end
+  local t_string = string_list[commu][text] or string_list.en[text] string.format('<font color="#CB546B">$string.%s.%s</font>', commu, text)
   return t_string
  end
