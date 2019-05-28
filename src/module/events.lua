@@ -75,21 +75,20 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
 		if object then
 			-- When we move left or right.
 			if key == 0 or key == 2 then
-				if key == 0 then
-					local direction = 'left'
-				elseif key == 2 then
-					local direction = 'right'
+				local direction = 'left'
+				if key == 2 then
+					direction = 'right'
 				end
-					players_data[player_name].object.direction = direction
-					Asset:new(player_name, firstToUpper(object.name))
+				players_data[player_name].object.direction = direction
+				Asset:new(player_name, firstToUpper(object.name))
 			end
 				-- We flying
 			if key == 32 then
 				local is_flying = player_data:getData('can_fly')
-					if is_flying then
+				if is_flying then
 					local y = yPos - 10
-						tfm.exec.displayParticle(1, xPos, y, 0, 0, 0, 0, nil)
-						tfm.exec.movePlayer(player_name, 0, 0, false, 0, -50, false, true)
+					tfm.exec.displayParticle(1, xPos, y, 0, 0, 0, 0, nil)
+					tfm.exec.movePlayer(player_name, 0, 0, false, 0, -50, false, true)
 				end
 			end
 		end

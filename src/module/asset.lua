@@ -62,14 +62,21 @@ function Asset:_setImage(player_name)
 	local direction = self:getData(player_name, 'direction')
 	local images = self:_getImages(player_name)
 	local axis = self:_getAxis(player_name)
-	if player_data.image then
+	if self:getData(player_name, 'object') then
 		tfm.exec.removeImage(players_data[player_name].image)
 	end
-	if direction == 'left' then
-		local base_image = tfm.exec.addImage(images.left .. '.png', '%' .. player_name, axis.l.x, axis.l.y)
-	else
-		local base_image = tfm.exec.addImage(images.right .. '.png', '%' .. player_name, axis.r.x, axis.r.y)
+	-- local direction_key = 'l'
+	-- if direction == 'right' then
+	-- 	direction_key = 'r'
+	-- end
+	local direction = 'left'
+	local direction_key = 'l'
+	local is_moving_right = tfm.get.room.playerList[player_name].movingRight or false
+	if is_moving_right then
+		direction = 'right'
+		direction_key = 'r'
 	end
+	local base_image = tfm.exec.addImage(images[direction] .. '.png', '%' .. player_name, axis[direction_key].x, axis[direction_key].y)
 	player_data.image = base_image
 	player_data.transformed = true
 	interface.update(player_name)
