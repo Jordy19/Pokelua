@@ -24,7 +24,6 @@ function update(player_name)
       local gender = gender_types[object.gender]
       local effects = {}
       local can_fly = player_data.can_fly
-      print(can_fly)
       if can_fly == true then
         table.insert(effects, '<bl>[<vp>Fly<bl>]')
       end
@@ -34,6 +33,8 @@ function update(player_name)
         '%s m <bl>Weight: <v>%s kg<bl>)<n> %s</font></p>',
         object.species:gsub('%.', ' '), object.height, object.weight, table.concat(effects))
       local type_color = Asset.getTypeColor(object)
+      local name_color = string.format('0x%s', type_color)
+      tfm.exec.setNameColor(player_name, name_color)
       ui.addTextArea(00, '', player_name, 5, 24, 790, 17, 0x301A0C, 0x684422, 0.7, true)
 
       ui.addTextArea(02, string.format(
