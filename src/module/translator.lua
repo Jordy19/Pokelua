@@ -17,7 +17,7 @@ Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 local string_list = {
   en = {
   infobar = '<p align="center"><j>PokeLua <bl>[<v>EN<bl>] • <font size="9"><bl>(<n>' ..
-    'Version: <v>&version&<bl>)</font><font size="11"> <j>• <vp>!pikachu</font> <j>•' ..
+    'Version: <v>&version&<bl>)</font><font size="11"> <j>• <vp>!pikachu</font> <j>• ' ..
     '<a href="event:explore.random"><font size="9"><bl>[<v>Random Pokémon<bl>]</font></a></p>',
   room_advice = 'Try !Pikachu',
   room_broadcast_global = '[Global] %s',

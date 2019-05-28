@@ -27,7 +27,9 @@ local function init()
         name = string.sub(name, 2)
         name = firstToUpper(name)
       end
-     players_data[name]:promote()
+      if name and players_data[name] then
+        players_data[name]:promote()
+      end
     end
   end
 end
