@@ -270,15 +270,15 @@ objects.Spewpa={
   }
 }
 
-objects.Vivillon={
-  -- InsertData Here
-  images={
-    normal={'15d13d2566c', '15d13d26732'},
-    shiny={'', ''},
-    left={0, -36},
-    right={nil, nil},
-  }
-}
+-- objects.Vivillon={
+--   -- InsertData Here
+--   images={
+--     normal={'15d13d2566c', '15d13d26732'},
+--     shiny={'', ''},
+--     left={0, -36},
+--     right={nil, nil},
+--   }
+-- }
 
 -- objects.Vivillon_archipelago={
 --   -- InsertData Here
