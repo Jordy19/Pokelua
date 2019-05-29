@@ -14,21 +14,26 @@
 
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
-function eventNewPlayer(name)
+function eventNewPlayer(player_name)
 	--[[ Triggered when a new player joins the room
 
 	Args:
 			name: A string containing the name of the player.
 	]]
 	for _,key in ipairs({0, 1, 2, 3, 32, 81, 80, 82, 46, 77, 104, 98, 100, 102, 101, 72, 71, 74}) do
-			tfm.exec.bindKeyboard(name, key, true, true)
+			tfm.exec.bindKeyboard(player_name, key, true, true)
 	end
-	players_data[name] = Player:create(name)
-	interface.intro(name)
+	players_data[player_name] = Player:create(player_name)
+	interface.intro(player_name)
 end
 
 function eventNewGame()
 	--[[ Triggered when a new round starts]]
+	for name,_ in next, tfm.get.room.playerList do
+		if players_data[name] and players_data[name].object then
+			Asset:new(name)
+		end
+	end
 end
 
 function eventChatCommand(player_name, msg)
