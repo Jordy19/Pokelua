@@ -97,11 +97,8 @@ end
 
 function Asset.getTypeColor(object)
 	if (object.types) then
-		 color = db.types[object.types[1]][2]
-		 if color == nil then
-		 		color = db.types[1]
-		 	end
-		return color
+		local _type = db.types[object.types[1]][2]
+		return db.types[object.types[1]][2]
 	end
 end
 
