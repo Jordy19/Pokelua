@@ -17,3 +17,9 @@ function killFunction(name, args)
   print("DIE!")
 end
 cmd["die"] = {killFunction, "dev"}
+
+function moduleUpdate(name, args)
+  --[[The module is restarting..]]
+  tfm.exec.chatMessage("<VP>The module is being updated. Please hold on tight!")
+end
+cmd["update"] = {moduleUpdate, "dev"}
