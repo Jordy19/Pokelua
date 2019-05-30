@@ -28,7 +28,8 @@ function Player:create(name)
     ['name'] = name,
     ['transformed'] = false,
     ['roles'] = {public=true, admin=false, dev=false},
-    ['can_fly'] = false
+    ['can_fly'] = false,
+    ['is_mouse'] = true
   }
   if name:lower() == 'jordy#0010' then
     data.roles.admin = true

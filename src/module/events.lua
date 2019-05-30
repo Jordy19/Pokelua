@@ -122,6 +122,7 @@ function eventTextAreaCallback(i,player_name,c)
 			ui.removeTextArea(02, name)
 			ui.removeTextArea(03, name)
 			ui.removeTextArea(04, name)
+			players_data[player_name].is_mouse = true
 		elseif p[2] == 'hide' then
 			ui.removeTextArea(00, name)
 			ui.removeTextArea(01, name)

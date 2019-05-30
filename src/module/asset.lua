@@ -34,11 +34,12 @@ function Asset:new(player_name, object_name)
 			spawned = false,
 		}
 		players_data[player_name].object = data
-		print(string.format("\t%s", object_name))
 	end
-	for _,v in pairs(objects[object_name].types) do
+	for type_1,type_2 in pairs(objects[object_name].types) do
 		-- Flying types
-		if v == 5 or v == 13 then
+		if type_1 == 5 or type_2 == 5 then
+			players_data[player_name].can_fly = true
+		elseif type_1 == 13 or type_2 == 13 then
 			players_data[player_name].can_fly = true
 		else
 			players_data[player_name].can_fly = false
@@ -92,6 +93,7 @@ function Asset:_setImage(player_name)
 	player_data.image = base_image
 	player_data.transformed = true
 	players_data[player_name].spawned = true
+	players_data[player_name].is_mouse = false
 	interface.update(player_name)
 end
 
