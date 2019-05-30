@@ -117,18 +117,18 @@ function eventTextAreaCallback(i,player_name,c)
 			tfm.exec.killPlayer(player_name)
 			tfm.exec.respawnPlayer(player_name)
 			tfm.exec.movePlayer(player_name, player_x, player_y)
-			ui.removeTextArea(00, name)
-			ui.removeTextArea(01, name)
-			ui.removeTextArea(02, name)
-			ui.removeTextArea(03, name)
-			ui.removeTextArea(04, name)
+			ui.removeTextArea(00, player_name)
+			ui.removeTextArea(01, player_name)
+			ui.removeTextArea(02, player_name)
+			ui.removeTextArea(03, player_name)
+			ui.removeTextArea(04, player_name)
 			players_data[player_name].is_mouse = true
 		elseif p[2] == 'hide' then
-			ui.removeTextArea(00, name)
-			ui.removeTextArea(01, name)
-			ui.removeTextArea(02, name)
-			ui.removeTextArea(03, name)
-			ui.removeTextArea(04, name)
+			ui.removeTextArea(00, player_name)
+			ui.removeTextArea(01, player_name)
+			ui.removeTextArea(02, player_name)
+			ui.removeTextArea(03, player_name)
+			ui.removeTextArea(04, player_name)
 		end
 	end
 end
