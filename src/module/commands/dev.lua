@@ -12,14 +12,14 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License. ]]
 
-cmd['die'] = {
+cmd.die = {
   'dev',
   function (name, args)
     print('die')
   end
 }
 
-cmd['update'] = {
+cmd.update = {
   'dev',
   function (name, args)
     tfm.exec.chatMessage("<VP>The module is being updated. Please hold on tight!")
