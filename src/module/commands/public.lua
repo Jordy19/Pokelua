@@ -12,8 +12,9 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License. ]]
 
-function helpFunction(name, args)
-  --[[Help command.]]
-  print("HELP!")
-end
-cmd["help"] = {helpFunction, "public"}
+cmd["help"] = {
+  'public',
+  function (name, args)
+    print("help!")
+  end,
+}

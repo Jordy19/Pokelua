@@ -57,8 +57,8 @@ function eventChatCommand(player_name, msg)
 		Asset:new(player_name, firstToUpper(command))
 	-- Are we calling an command?
 	elseif cmd[command] then
-		local func = cmd[command][1]
-		local role = cmd[command][2]
+		local role = cmd[command][1]
+		local func = cmd[command][2]
 		local player_role = player_data:getData('roles')
 		if player_role[role] then
 			func(player_name, args)

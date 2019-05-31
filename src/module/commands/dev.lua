@@ -12,14 +12,16 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License. ]]
 
-function killFunction(name, args)
-  --[[Help command.]]
-  print("DIE!")
-end
-cmd["die"] = {killFunction, "dev"}
+cmd['die'] = {
+  'dev',
+  function (name, args)
+    print('die')
+  end
+}
 
-function moduleUpdate(name, args)
-  --[[The module is restarting..]]
-  tfm.exec.chatMessage("<VP>The module is being updated. Please hold on tight!")
-end
-cmd["update"] = {moduleUpdate, "dev"}
+cmd['update'] = {
+  'dev',
+  function (name, args)
+    tfm.exec.chatMessage("<VP>The module is being updated. Please hold on tight!")
+  end
+}
