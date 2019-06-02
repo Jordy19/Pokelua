@@ -45,6 +45,8 @@ local tfm = {
         removeImage = function(...) printArgs("remoteImage", ...) end,
         movePlayer = function(...) printArgs("movePlayer", ...) end,
         newGame = function(...) printArgs("newGame", ...) end,
+        giveCheese = function(...) printArgs("giveCheese", ...) end,
+        shaman = function(...) printArgs("shaman", ...) end,
     },
     ui = {
         addTextArea = function(...) printArgs("addTextArea", ...) end,
