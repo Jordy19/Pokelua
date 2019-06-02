@@ -18,9 +18,10 @@ Asset = {}
 Asset.__index = Asset
 
 function Asset:new(player_name, object_name)
-	object_name = object_name or objects[math.random(#objects)]
+	object_name = object_name or table.keys(objects)[math.random(#table.keys(objects))]
+	print(object_name)
 	local player_data = players_data[player_name]
-	if players_data[player_name]:getData('object') then
+	if player_data.object then
 		players_data[player_name].object.name = object_name
 		players_data[player_name].object.object = objects[object_name]
 	else
@@ -111,8 +112,8 @@ function Asset:_getImages(player_name)
 	Returns: Table with image ids.
 	]]
 	local images = {left='', right=''}
-	local obj = self:getData(player_name, 'object')
-	if self:getData(player_name, 'shiny') == 1 then
+	local obj = players_data[player_name].object.object
+	if obj.shiny == 1 then
 		images.left, images.right = obj.images.shiny[1], obj.images.shiny[2]
 	else
 		images.left, images.right = obj.images.normal[1], obj.images.normal[2]
@@ -120,7 +121,7 @@ function Asset:_getImages(player_name)
 	return images
 end
 
- function  Asset:_getAxis(player_name)
+function Asset:_getAxis(player_name)
 	--[[Get's the axis of the Object.
 
 	Returns: Table wiith the x/y values. ]]

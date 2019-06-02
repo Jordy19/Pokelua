@@ -28,7 +28,7 @@ local function init()
         name = firstToUpper(name)
       end
       if name and players_data[name] then
-        players_data[name]:promote()
+        Player.promote(name)
       end
     end
   end

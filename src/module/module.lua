@@ -20,7 +20,7 @@ require 'libs'
 -- We need tables.
 local db = {}
 local cmd = {}
-local objects = setmetatable({}, {__newindex = table.newidx})
+local objects = {}
 local players_data = {}
 
 -- Data lists.

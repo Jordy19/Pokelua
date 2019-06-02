@@ -24,6 +24,7 @@ function eventNewPlayer(player_name)
 			tfm.exec.bindKeyboard(player_name, key, true, true)
 	end
 	players_data[player_name] = Player:create(player_name)
+	players_data[player_name] = Player.create(player_name)
 	interface.intro(player_name)
 end
 
@@ -59,7 +60,7 @@ function eventChatCommand(player_name, msg)
 	elseif cmd[command] then
 		local role = cmd[command][1]
 		local func = cmd[command][2]
-		local player_role = player_data:getData('roles')
+		local player_role = player_data.roles
 		if player_role[role] then
 			func(player_name, args)
 		else
@@ -72,12 +73,12 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
 	-- [[ Triggered when a button is pressed.]]
 	-- If we move left or right.
 	local player_data = players_data[player_name]
-	local is_transformed = player_data:getData('transformed')
+	local is_transformed = Player.getData(player_name, 'transformed')
 	if players_data[player_name].intro then
 		interface.intro(player_name, true)
 	end
 	if is_transformed then
-		local object = player_data:getData('object')
+		local object = Player.getData(player_name, 'object')
 		if object then
 			-- When we move left or right.
 			if key == 0 or key == 2 then
@@ -90,7 +91,7 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
 			end
 				-- We flying
 			if key == 32 then
-				local is_flying = player_data:getData('can_fly')
+				local is_flying = Player.getData(player_name, 'can_fly')
 				if is_flying then
 					local y = yPos - 10
 					tfm.exec.displayParticle(1, xPos, y, 0, 0, 0, 0, nil)

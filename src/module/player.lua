@@ -15,10 +15,8 @@
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
 -- Create the Playerlass class.
-local Player = {}
-Player.__index = Player
 
-function Player:create(name)
+local function create(name)
   --[[ Function to create new player data.
 
   Args:
@@ -35,31 +33,42 @@ function Player:create(name)
     data.roles.admin = true
     data.roles.dev = true
   end
-  return setmetatable(data, self)
+  return data
+  -- return setmetatable(data, self)
 end
 
-function Player:getData(key)
-  --[[ Function to obtain the stored player data by key ]]
-   return self[key]
+local function getData(name, key)
+  --[[ Function to obtain the stored player data by key. ]]
+   return players_data[name][key]
 end
 
-function Player:promote()
+local function getAllData(name)
+  --[[ Function to obtain all the player data. ]]
+  return players_data[name]
+end
+
+local function promote(name)
   --[[ Function to promote a player to admin. ]]
-  if self.roles.admin == false then
-    self.roles.admin = true
-    Room:broadcast(string.format(tString('room_admin_promotion'), self.name))
+  local player_data = getAllData(name)
+  if player_data.roles.admin == false then
+    player_data.roles.admin = true
+    Room:broadcast(string.format(tString('room_admin_promotion'), name))
   end
 end
 
-function Player:depromote()
+local function depromote(name)
     --[[ Function to depromote a player from admin. ]]
-  if self.roles.admin == true then
-    self.roles.admin = false
-    Room:broadcast(string.format(tString('room_admin_depromotion'), self.name))
+  local player_data = getAllData(name)
+  if player_data.roles.admin == true then
+    player_data.roles.admin = false
+    Room:broadcast(string.format(tString('room_admin_depromotion'), name))
   end
 end
 
-function Player:save()
-  --[[ Function to save the changed player data. ]]
-  players_data[self.data.name] = self
-end
+Player = {
+  create = create,
+  getData = getData,
+  getAllData = getAllData,
+  promote = promote,
+  depromote = depromote,
+}

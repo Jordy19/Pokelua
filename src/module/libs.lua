@@ -25,6 +25,16 @@ function table.newidx(t, k, v)
   rawset(t, #t + 1, k)
 end
 
+function table.keys(t)
+  local keyset={}
+  local n=0
+  for k,v in pairs(t) do
+    n=n+1
+    keyset[n]=k
+  end
+  return keyset
+end
+
 function firstToUpper(str)
   return (str:gsub("^%l", string.upper))
 end
