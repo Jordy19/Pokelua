@@ -38,3 +38,12 @@ end
 function firstToUpper(str)
   return (str:gsub("^%l", string.upper))
 end
+
+function multiUserCommand(command, input)
+  for _,name in next, input do
+    local is_in_room = tfm.get.room.playerList[name]
+    if is_in_room then
+      command(name)
+    end
+  end
+end
