@@ -52,7 +52,7 @@ local function promote(name)
   local player_data = getAllData(name)
   if player_data.roles.admin == false then
     player_data.roles.admin = true
-    Room:broadcast(string.format(tString('room_admin_promotion'), name))
+    Room.broadcast(string.format(tString('room_admin_promotion'), name))
   end
 end
 
@@ -61,7 +61,7 @@ local function depromote(name)
   local player_data = getAllData(name)
   if player_data.roles.admin == true then
     player_data.roles.admin = false
-    Room:broadcast(string.format(tString('room_admin_depromotion'), name))
+    Room.broadcast(string.format(tString('room_admin_depromotion'), name))
   end
 end
 

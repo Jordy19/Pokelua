@@ -14,7 +14,7 @@
 
 function update(player_name)
   local player_data = players_data[player_name]
-  local transformed = player_data:getData('transformed')
+  local transformed = Player.getData(player_name, 'transformed')
   if transformed then
     local object = Asset:getData(player_name, 'object')
     -- print(object.species)

@@ -35,15 +35,17 @@ require 'lists.pokemon.fakemon'
 require 'lists.pokemon.misc'
 
 -- Module files.
-require 'commands.dev'
-require 'commands.admin'
-require 'commands.public'
 require 'translator'
 require 'interface'
 require 'player'
 require 'asset'
 require 'events'
 require 'room'
+
+-- Module commands.
+require 'commands.dev'
+require 'commands.admin'
+require 'commands.public'
 
 db.types = {
   [1] = {'Bug','aabb22'},
