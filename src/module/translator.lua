@@ -24,6 +24,9 @@ local string_list = {
   room_broadcast_admin = '<font color="#EB1D51">~ [<b>A</b>]</font><font color="#CB2655"> %s</font>',
   room_admin_promotion = 'New room administrator: <b>%s</b>',
   room_admin_depromotion = 'Room admin removed: <b>%s</b>',
+  room_intro = '<font color="#e6bc2f">• Welcome to the world of Nintendo\'s Pokémon!</font>',
+  room_intro_disclaimer = '<font color="#ee6b2f" size="9">• Pokémon is © 1995–2019 Nintendo/Creatures Inc./GAME FREAK inc.</font>',
+  room_intro_thread = '<font color="#30a7d7" size="10">• English support thread: </font><font size="10" color="#1b53ba">https://atelier801.com/topic?f=6&t=838708</font>',
   commands_no_permission = 'Access denied: You have insufficient permissions.',
 
   },
