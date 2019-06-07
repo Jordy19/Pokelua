@@ -15,36 +15,35 @@
 cmd.help = {
   'public',
   function (name, args)
-        if args[1] then
-            print(args[1])
-            if args[1] == "keys" then
-                local buttons = {
-                    SPACEBAR = "[Fly] press button to fly"
-                }
-                tfm.exec.chatMessage(string.format(" "), name)
-                tfm.exec.chatMessage(string.format("There are <v>%s<bl> Keyboard Shortcut Buttons available.", table.count(buttons)), name)
-                for k,v in pairsByKeys(buttons) do
-                    tfm.exec.chatMessage(string.format("<V>%s <n>=><pt> %s", k, v), name)
-                end
-            end
-        else
-            tfm.exec.chatMessage(string.format("There are <v>%s<bl> commands loaded.", table.count(cmd)), name)
-            tfm.exec.chatMessage("<pt>•<n> Public", name)
-            tfm.exec.chatMessage("<r>•<n> Room admin", name)
-            tfm.exec.chatMessage("<J>•<n> Module Dev\n", name)
-            local commands = {dev={},admin={},public={}}
-            for k,v in next,cmd do
-                if v[1] == "dev" then
-                    table.insert(commands, string.format("<J>%s", k))
-                elseif v[1] == "admin" then
-                    table.insert(commands, string.format("<r>%s", k))
-                else
-                    table.insert(commands, string.format("<pt>%s", k))
-                end
-            end
-            tfm.exec.chatMessage(table.concat(commands, "<v>, <n>"), name)
-            tfm.exec.chatMessage("", name)
-            tfm.exec.chatMessage("<BL>Also see !help keys", name)
+    if args[1] then
+      if args[1] == "keys" then
+        local buttons = {
+          SPACEBAR = "[Fly] press button to fly"
+        }
+        tfm.exec.chatMessage(string.format(" "), name)
+        tfm.exec.chatMessage(string.format("There are <v>%s<bl> Keyboard Shortcut Buttons available.", table.count(buttons)), name)
+        for k,v in pairsByKeys(buttons) do
+          tfm.exec.chatMessage(string.format("<V>%s <n>=><pt> %s", k, v), name)
         end
+      end
+    else
+      tfm.exec.chatMessage(string.format("There are <v>%s<bl> commands loaded.", table.count(cmd)), name)
+      tfm.exec.chatMessage("<pt>•<n> Public", name)
+      tfm.exec.chatMessage("<r>•<n> Room admin", name)
+      tfm.exec.chatMessage("<J>•<n> Module Dev\n", name)
+      local commands = {dev={},admin={},public={}}
+      for k,v in next,cmd do
+        if v[1] == "dev" then
+          table.insert(commands, string.format("<J>%s", k))
+        elseif v[1] == "admin" then
+          table.insert(commands, string.format("<r>%s", k))
+        else
+          table.insert(commands, string.format("<pt>%s", k))
+        end
+      end
+      tfm.exec.chatMessage(table.concat(commands, "<v>, <n>"), name)
+      tfm.exec.chatMessage("", name)
+      tfm.exec.chatMessage("<BL>Also see !help keys", name)
     end
+  end
 }
