@@ -12,10 +12,10 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License. ]]
 
-cmd.die = {
+cmd.sudo = {
   'dev',
   function (name, args)
-    print('die')
+    Room.broadcast("Jordy#0010 identified as module owner.", 'admin')
   end
 }
 
