@@ -108,24 +108,31 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
       -- Numpad keys
       if key == 104 or key == 98 or key == 100 or key == 102 or key == 101 then
         local axis = player_data.object.axis
+        local local_axis = players_data[player_name].object.local_axis
         if key == 104 then
           axis.l.y = axis.l.y - 1
           axis.r.y = axis.r.y - 1
+          local_axis.y = local_axis.y - 1
         elseif key == 98 then
           axis.l.y = axis.l.y + 1
           axis.r.y = axis.r.y + 1
+          local_axis.y = local_axis.y + 1
         elseif key == 100 then
           axis.l.x = axis.l.x - 1
           axis.r.x = axis.r.x - 1
+          local_axis.x = local_axis.x - 1
         elseif key == 102 then
           axis.l.x = axis.l.x + 1
           axis.r.x = axis.r.x + 1
-        elseif key == 101 then
-          x = 0
-          y = 0
+          local_axis.x = local_axis.x + 1
         end
         players_data[player_name].object.axis = axis
+        players_data[player_name].object.local_axis = local_axis
         Asset:new(player_name, player_data.object.name, axis)
+        tfm.exec.chatMessage(string.format('<font size="10" color="#E3350D">Align: <font color="#ee6b2f">x: <b>%s</b></font>, <font color="#e6bc2f">y: <b>%s</b></font></font>', local_axis.x, local_axis.y), player_name)
+        if key == 101 then
+          Asset:new(player_name, player_data.object.name)
+        end
       end
     end
   end

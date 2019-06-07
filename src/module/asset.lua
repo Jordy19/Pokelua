@@ -33,7 +33,8 @@ function Asset:new(player_name, object_name, axis)
 			shiny = math.random(0, 500),
 			artist = false,
 			spawned = false,
-			axis = axis
+			axis = axis,
+			local_axis = {x = 0, y =0}
 		}
 		players_data[player_name].object = data
 	end
@@ -89,8 +90,6 @@ function Asset:_setImage(player_name)
 	if player_data.object.axis then
     axis = player_data.object.axis
   end
-  print(axis.l.y)
-  print(axis.r.y)
 	local direction_key = 'l'
 	if direction == 'right' then
 		direction = 'right'
