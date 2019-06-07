@@ -17,7 +17,7 @@ Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 Asset = {}
 Asset.__index = Asset
 
-function Asset:new(player_name, object_name)
+function Asset:new(player_name, object_name, axis)
 	object_name = object_name or table.keys(objects)[math.random(#table.keys(objects))]
 	print(object_name)
 	local player_data = players_data[player_name]
@@ -33,9 +33,11 @@ function Asset:new(player_name, object_name)
 			shiny = math.random(0, 500),
 			artist = false,
 			spawned = false,
+			axis = axis
 		}
 		players_data[player_name].object = data
 	end
+	-- We can set custom xPosition and yPosition values
 	for type_1,type_2 in pairs(objects[object_name].types) do
 		-- Flying types
 		if type_1 == 5 or type_2 == 5 then
@@ -84,6 +86,11 @@ function Asset:_setImage(player_name)
 	local direction = self:getData(player_name, 'direction')
 	local images = self:_getImages(player_name)
 	local axis = self:_getAxis(player_name)
+	if player_data.object.axis then
+    axis = player_data.object.axis
+  end
+  print(axis.l.y)
+  print(axis.r.y)
 	local direction_key = 'l'
 	if direction == 'right' then
 		direction = 'right'
@@ -95,6 +102,7 @@ function Asset:_setImage(player_name)
 	player_data.transformed = true
 	players_data[player_name].spawned = true
 	players_data[player_name].is_mouse = false
+	players_data[player_name].object.axis = axis
 	interface.update(player_name)
 end
 

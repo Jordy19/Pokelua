@@ -105,6 +105,28 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
           tfm.exec.movePlayer(player_name, 0, 0, false, 0, -50, false, true)
         end
       end
+      -- Numpad keys
+      if key == 104 or key == 98 or key == 100 or key == 102 or key == 101 then
+        local axis = player_data.object.axis
+        if key == 104 then
+          axis.l.y = axis.l.y - 1
+          axis.r.y = axis.r.y - 1
+        elseif key == 98 then
+          axis.l.y = axis.l.y + 1
+          axis.r.y = axis.r.y + 1
+        elseif key == 100 then
+          axis.l.x = axis.l.x - 1
+          axis.r.x = axis.r.x - 1
+        elseif key == 102 then
+          axis.l.x = axis.l.x + 1
+          axis.r.x = axis.r.x + 1
+        elseif key == 101 then
+          x = 0
+          y = 0
+        end
+        players_data[player_name].object.axis = axis
+        Asset:new(player_name, player_data.object.name, axis)
+      end
     end
   end
 end
