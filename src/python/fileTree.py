@@ -31,7 +31,8 @@ def getFileTree(path):
     ignoreFiles = ["debug.lua", "travis.lua", "output.lua"]
     for path, subdirs, files in os.walk(path):
         for name in files:
-            filePath = path.split("\\")[3:]
+            filePath = path.split("\\")[4:]
+            print(filePath)
             if not filePath:
                 if name not in ignore and name not in ignoreFiles:
                     if ".lua" in name:

@@ -70,7 +70,6 @@ class Builder():
             self.srcPath,
             self.filesList,
             self.loadOrder,
-            self.srcPath,
             config
         )
         src.python.debug.run(self.srcPath)

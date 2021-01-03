@@ -62,7 +62,7 @@ end
 core.introduce = function(name)
     tfm.exec.removeImage(pData(name, 'introImg'))
     tfm.exec.removeImage(pData(name, 'legalImg'))
-    for i,key in ipairs({32,81,80, 82, 46, 77, 104, 98, 100, 102, 101,72, 71, 74}) do
+    for i,key in ipairs({0,1,2,3,32,81,80, 82, 46, 77, 104, 98, 100, 102, 101,72, 71, 74}) do
         tfm.exec.bindKeyboard(name,key,true,true)
     end
     system.bindMouse(name, true)

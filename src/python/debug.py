@@ -3,6 +3,7 @@ import os
 
 def run(path):
     try:
+        print(path)
         call = subprocess.Popen("lua debug.lua", cwd=path)
     except subprocess.CalledProcessError:
         buildStatus = ("• [!] Failed. Possibly contains errors and bugs.")
@@ -12,7 +13,7 @@ def run(path):
         buildStatus = "• [+] Passed. No errors were detected at first run."
         print(call.communicate())
     finally:
-        os.remove("{}\{}".format(path, "debug.lua"))
+        # os.remove("{}\{}".format(path, "debug.lua"))
         print(buildStatus)
 
 

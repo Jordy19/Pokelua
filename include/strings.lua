@@ -25,4 +25,4 @@ translate.text = {
 }
 -- For international, e2 community we will fall back to EN.
 translate.text.xx = translate.text.en
-translate.text.e2 = translate.text.en
+translate.text.e2 = translate.text.ena

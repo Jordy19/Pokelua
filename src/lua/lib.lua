@@ -3,8 +3,6 @@
     Authors: Jordynl
 ]]
 
-library = {}
-
 table.newidx = function(t, k, v)
     rawset(t, k, v)
     rawset(t, #t + 1, k)

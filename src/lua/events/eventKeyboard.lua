@@ -92,6 +92,15 @@ function eventKeyboard(name,key,down,x,y)
             core.introduce(name)
         end
     end
+    -- if key == 80 then
+    --     if db.players[name].pokedexOpen then
+    --         pokedex.close(name, true)
+    --         db.players[name].pokedexOpen = false
+    --     else
+    --         pokedex.open(name, true)
+    --         db.players[name].pokedexOpen = true
+    --     end
+    -- end
     if key == 81 then
         if db.players[name].qc == true then
             qc.stop(name)
