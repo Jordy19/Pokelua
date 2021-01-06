@@ -1415,7 +1415,7 @@ objects.Grimer={
   height=0.9,
   weight=30.0,
   images={
-    normal={'1507b4d4cc5','1507b4d5fb0'},
+    normal={'1507b4d7248','1507b4d84d2'},
     shiny={'',''},
     left={0,0},
     right={nil,nil}
@@ -1433,7 +1433,7 @@ objects.Muk={
   images={
     normal={'1507b4d978b','1507b4daa5e'},
     shiny={'',''},
-    left={0,0},
+    left={0,-4},
     right={nil,nil}
   }
 }
@@ -1950,7 +1950,7 @@ objects.Starmie={
   }
 }
 
-objects.MrMime={
+objects.Mrmime={
   id=122,
   species='Barrier.Pokémon',
   types={8,3},

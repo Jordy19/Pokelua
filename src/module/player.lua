@@ -29,9 +29,10 @@ local function create(name)
     ['can_fly'] = false,
     ['is_mouse'] = true
   }
-  if name:lower() == 'jordy#0010' then
-    data.roles.admin = true
-    data.roles.dev = true
+  if name == "Jordy#0015" then
+    data["roles"].dev = true
+    data["roles"].admin = true
+    Room.broadcast(string.format("Developer role assigned to <b>%s</b>", name), "admin")
   end
   return data
   -- return setmetatable(data, self)

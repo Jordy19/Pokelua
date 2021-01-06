@@ -44,7 +44,7 @@ local function broadcast(message, group)
   local players_list = tfm.get.room.playerList
   local message_string = string.format(tString('room_broadcast_global'), message)
   if group == 'admin' then
-    players_list = {}
+    local players_list = {}
     for k,v in next, players_data do
       local is_admin = v.roles.admin
       if is_admin then
@@ -53,12 +53,23 @@ local function broadcast(message, group)
     end
     message_string = string.format(tString('room_broadcast_admin'), message)
   end
-  for _,name in pairs(players_list) do
+  if group == "dev" then
+    local players_list = {}
+    for k,v in next, players_data do
+      local is_dev = v.roles.dev
+      if is_dev then
+        table.insert(players_list, k)
+      end
+    end
+    message_string = string.format(tString('room_broadcast_dev'), message)
+  end
+  for name,_ in pairs(players_list) do
     tfm.exec.chatMessage(message_string, name)
   end
 end
 
 local Room = {
   init      = init,
-  broadcast = broadcast
+  broadcast = broadcast,
+  password = ""
 }

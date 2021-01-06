@@ -67,3 +67,28 @@ cmd.newgame = {
         tfm.exec.newGame(map)
     end
 }
+
+cmd.pw = {
+    "admin",
+    function (name, args)
+        print(Room.password)
+        if args[1] then
+            if args[1] == "." then
+                tfm.exec.setRoomPassword()
+                Room.broadcast(string.format("<VP>%s removed the room password.", name), "admin")
+                Room.password = nil
+            else
+                password = string.sub(table.concat(args, " "), 1)
+                Room.broadcast(string.format("<VP>%s changed the room password: %s", name, password), "admin")
+                tfm.exec.setRoomPassword(password)
+                Room.password = password
+            end
+        else
+            if Room.password then
+                tfm.exec.chatMessage(string.format("<VP>The password for this room is: %s", Room.password), name)
+            else
+                tfm.exec.chatMessage("Please enter a password phrase.", name)
+            end
+        end
+    end
+}

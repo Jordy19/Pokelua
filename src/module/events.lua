@@ -27,6 +27,7 @@ function eventNewPlayer(player_name)
   tfm.exec.chatMessage(tString('room_intro'), player_name)
   tfm.exec.chatMessage(tString('room_intro_disclaimer'), player_name)
   tfm.exec.chatMessage(tString('room_intro_thread'), player_name)
+  tfm.exec.chatMessage(tString('room_intro_feedback'), player_name)
   tfm.exec.chatMessage(' ', player_name)
   players_data[player_name] = Player.create(player_name)
   interface.intro(player_name)
@@ -61,6 +62,7 @@ function eventChatCommand(player_name, msg)
   local command = args[1]:lower()
   -- Are we calling an object directly?
   if objects[firstToUpper(command)] then
+
     Asset:new(player_name, firstToUpper(command))
   -- Are we calling an command?
   elseif cmd[command] then
@@ -80,6 +82,7 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
   -- [[ Triggered when a button is pressed.]]
   -- If we move left or right.
   local player_data = players_data[player_name]
+  local player_role = player_data.roles
   local is_transformed = Player.getData(player_name, 'transformed')
   if players_data[player_name].intro then
     interface.intro(player_name, true)
@@ -94,7 +97,8 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
           direction = 'right'
         end
         players_data[player_name].object.direction = direction
-        Asset:new(player_name, firstToUpper(object.name))
+        --Asset:new(player_name, firstToUpper(object.name))
+        Asset:_setImage(player_name)
       end
         -- We flying
       if key == 32 then
@@ -103,6 +107,13 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
           local y = yPos - 10
           tfm.exec.displayParticle(1, xPos, y, 0, 0, 0, 0, nil)
           tfm.exec.movePlayer(player_name, 0, 0, false, 0, -50, false, true)
+        end
+      end
+      -- Random Pokemon [P]
+      if key == 80 then
+        Asset:new(player_name)
+        if player_role[role] then
+          Room.broadcast(string.format("Random: <b>%s</b>", players_data.object.name), "dev")
         end
       end
       -- Numpad keys
@@ -129,7 +140,8 @@ function eventKeyboard(player_name, key, down, xPos, yPos)
         players_data[player_name].object.axis = axis
         players_data[player_name].object.local_axis = local_axis
         Asset:new(player_name, player_data.object.name, axis)
-        tfm.exec.chatMessage(string.format('<font size="10" color="#E3350D">Align: <font color="#ee6b2f">x: <b>%s</b></font>, <font color="#e6bc2f">y: <b>%s</b></font></font>', local_axis.x, local_axis.y), player_name)
+        -- tfm.exec.chatMessage(string.format('<font size="10" color="#E3350D">Align L: <font color="#ee6b2f">x: <b>%s</b></font>, <font color="#e6bc2f">y: <b>%s</b></font> Align: R</font>', local_axis.x, local_axis.y), player_name)
+        tfm.exec.chatMessage(string.format('<font size="10" color="#E3350D">Align L: <font color="#ee6b2f">x: <b>%s</b></font>, <font color="#e6bc2f">y: <b>%s</b></font> Align R: <font color="#ee6b2f">x: <b>%s</b></font>', axis.l.x, axis.l.y, axis.r.x, axis.r.y), player_name)
         if key == 101 then
           Asset:new(player_name, player_data.object.name)
         end
@@ -166,6 +178,27 @@ function eventTextAreaCallback(i,player_name,c)
       ui.removeTextArea(02, player_name)
       ui.removeTextArea(03, player_name)
       ui.removeTextArea(04, player_name)
+    end
+  end
+  if p[1] == 'info' then
+    local obj = players_data[player_name]
+    tfm.exec.chatMessage(string.format("<font color=\"#BABD2F\"><b>%s</b></font>", obj.object.name), player_name)
+    -- Shiny availablility.
+    local shinyAvailable = "No."
+    print(obj.object.object.images.shiny[1])
+    if obj.object.object.images.shiny[1] ~= "" and obj.object.object.images.shiny[2] ~= "" then
+      shinyAvailable = "Yes."
+    end
+    tfm.exec.chatMessage(string.format("\t\t<b>Shiny availability:</b> %s", shinyAvailable), player_name)
+    -- Artist check.
+    if obj.object.object.artist then
+      tfm.exec.chatMessage(string.format("\t\t<b>Artist:</b> <V>%s<BL>", obj.object.object.artist), player_name)
+    end
+
+  end
+  if p[1] == 'navigate' then
+    if p[2] == 'next' then
+      print(players_data[player_name].object.id)
     end
   end
 end

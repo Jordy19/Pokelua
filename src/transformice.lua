@@ -13,7 +13,7 @@
 -- limitations under the License.
 
 local tfm = {
-    hideOutput = {disableChatCommandDisplay=true},
+    hideOutput = {disableChatCommandDisplay=true,bindKeyboard=true},
     debug = true,
     get = {
         room = {
@@ -22,14 +22,14 @@ local tfm = {
                             isFacingRight=true,
                             tribeName="Lua devs"
                     },
-                    ["+Jordy#0000"]={
-                            isFacingRight=true,
-                            tribeName=nil
-                    },
-                    ["Pikashu#0001"]={
-                            isFacingRight=false,
-                            tribeName="test",
-                    }
+                    -- ["+Jordy#0000"]={
+                    --         isFacingRight=true,
+                    --         tribeName=nil
+                    -- },
+                    -- ["Pikashu#0001"]={
+                    --         isFacingRight=false,
+                    --         tribeName="test",
+                    -- }
             },
             name = "*#pokelua0jordy#0010",
             -- name = "*Something cute",

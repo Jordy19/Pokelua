@@ -47,3 +47,18 @@ cmd.help = {
     end
   end
 }
+
+cmd.roles = {
+  'public',
+  function (name, args)
+    local player_roles = players_data[name].roles
+    local roles={}
+    local n=0
+
+    for k,v in pairs(player_roles) do
+      n=n+1
+      roles[n]=k
+    end
+    tfm.exec.chatMessage(table.concat(roles, ", "), name)
+  end
+}

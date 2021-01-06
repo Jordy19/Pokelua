@@ -783,7 +783,7 @@ objects.Stunky={
   images={
     normal={'1507bc7356d','1507bc75062'},
     shiny={'',''},
-    left={0,0},
+    left={0,27},
     right={nil,nil}
   }
 }
@@ -799,7 +799,7 @@ objects.Skuntank={
   images={
     normal={'1507bc76ae2','1507bc78540'},
     shiny={'',''},
-    left={0,0},
+    left={0,-11},
     right={nil,nil}
   }
 }

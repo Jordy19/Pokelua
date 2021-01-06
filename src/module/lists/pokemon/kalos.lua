@@ -931,7 +931,7 @@ objects.Aegislash={
   images={
     normal={'15d13c90431', '15d13c914b3'},
     shiny={'', ''},
-    left={0, -35},
+    left={0, -29},
     right={nil, nil},
   }
 }
@@ -1219,7 +1219,7 @@ objects.Aurorus={
   images={
     normal={'15d13c97bec', '15d13c9935f'},
     shiny={'', ''},
-    left={0, -32},
+    left={0, -27},
     right={nil, nil},
   }
 }

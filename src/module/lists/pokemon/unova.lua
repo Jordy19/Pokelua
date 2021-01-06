@@ -14,6 +14,8 @@
 
 Pokémon And All Respective Names are Trademark & © of Nintendo 1996-2019]]
 
+
+
 objects.Victini={
   id=494,
   species='Victory.Pokémon',
@@ -2234,7 +2236,7 @@ objects.Durant={
   images={
     normal={'1507be41e49', '1507be43afe'},
     shiny={'', ''},
-    left={0, 0},
+    left={0, 6},
     right={nil, nil},
   }
 }

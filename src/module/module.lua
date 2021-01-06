@@ -24,23 +24,24 @@ local objects = {}
 local players_data = {}
 
 -- Data lists.
-require 'lists.pokemon.kanto'
-require 'lists.pokemon.jotho'
-require 'lists.pokemon.hoenn'
-require 'lists.pokemon.sinnoh'
-require 'lists.pokemon.unova'
-require 'lists.pokemon.kalos'
-require 'lists.pokemon.mega'
-require 'lists.pokemon.fakemon'
-require 'lists.pokemon.misc'
+require 'lists.master'
+-- require 'lists.pokemon.kanto'
+-- require 'lists.pokemon.jotho'
+-- require 'lists.pokemon.hoenn'
+-- require 'lists.pokemon.sinnoh'
+-- require 'lists.pokemon.unova'
+-- require 'lists.pokemon.kalos'
+-- require 'lists.pokemon.mega'
+-- require 'lists.pokemon.fakemon'
+-- require 'lists.pokemon.misc'
 
 -- Module files.
 require 'translator'
 require 'interface'
+require 'room'
 require 'player'
 require 'asset'
 require 'events'
-require 'room'
 
 -- Module commands.
 require 'commands.dev'

@@ -19,25 +19,20 @@ Asset.__index = Asset
 
 function Asset:new(player_name, object_name, axis)
 	object_name = object_name or table.keys(objects)[math.random(#table.keys(objects))]
-	print(object_name)
 	local player_data = players_data[player_name]
-	if player_data.object then
-		players_data[player_name].object.name = object_name
-		players_data[player_name].object.object = objects[object_name]
-	else
-		local data = {
-			player_name = player_name,
-			direction='left',
-			name = object_name,
-			object = objects[object_name],
-			shiny = math.random(0, 500),
-			artist = false,
-			spawned = false,
-			axis = axis,
-			local_axis = {x = 0, y =0}
-		}
-		players_data[player_name].object = data
-	end
+	local data = {
+		id = objects[object_name].id,
+		player_name = player_name,
+		direction='left',
+		name = object_name,
+		object = objects[object_name],
+		shiny = math.random(0, 500),
+		artist = false,
+		spawned = false,
+		axis = axis,
+		local_axis = {x = 0, y =0}
+	}
+	players_data[player_name].object = data
 	-- We can set custom xPosition and yPosition values
 	for type_1,type_2 in pairs(objects[object_name].types) do
 		-- Flying types
